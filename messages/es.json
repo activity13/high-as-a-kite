@@ -1,0 +1,253 @@
+{
+  "translation": {
+    "language": "es",
+    "LanguageSwitcher": {
+      "english": "English",
+      "spanish": "Español"
+    },
+    "translations": {
+      "common": {
+        "locale": "es",
+        "companyName": "Viure"
+      },
+      "HomePage": {
+        "title": "Conoce como lo hacemos posible en Viure!",
+        "description": "Escríbenos para más información.",
+        "cta": "Comenzar",
+        "follow": "Siguenos",
+        "chat": "Conversemos"
+      },
+      "Hero": {
+        "title": "¡Una Maravilla del Mundo!",
+        "description": "Aquí comienza tu viaje con Viure."
+      },
+      "Navbar": {
+        "about": "Sobre Nosotros",
+        "trips": "Proximos Viajes",
+        "book": "Reservar"
+      },
+      "TermsAndConditions": {
+        "LastUpdated": "Última actualización: 31 de julio de 2025",
+        "Introduction": {
+          "Description": "VIURE actúa como intermediario para la reserva de alojamientos, excursiones y otros servicios relacionados con viajes ('Servicios de Terceros'). Al participar en un Viaje o Expedición de VIURE, reconoces y aceptas nuestra EXENCIÓN DE RESPONSABILIDAD y POLÍTICA DE PRIVACIDAD, así como los siguientes términos:"
+        },
+        "ThirdPartyResponsibility": {
+          "Title": "Responsabilidad de Terceros",
+          "Description": "Los alojamientos, excursiones y otros servicios proporcionados durante el viaje son operados por terceros independientes ('Proveedores de Servicios') sobre los cuales VIURE no tiene control directo. Aunque seleccionamos cuidadosamente y colaboramos con proveedores de confianza, no somos responsables de sus acciones, omisiones o la calidad de sus servicios."
+        },
+        "OurCommitment": {
+          "Title": "Nuestro Compromiso",
+          "Description": "Nos esforzamos por garantizar que todos los Proveedores de Servicios cumplan con estándares razonables de seguridad, fiabilidad y profesionalismo. Si surge un problema con un Servicio de Terceros, te asistiremos en la medida de nuestras posibilidades para resolverlo con el proveedor. Sin embargo, no somos responsables de circunstancias fuera de nuestro control, incluyendo, pero no limitado a:",
+          "List": [
+            "Cambios, cancelaciones o fallos en el servicio por parte de un proveedor externo.",
+            "Lesiones, pérdidas o daños resultantes de los actos o negligencia de terceros.",
+            "Eventos de fuerza mayor, como desastres naturales, inestabilidad política o circunstancias imprevistas que afecten el viaje."
+          ]
+        },
+        "ParticipantAcknowledgement": {
+          "Title": "Reconocimiento del Participante",
+          "Description": "Al unirte a un Viaje de VIURE, entiendes que viajar conlleva riesgos inherentes. Aceptas liberar a VIURE de responsabilidad por eventos fuera de nuestro control razonable y reconoces que cualquier reclamación relacionada con servicios de terceros debe dirigirse al proveedor respectivo."
+        },
+        "ResolutionAndSupport": {
+          "Title": "Resolución y Soporte",
+          "Description": "En caso de un problema con un Servicio de Terceros, los participantes deben notificar a VIURE lo antes posible. Haremos esfuerzos razonables para facilitar una solución, pero no asumimos responsabilidad financiera por fallos de terceros."
+        },
+        "ReadyForTheAdventure": {
+          "Title": "Listo para la Aventura",
+          "Acceptance": {
+            "Title": "Aceptación",
+            "List": [
+              "Tienes al menos 18 años.",
+              "Has leído, entendido y aceptado estos Términos y Condiciones.",
+              "Este acuerdo es legalmente vinculante entre tú y VIURE."
+            ],
+            "Description": "VIURE no ofrece garantías, expresas o implícitas, con respecto a cualquier Viaje, participación en los Servicios o actividades ofrecidas. Nuestras responsabilidades y obligaciones están limitadas como se describe en estos Términos. Podemos actualizar estos Términos de vez en cuando. Continuar utilizando nuestros Servicios implica que aceptas cualquier actualización. Al unirte a un Viaje, aceptas nuestra Política de Privacidad, que explica cómo recolectamos, usamos y protegemos tus datos."
+          }
+        },
+        "WhatWeOffer": {
+          "Title": "Qué Ofrecemos",
+          "TheExperience": {
+            "Title": "La Experiencia",
+            "List": [
+              "Trabaja de forma remota desde destinos con alojamientos y espacios de coworking seleccionados.",
+              "Aventuras de fin de semana y experiencias locales curadas.",
+              "Una comunidad integrada de trabajadores remotos y viajeros con intereses similares."
+            ],
+            "Description": "VIURE se asocia con proveedores de terceros ('Proveedores de Servicios') para alojamiento, transporte y actividades. Estos proveedores operan de manera independiente, y aunque los elegimos cuidadosamente, no somos responsables de sus acciones o servicios."
+          },
+          "SafetyAndFlexibility": {
+            "Title": "Seguridad y Flexibilidad",
+            "List": [
+              "Viajar conlleva riesgos. Reconoces y aceptas que VIURE no puede garantizar tu seguridad durante un Viaje.",
+              "Nos reservamos el derecho de ajustar itinerarios cuando sea necesario por razones de seguridad, comodidad o logística.",
+              "Al compartir tu información de contacto, aceptas recibir actualizaciones, promociones y notificaciones importantes de VIURE."
+            ]
+          }
+        },
+        "WhoCanJoin": {
+          "Title": "¿Quién Puede Unirse?",
+          "TheBasics": {
+            "Title": "Lo Básico",
+            "Description": "Damos la bienvenida a viajeros aventureros y respetuosos, pero nos reservamos el derecho de aceptar, rechazar o expulsar a Participantes por razones que incluyen, pero no se limitan a:",
+            "List": [
+              "Comportamiento que cause peligro, angustia o incomodidad a otros.",
+              "Incumplimiento de los términos de pago o las leyes locales."
+            ],
+            "Note": "Los participantes expulsados de un Viaje no tendrán derecho a reembolso."
+          },
+          "TravelRequirements": {
+            "Title": "Requisitos de Viaje",
+            "Description": "Los participantes son responsables de asegurarse de tener los pasaportes, visas y vacunas correctas. No cumplir con esto no da derecho a un reembolso."
+          },
+          "HealthAndWellness": {
+            "Title": "Salud y Bienestar",
+            "Description": "Si tienes alguna condición médica que pueda afectar tu participación, debes informarla con antelación. Cada participante de VIURE debe completar un formulario con la información de un seguro médico internacional para emergencias. Si se descubre que no tienes seguro médico o que tu seguro es insuficiente, asumes los riesgos asociados.",
+            "InsuranceRequirements": {
+              "Description": "Todos los participantes deben tener un seguro de viaje válido que cubra:",
+              "List": [
+                "Gastos médicos y emergencias",
+                "Evacuación y repatriación",
+                "Cancelación e interrupciones del viaje",
+                "Responsabilidad personal"
+              ],
+              "Note": "Es posible que se requiera prueba del seguro antes de la participación."
+            }
+          }
+        },
+        "Payment": {
+          "Title": "Pago",
+          "PaymentTerms": {
+            "Title": "Términos de Pago",
+            "Description": "Todos los pagos deben realizarse de acuerdo con nuestras Políticas de Pago y Reembolso, disponibles en nuestro sitio web."
+          },
+          "PricingAndAdjustments": {
+            "Title": "Precios y Ajustes",
+            "Description": "El costo para participar en los viajes o expediciones de VIURE está listado en nuestro sitio web y puede cambiar en cualquier momento. Sin embargo, respetaremos el precio anunciado en el momento del depósito del Participante."
+          },
+          "NoRetroactiveDiscounts": {
+            "Title": "Sin Descuentos Retroactivos",
+            "Description": "Si el precio de un viaje o expedición disminuye después de que hayas realizado tu pago inicial, no tendrás derecho a reembolsos o reducciones en pagos futuros."
+          }
+        },
+        "CancellationsAndRefunds": {
+          "Title": "Cancelaciones y Reembolsos",
+          "HowToCancel": {
+            "Title": "Cómo Cancelar",
+            "Description": "Las cancelaciones deben enviarse por correo electrónico."
+          },
+          "RefundPolicy": {
+            "Title": "Política de Reembolso",
+            "List": [
+              "Si el Viaje NO Ha Sido Confirmado, más de 60 días antes del viaje: reembolso del 80% del monto pagado, menos una tarifa de procesamiento bancario y de solicitud de USD 100.",
+              "Si el Viaje NO Ha Sido Confirmado, entre 45 y 60 días antes del viaje: reembolso del 50% del monto pagado, menos una tarifa de procesamiento bancario y de solicitud de USD 100.",
+              "Si el Viaje HA Sido Confirmado, más de 45 días antes del viaje: reembolso del 50% del monto pagado, menos una tarifa de procesamiento bancario y de solicitud de USD 100.",
+              "Menos de 45 días antes del viaje o después de que comience: no se emitirán reembolsos."
+            ]
+          },
+          "GracePeriod": {
+            "Title": "Período de Gracia de 24 Horas",
+            "Description": "Si reservas más de 45 días antes de la fecha de inicio del viaje, puedes cancelar dentro de las 24 horas posteriores a la reserva para obtener un reembolso completo (menos una tarifa bancaria de $50 por recargos de tarjetas de crédito/débito). Si reservas 45 días o menos antes de la fecha de inicio del viaje, el período de cancelación de 24 horas no aplica, y no se emitirán reembolsos."
+          },
+          "ImportantConditions": {
+            "Title": "Condiciones Importantes",
+            "List": [
+              "Los reembolsos solo se emiten por las razones enumeradas en estos Términos. Las amenazas de reseñas negativas o publicaciones en redes sociales no se considerarán motivos válidos para un reembolso.",
+              "Nos reservamos el derecho de tomar medidas contra contenido en línea falso, engañoso, difamatorio o inapropiado relacionado con cancelaciones.",
+              "Los pagos no son transferibles a otra persona, y tu plaza no puede ser ocupada por nadie más que tú.",
+              "Las no presentaciones no son reembolsables.",
+              "En el improbable caso de que VIURE cese operaciones o declare bancarrota, no se emitirán reembolsos."
+            ]
+          }
+        },
+        "Invoices": {
+          "Title": "Facturas",
+          "Description": "Las facturas por viajes o expediciones, facturas de depósitos y cualquier factura por servicios adicionales proporcionados o facilitados por VIURE se enviarán y vencerán al comprometerse con el servicio respectivo. Ten en cuenta que todos los pagos de reservas y facturas serán procesados y proporcionados por WeTravel, una plataforma de reservas utilizada por VIURE para manejar pagos y reservas."
+        },
+        "DiscountsPromotionsAndIncentives": {
+          "Title": "Descuentos, Promociones e Incentivos",
+          "HowDiscountsWork": {
+            "Title": "Cómo Funcionan los Descuentos",
+            "Description": "VIURE, a su sola discreción, puede ofrecer descuentos y/o promociones para productos o servicios específicos. Los descuentos y promociones no son transferibles y deben usarse dentro de los plazos anunciados. VIURE se reserva el derecho de denegar el uso de códigos de descuento que no se utilicen como se indica. Por ejemplo, si un participante individual usa un código de descuento destinado a parejas, VIURE no respetará ese descuento."
+          },
+          "CombiningDiscountsAndIncentives": {
+            "Title": "Combinación de Descuentos e Incentivos",
+            "Description": "Los descuentos o incentivos combinados no se pueden aplicar a la misma reserva, a menos que se indique lo contrario a la sola discreción de VIURE."
+          },
+          "ParticipantIncentives": {
+            "Title": "Incentivos para Participantes",
+            "Description": "VIURE se reserva el derecho de retirar ofertas de incentivos para participantes (como 'Recomienda a un Amigo') sin previo aviso y en cualquier momento."
+          },
+          "VIURECredit": {
+            "Title": "Crédito de VIURE",
+            "Description": "El crédito de VIURE es válido por el período especificado en la emisión o hasta la fecha de vencimiento indicada en el crédito. Si no se proporciona un período de vencimiento en la emisión, el crédito será válido por un año."
+          }
+        },
+        "TravelRefunds": {
+          "Title": "Reembolsos de Viaje",
+          "Description": "No se emitirán reembolsos por ningún costo de vuelos u otros gastos de viaje incurridos por los participantes, antes, durante o después del viaje o expedición. Llegar tarde o abandonar un viaje o expedición en curso por cualquier motivo no dará derecho a un reembolso, ni se reembolsarán las porciones no utilizadas de un viaje o expedición. Ni VIURE ni sus afiliados serán responsables de las penalizaciones por cancelación cobradas por aerolíneas u otros proveedores de transporte. Esto incluye penalizaciones por cancelación relacionadas con boletos no reembolsables comprados hacia o desde las ciudades donde estarás antes o después de unirte al viaje."
+        },
+        "DamageToProperty": {
+          "Title": "Daños a la Propiedad",
+          "Description": "Los participantes son financieramente responsables de cualquier daño o rotura a la propiedad, ya sea en el espacio de coliving, casa, hostal, hotel o espacio de coworking de VIURE, durante su estancia."
+        },
+        "SharingARoom": {
+          "Title": "Compartir una Habitación",
+          "GuestStayPolicy": {
+            "Title": "Política de Estancia de Invitados",
+            "Description": "Si planeas que un invitado no participante de VIURE se quede en tu alojamiento privado, habrá una tarifa de ocupación por cada noche de la estancia de tu invitado. Esta tarifa generalmente oscila entre 30-45 USD por noche, dependiendo de la ubicación. Pueden aplicarse cargos adicionales si tu invitado desea participar en actividades o excursiones de la semana o fin de semana. Las estancias de invitados están limitadas a un máximo de 3 días. Si tu invitado no participará en el viaje o expedición y su estancia supera los 3 días, infórmanos para que podamos evaluar el precio caso por caso."
+          },
+          "AdditionalParticipant": {
+            "Title": "Participante Adicional",
+            "Description": "Si tu invitado es un participante en el viaje, habrá una tarifa adicional para ellos. Esta tarifa cubre aproximadamente el 30% del costo de tu alojamiento y el 100% de los servicios y tours incluidos en el viaje. Esta opción solo está disponible para habitaciones privadas."
+          }
+        },
+        "PersonalResponsibility": {
+          "Title": "Responsabilidad Personal",
+          "YourHealthSafetyAndSecurity": {
+            "Title": "Tu Salud, Seguridad y Protección",
+            "Description": "Aunque VIURE proporciona consejos de viaje, directrices y recomendaciones de seguridad, es responsabilidad del participante garantizar su propia salud, seguridad y protección durante el viaje. Recomendamos encarecidamente que todos los participantes tengan un seguro médico de viaje válido y estén al día con las vacunas antes de viajar. Como participante, reconoces y aceptas los riesgos asociados con el viaje, incluyendo accidentes, lesiones y eventos imprevistos."
+          },
+          "OurCommitmentToSafety": {
+            "Title": "Nuestro Compromiso con la Seguridad",
+            "Description": "VIURE tomará todas las medidas razonables para seguir los protocolos y directrices de seguridad para minimizar los riesgos. Sin embargo, no podemos garantizar que no ocurran accidentes o emergencias. Al participar en un viaje o expedición de VIURE, reconoces y aceptas que los riesgos son inherentes al viajar, y liberas a VIURE de cualquier responsabilidad por incidentes que puedan ocurrir."
+          }
+        },
+        "PhotoAndDataPermissions": {
+          "Title": "Permisos de Fotos y Datos",
+          "MediaRelease": {
+            "Title": "Autorización de Medios",
+            "Description": "Al participar en un Viaje, otorgas a VIURE permiso para usar tu imagen, video o semejanza con fines promocionales, incluyendo, pero no limitado a, redes sociales, sitios web y materiales de marketing."
+          },
+          "ContentUse": {
+            "Title": "Uso de Contenido",
+            "Description": "Cualquier contenido que compartas con VIURE, incluyendo fotos, testimonios y otros medios, puede ser utilizado con fines de marketing, a nuestra sola discreción."
+          }
+        },
+        "AcceptableBehavior": {
+          "Title": "Comportamiento Aceptable",
+          "Description": "Para garantizar una comunidad segura, acogedora e inclusiva, VIURE se reserva el derecho de terminar la participación de cualquier participante en cualquier momento, por razones que incluyen, pero no se limitan a:",
+          "List": [
+            "Actos Ilegales: Si un participante infringe la ley del país en el que se encuentra.",
+            "Relaciones Locales: Si un participante se comporta de manera poco amable u ofensiva hacia nuestro anfitrión/coanfitrión, incluyendo, pero no limitado a, personal de casas, hostales, coliving, hoteles, coworking o agencias de tours.",
+            "Actos Imprudentes: Si un participante actúa de manera que pone en peligro irrazonable a sí mismo o a otros participantes, ya sea intencionalmente o no.",
+            "Comportamiento en la Comunidad: Si un participante es reportado repetidamente por otros o se comporta de manera negativa o grosera hacia otros participantes.",
+            "Armas: No se permiten armas en ningún viaje o expedición de VIURE, incluyendo en alojamientos, espacios de trabajo o excursiones."
+          ],
+          "Note": "VIURE tiene plena discreción para decidir si ha ocurrido alguno de los comportamientos anteriores. Si la estancia o participación de un participante es terminada, se tratará como una cancelación de viaje o expedición, y no se emitirá reembolso."
+        },
+        "ForceMajeure": {
+          "Title": "Fuerza Mayor",
+          "Description": "En ningún caso VIURE será responsable por cualquier fallo o retraso en el cumplimiento de sus obligaciones derivado de circunstancias fuera de su control, incluyendo, pero no limitado a, huelgas, paros laborales, accidentes, actos de guerra o terrorismo, disturbios civiles o militares, pandemias, catástrofes naturales o interrupciones/pérdidas de servicios públicos, comunicaciones o servicios informáticos."
+        },
+        "ChangesToTheTCs": {
+          "Title": "Cambios a los Términos y Condiciones",
+          "Description": "Estos términos y condiciones están sujetos a cambios sin previo aviso. Tras una actualización, los nuevos términos y condiciones serán aplicables y entrarán en vigor inmediatamente después de su publicación en el sitio web oficial de VIURE."
+        },
+        "Jurisdiction": {
+          "Title": "Jurisdicción",
+          "Description": "VIURE no es responsable por lesiones, pérdidas o daños incurridos durante tu participación en un Viaje. Todas las disputas deben resolverse mediante arbitraje vinculante en Wyoming, a menos que califiquen para un tribunal de pequeñas causas. Estos Términos se rigen por las leyes de Wyoming, EE. UU. Todas las reclamaciones deben resolverse de manera individual. No se permiten acciones colectivas."
+        }
+      }
+    }
+  }
+}
