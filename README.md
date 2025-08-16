@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Viure Web
 
-## Getting Started
+Página web para **Viure**, una agencia de aventuras para nómadas digitales. Desarrollada con Next.js 15, TypeScript, Tailwind CSS, y DaisyUI. Soporta 2 idiomas (español e inglés) y está optimizada para SEO.
 
-First, run the development server:
+## Propósito
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Ofrecer una experiencia digital moderna y responsiva que promueva viajes en grupo para nómadas digitales, con un diseño inspirado en nomatribe.co, formularios de contacto, y un blog para SEO.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tecnologías
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Next.js 15**: Framework principal (App Router).
+- **TypeScript**: Tipado estático para robustez.
+- **Tailwind CSS + DaisyUI**: Estilizado moderno y personalizable.
+- **next-intl**: Multilenguaje (es, en, fr, pt).
+- **Framer Motion**: Animaciones suaves.
+- **EmailJS**: Formularios sin backend.
+- **next-seo**: Optimización SEO.
+- **@vercel/analytics**: Analíticas de rendimiento.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Instalación
 
-## Learn More
+1. Clona el repositorio: `git clone https://github.com/activity13/viure-experience.git`
+2. Instala dependencias: `npm install`
+3. Configura variables de entorno (`.env.local` para EmailJS).
+4. Ejecuta en desarrollo: `npm run dev`
 
-To learn more about Next.js, take a look at the following resources:
+## Estructura
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+viure-web/
+├── /src
+| ├── /app
+│ | ├── /[...locale] (rutas: /es, /en)
+| │ ├── layout.tsx
+| │ ├── page.tsx
+| │ ├── global.css
+| │ └── /terms-conditions
+| | | └── page.tsx
+│ | └──/components (Hero.tsx, DestinationCard.tsx, etc.)
+| └──/i18n
+| | └── navigation.ts
+| | ├── request.ts
+| | └── routing.ts
+├── /public (imágenes, videos)
+├── /locales (es.json, en.json)
+├── /lib (emailjs.ts, seo.ts)
+├── next.config.js
+├── tsconfig.json
+├── tailwind.config.js
+├── .eslintrc.json
+├── .prettierrc
+├── .env.local
+└── README.md
+text## Despliegue
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Plataforma**: Vercel (URL: `viure-web.vercel.app`).
+- **Dominio**: Configurado con GoDaddy (pendiente: `viure.com`).
 
-## Deploy on Vercel
+## Propiedad
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Código exclusivo para Viure. Desarrollado por [Tu Nombre/VeryFazty]. Transferible al cliente al finalizar.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Contribución
+
+- Reporta issues en GitHub.
+- Contacto: [tu-email@veryfazty.com].
+
+## Licencia
+
+Sin licencia pública. Propiedad exclusiva de Viure (ver acuerdo con el cliente).

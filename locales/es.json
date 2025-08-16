@@ -2,8 +2,8 @@
   "translation": {
     "language": "es",
     "LanguageSwitcher": {
-      "english": "English",
-      "spanish": "Español"
+      "english": "EN",
+      "spanish": "ES"
     },
     "translations": {
       "common": {
@@ -18,13 +18,14 @@
         "chat": "Conversemos"
       },
       "Hero": {
-        "title": "¡Una Maravilla del Mundo!",
-        "description": "Aquí comienza tu viaje con Viure."
+        "title": "Viajes en grupo para quienes trabajan remoto y quieren vivir más intensamente.",
+        "description": "En Viure Experience diseñamos experiencias para personas que pueden trabajar desde cualquier lugar, buscan aventura y quieren pertenecer a una comunidad que los inspira a crecer."
       },
       "Navbar": {
         "about": "Sobre Nosotros",
-        "trips": "Proximos Viajes",
-        "book": "Reservar"
+        "trips": "Próximos Viajes",
+        "book": "Reserva",
+        "terms": "T&C"
       },
       "TermsAndConditions": {
         "LastUpdated": "Última actualización: 31 de julio de 2025",

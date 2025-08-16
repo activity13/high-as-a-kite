@@ -7,10 +7,11 @@ export default function Home() {
   return (
     <>
       <Hero
-        image="/images/kite.jpg"
+        image="/images/nomade.jpeg"
         title={t('Hero.title')}
         description={t('Hero.description')}
       />
+      <div className="min-h-screen bg-blue-950"></div>
     </>
   );
 }

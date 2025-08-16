@@ -2,8 +2,8 @@
   "translation": {
     "language": "en",
     "LanguageSwitcher": {
-      "english": "English",
-      "spanish": "Español"
+      "english": "EN",
+      "spanish": "ES"
     },
     "translations": {
       "common": {
@@ -18,13 +18,14 @@
         "chat": "Let's talk."
       },
       "Hero": {
-        "title": "A Wonder of The World!",
-        "description": "Here begins your journey with Viure."
+        "title": "Group trips for remote workers who want to live more intensely.",
+        "description": "At Viure Experience, we design experiences for people who can work from anywhere, seek adventure, and want to belong to a community that inspires them to grow."
       },
       "Navbar": {
         "about": "About Us",
         "trips": "Upcoming Trips",
-        "book": "Book now"
+        "book": "Book now",
+        "terms": "T&C"
       },
       "TermsAndConditions": {
         "LastUpdated": "July 31, 2025",

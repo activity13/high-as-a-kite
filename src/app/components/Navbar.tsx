@@ -5,30 +5,100 @@ import LanguageSwitcher from './LanguageSwitcher';
 export default function Navbar() {
   const t = useTranslations('translation.translations');
   return (
-    <nav
-      className="navbar w-full px-6 py-4 flex items-center  fixed inset-x-0 top-0 z-10 text-white"
-      style={{
-        backdropFilter: 'blur(2px)',
-      }}>
-      {/* Logo */}
-      <div className="navbar-start text-2xl font-semibold">
-        <Link href={'/'}>{t('common.companyName')}</Link>
+    <div className="drawer">
+      <input id="navbar-drawer" type="checkbox" className="drawer-toggle" />
+
+      {/* Contenido principal */}
+      <div className="drawer-content">
+        <nav
+          className="
+        navbar 
+        fixed inset-x-0 top-0 z-20 
+        w-full 
+        px-4 md:px-12 
+        py-4 md:py-6 
+        flex items-center justify-between
+        text-white 
+        bg-black/30 backdrop-blur-md 
+        border-b border-white/10
+      ">
+          {/* Logo */}
+          <div className="text-xl md:text-2xl font-semibold">
+            <Link href="/">{t('common.companyName')}</Link>
+          </div>
+
+          {/* Menú Desktop */}
+          <div className="hidden md:flex items-center gap-8">
+            <Link
+              href="/about"
+              className="text-white/90 hover:text-white hover:scale-105 transition">
+              {t('Navbar.about')}
+            </Link>
+            <Link
+              href="/trips"
+              className="text-white/90 hover:text-white hover:scale-105 transition">
+              {t('Navbar.trips')}
+            </Link>
+            <Link
+              href="/book"
+              className="text-white/90 hover:text-white hover:scale-105 transition">
+              {t('Navbar.book')}
+            </Link>
+            <Link
+              href="/terms-conditions"
+              className="text-white/90 hover:text-white hover:scale-105 transition">
+              {t('Navbar.terms')}
+            </Link>
+          </div>
+
+          {/* Idiomas + Hamburguesa */}
+          <div className="flex items-center gap-4">
+            <div className="hidden md:block">
+              <LanguageSwitcher />
+            </div>
+            {/* Botón hamburguesa solo en mobile */}
+            <label
+              htmlFor="navbar-drawer"
+              className="md:hidden btn btn-ghost btn-circle">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </label>
+          </div>
+        </nav>
       </div>
 
-      {/* Menú de navegación */}
-      <div className="navbar-center items-center text-center gap-8">
-        <button className="text-foreground hover:text-primary transition-colors">
-          Nosotros
-        </button>
-        <button className="text-foreground hover:text-primary transition-colors">
-          Próximos Viajes
-        </button>
-        <button className="px-6">Reserva</button>
-        <Link href={'/terms-conditions'}>T&C</Link>
+      {/* Drawer Side */}
+      <div className="drawer-side z-30">
+        <label htmlFor="navbar-drawer" className="drawer-overlay"></label>
+        <ul className="menu p-4 w-64 min-h-full bg-black/90 text-white">
+          <li>
+            <Link href="/about">{t('Navbar.about')}</Link>
+          </li>
+          <li>
+            <Link href="/trips">{t('Navbar.trips')}</Link>
+          </li>
+          <li>
+            <Link href="/book">{t('Navbar.book')}</Link>
+          </li>
+          <li>
+            <Link href="/terms-conditions">{t('Navbar.terms')}</Link>
+          </li>
+          <li>
+            <LanguageSwitcher />
+          </li>
+        </ul>
       </div>
-      <div className="navbar-end">
-        <LanguageSwitcher />
-      </div>
-    </nav>
+    </div>
   );
 }
