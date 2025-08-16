@@ -2,7 +2,6 @@ import React from 'react';
 
 import { useTranslations } from 'next-intl';
 import { MessageCircle, Facebook, Instagram } from 'lucide-react';
-// @ts-ignore
 interface i18nProps {
   title: string;
   image: string;
