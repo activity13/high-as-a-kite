@@ -1,6 +1,7 @@
-import { i, section } from 'framer-motion/client';
+import React from 'react';
+
 import { useTranslations } from 'next-intl';
-import { MessageCircle, Facebook, Instagram, Twitter } from 'lucide-react';
+import { MessageCircle, Facebook, Instagram } from 'lucide-react';
 // @ts-ignore
 interface i18nProps {
   title: string;

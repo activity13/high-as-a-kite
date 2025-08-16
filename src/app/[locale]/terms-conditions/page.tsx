@@ -1,4 +1,4 @@
-import { div } from 'framer-motion/client';
+import React from 'react';
 import { useTranslations } from 'next-intl';
 
 export default function TermsConditionsPage() {
