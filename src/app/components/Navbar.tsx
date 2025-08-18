@@ -47,7 +47,7 @@ export default function Navbar() {
             <Link
               href="/terms-conditions"
               className="text-white/90 hover:text-white hover:scale-105 transition">
-              {t('Navbar.terms')}
+              {t('Navbar.blog')}
             </Link>
           </div>
 

@@ -3,7 +3,6 @@ import createNextIntlPlugin from 'next-intl/plugin';
 
 const nextConfig: NextConfig = {
   /* config options here */
-  scrollRestoration: true,
 };
 
 const withNextIntl = createNextIntlPlugin();
