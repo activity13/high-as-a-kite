@@ -6,6 +6,7 @@ import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 import { Analytics } from '@vercel/analytics/next';
 
 const geistSans = Geist({
@@ -40,9 +41,9 @@ export default async function LocaleLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} bg-amber-600 antialiased h-screen `}>
         <NextIntlClientProvider>
-          {' '}
           <Navbar />
           {children}
+          <Footer />
         </NextIntlClientProvider>
         <Analytics />
       </body>

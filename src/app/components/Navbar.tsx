@@ -53,9 +53,7 @@ export default function Navbar() {
 
           {/* Idiomas + Hamburguesa */}
           <div className="flex items-center gap-4">
-            <div className="hidden md:block">
-              <LanguageSwitcher />
-            </div>
+            <LanguageSwitcher />
             {/* Botón hamburguesa solo en mobile */}
             <label
               htmlFor="navbar-drawer"
@@ -92,10 +90,7 @@ export default function Navbar() {
             <Link href="/book">{t('Navbar.book')}</Link>
           </li>
           <li>
-            <Link href="/terms-conditions">{t('Navbar.terms')}</Link>
-          </li>
-          <li>
-            <LanguageSwitcher />
+            <Link href="/terms-conditions">{t('Navbar.blog')}</Link>
           </li>
         </ul>
       </div>

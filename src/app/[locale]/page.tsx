@@ -10,7 +10,6 @@ export default function Home() {
         title={t('Hero.title')}
         description={t('Hero.description')}
       />
-      <div className="min-h-screen bg-white"></div>
     </>
   );
 }

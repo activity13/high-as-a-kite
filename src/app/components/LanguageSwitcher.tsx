@@ -15,7 +15,9 @@ export default function LanguageSwitcher() {
     const newLocale = e.target.value;
     // Reemplaza el idioma en la URL actual (por ejemplo, /en/about -> /es/about)
     const newPath = pathname.replace(/^\/[a-z]{2}/, `/${newLocale}`);
-    router.push(newPath);
+    router.push(newPath, {
+      scroll: false,
+    });
   };
 
   return (
@@ -23,7 +25,7 @@ export default function LanguageSwitcher() {
       <select
         value={locale}
         onChange={handleLanguageChange}
-        className="block select-xs select-warning w-full text-primary bg-white border border-gray-300 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+        className="block select-xs select-warning w-full text-white bg-black/30 backdrop-blur-md appearance-none  rounded-full hover:border-gray-500 px-4 py-2 pr-8  shadow leading-tight focus:outline-none focus:shadow-outline text-xl text-bold">
         <option value="en">{t('english')}</option>
         <option value="es">{t('spanish')}</option>
       </select>

@@ -8,7 +8,8 @@
     "translations": {
       "common": {
         "locale": "es",
-        "companyName": "Viure"
+        "companyName": "Viure",
+        "slogan": "Aventuraos hijos mios. Since 1999"
       },
       "HomePage": {
         "title": "Conoce como lo hacemos posible en Viure!",
@@ -25,7 +26,28 @@
         "about": "Sobre Nosotros",
         "trips": "Próximos Viajes",
         "book": "Reserva",
-        "terms": "T&C"
+        "blog": "Blog"
+      },
+      "Footer": {
+        "services": {
+          "title": "Servicios",
+          "trip": "El Viaje"
+        },
+        "company": {
+          "title": "Compañía",
+          "about": "Nosotros",
+          "trips": "Próximos Viajes",
+          "book": "Reserva Ahora",
+          "blog": "Blog"
+        },
+        "legal": {
+          "title": "Legal",
+          "termsAndConditions": "Terminos y Condiciones",
+          "tripPolicies": "Politica de Viaje y Expediciones",
+          "paymentPolicies": "Policia de Pago y Devoluciones",
+          "privacyPolicies": "Politica de Privacidad",
+          "rights": "Viure Experience © 2025. Todos los derechos reservados."
+        }
       },
       "TermsAndConditions": {
         "LastUpdated": "Última actualización: 31 de julio de 2025",
@@ -247,6 +269,96 @@
         "Jurisdiction": {
           "Title": "Jurisdicción",
           "Description": "VIURE no es responsable por lesiones, pérdidas o daños incurridos durante tu participación en un Viaje. Todas las disputas deben resolverse mediante arbitraje vinculante en Wyoming, a menos que califiquen para un tribunal de pequeñas causas. Estos Términos se rigen por las leyes de Wyoming, EE. UU. Todas las reclamaciones deben resolverse de manera individual. No se permiten acciones colectivas."
+        }
+      },
+      "TripAndExpeditionsPolicies": {
+        "Title": "Políticas de Viajes y Expediciones",
+        "Introduction": {
+          "Description": "Estas políticas establecen las expectativas y directrices para los participantes que se unan a los viajes y expediciones de VIURE. Al reservar, aceptas seguir estas reglas para una experiencia fluida y agradable."
+        },
+        "AccommodationsAndTravel": {
+          "Title": "Alojamientos y Viajes",
+          "Accommodation": {
+            "Description": "Te alojarás en viviendas compartidas o privadas con acceso a espacios de trabajo y eventos grupales. El objetivo es la comodidad y la comunidad."
+          },
+          "Flights": {
+            "Description": "Eres responsable de reservar tus propios vuelos hacia y desde el destino del viaje. VIURE no cubre los costos de viaje ni reembolsa por problemas con vuelos, como cancelaciones o retrasos."
+          },
+          "Luggage": {
+            "Description": "El equipaje estándar incluye una maleta de mano. El equipaje facturado (hasta 23 kg / 50 lbs) o equipaje adicional puede incurrir en tarifas extra, sujeto a disponibilidad. VIURE no es responsable por equipaje perdido, dañado o retrasado."
+          },
+          "Pets": {
+            "Description": "Se pueden permitir mascotas en ciertos viajes, dependiendo del proveedor de alojamiento. Serás responsable de cualquier costo adicional relacionado con las mascotas."
+          }
+        },
+        "ResponsibilitiesAndSafety": {
+          "Title": "Responsabilidades y Seguridad",
+          "PersonalResponsibility": {
+            "Description": "Eres responsable de tus acciones y comportamiento durante el viaje, incluyendo en alojamientos, espacios de trabajo y eventos. VIURE proporciona orientación, pero no asume responsabilidad por las acciones individuales o los riesgos asumidos por los participantes."
+          },
+          "Damages": {
+            "Description": "Si causas daños a los alojamientos o instalaciones, se te cobrarán las reparaciones. Si nadie asume la responsabilidad por daños en alojamientos compartidos, los costos se dividirán equitativamente entre los compañeros de vivienda. Los daños deben reportarse inmediatamente al Anfitrión/Coanfitrión para su resolución."
+          },
+          "HealthAndSafety": {
+            "Description": "Los participantes deben cumplir con las regulaciones locales de salud, incluidos los protocolos de COVID-19, requisitos de vacunación y otras directrices de seguridad. Es obligatorio contar con un seguro de viaje que cubra emergencias médicas, cancelaciones y responsabilidad personal. La prueba de un seguro de viaje válido debe presentarse al menos 30 días antes de la fecha de inicio del viaje."
+          }
+        },
+        "WorkspacesAndBehavior": {
+          "Title": "Espacios de Trabajo y Comportamiento",
+          "WorkspaceEtiquette": {
+            "Description": "Respeta las reglas del espacio de trabajo y mantén un ambiente profesional y colaborativo."
+          },
+          "Security": {
+            "Description": "VIURE no es responsable por objetos perdidos o robados en los espacios de trabajo. Siempre asegura tus pertenencias."
+          }
+        },
+        "AgeAndSpecialRequests": {
+          "Title": "Edad y Solicitudes Especiales",
+          "AgeRequirement": {
+            "Description": "Los participantes deben tener al menos 21 años."
+          },
+          "SpecialRequests": {
+            "Description": "Si tienes alguna solicitud especial (por ejemplo, restricciones dietéticas, preferencias de habitación), infórmanos al momento de la reserva. Haremos lo mejor para acomodar las solicitudes, pero no podemos garantizar que todas se cumplan."
+          }
+        },
+        "LegalAndLiability": {
+          "Title": "Legal y Responsabilidad",
+          "IllegalActivity": {
+            "Description": "VIURE tiene una política de tolerancia cero para drogas ilegales o comportamientos ilegales. Si participas en actividades ilegales, podrías ser expulsado del viaje a tu propio costo sin reembolso. VIURE no es responsable por las consecuencias legales de actividades ilegales."
+          },
+          "TravelDocuments": {
+            "Description": "Eres responsable de obtener todos los documentos necesarios, como pasaportes, visas y vacunas. Si no tienes los documentos requeridos, serás responsable de cualquier costo adicional causado por la falta de documentación de viaje. VIURE no es responsable de proporcionar asesoramiento legal o relacionado con visas."
+          }
+        },
+        "SharedAccommodation": {
+          "Title": "Alojamiento Compartido",
+          "SharingRooms": {
+            "Description": "A menos que estés en un alojamiento privado, compartirás tu habitación con otros. Respeta a tus compañeros de vivienda considerando sus necesidades de trabajo, sueño y personales."
+          },
+          "RoomAssignments": {
+            "Description": "VIURE no garantiza preferencias de habitación. En espacios compartidos, podemos emparejar a los participantes por sexo, pero podrían darse habitaciones mixtas. Los participantes no deben llevar a no participantes al alojamiento compartido."
+          },
+          "HealthRisks": {
+            "Description": "Al compartir alojamiento, reconoces la posibilidad de contraer o propagar enfermedades."
+          }
+        },
+        "HousingPromise": {
+          "Title": "Compromiso de Alojamiento",
+          "Description": "VIURE se esfuerza por proporcionar alojamientos de calidad, pero reconoce que pueden surgir circunstancias imprevistas. Si ocurre alguno de los siguientes problemas, repórtalos inmediatamente a tu Anfitrión o Coanfitrión de la comunidad:",
+          "List": [
+            "Cortes de Energía: Si hay un corte que dura más de 48 horas y afecta el edificio o la unidad.",
+            "Internet: Si no hay internet disponible, VIURE puede proporcionar una tarjeta SIM, un punto de acceso móvil o trasladarte a un lugar con conectividad confiable.",
+            "Calefacción o Refrigeración: En climas extremos (por encima de 26°C para climas cálidos o por debajo de 10°C para climas fríos), VIURE garantizará aire acondicionado o calefacción, sujeto a disponibilidad.",
+            "Limpieza: Las habitaciones deben estar limpias al momento del check-in. Nota: Los alojamientos compartidos no incluyen toallas."
+          ]
+        },
+        "NOMATRIBEAsIntermediary": {
+          "Title": "VIURE como Intermediario",
+          "Description": "Actividades y Servicios: VIURE trabaja con agencias locales para ofrecer actividades y servicios. Sin embargo, no somos responsables por cancelaciones debido al clima u otros problemas. Intentaremos encontrar alternativas adecuadas."
+        },
+        "ContactAndQuestions": {
+          "Title": "Contacto y Preguntas",
+          "Description": "Para cualquier pregunta o inquietud, contacta al soporte de VIURE en: hello@viure.co"
         }
       }
     }
