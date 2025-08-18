@@ -90,7 +90,7 @@ export default function Navbar() {
             <Link href="/book">{t('Navbar.book')}</Link>
           </li>
           <li>
-            <Link href="/terms-conditions">{t('Navbar.blog')}</Link>
+            <Link href="/blog">{t('Navbar.blog')}</Link>
           </li>
         </ul>
       </div>

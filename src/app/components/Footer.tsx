@@ -36,10 +36,12 @@ export default function Footer() {
       </nav>
       <nav>
         <h6 className="footer-title">{t('Footer.legal.title')}</h6>
-        <a className="link link-hover">
+        <Link href={'/terms-conditions'} className="link link-hover">
           {t('Footer.legal.termsAndConditions')}
-        </a>
-        <a className="link link-hover">{t('Footer.legal.tripPolicies')}</a>
+        </Link>
+        <Link href={'/trip-policies'} className="link link-hover">
+          {t('Footer.legal.tripPolicies')}
+        </Link>
         <a className="link link-hover">{t('Footer.legal.paymentPolicies')}</a>
         <a className="link link-hover">{t('Footer.legal.privacyPolicies')}</a>
       </nav>
