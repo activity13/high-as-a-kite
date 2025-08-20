@@ -279,54 +279,67 @@
         "AccommodationsAndTravel": {
           "Title": "Alojamientos y Viajes",
           "Accommodation": {
+            "Title": "Accomodation",
             "Description": "Te alojarás en viviendas compartidas o privadas con acceso a espacios de trabajo y eventos grupales. El objetivo es la comodidad y la comunidad."
           },
           "Flights": {
+            "Title": "Vuelos",
             "Description": "Eres responsable de reservar tus propios vuelos hacia y desde el destino del viaje. VIURE no cubre los costos de viaje ni reembolsa por problemas con vuelos, como cancelaciones o retrasos."
           },
           "Luggage": {
+            "Title": "Equipaje",
             "Description": "El equipaje estándar incluye una maleta de mano. El equipaje facturado (hasta 23 kg / 50 lbs) o equipaje adicional puede incurrir en tarifas extra, sujeto a disponibilidad. VIURE no es responsable por equipaje perdido, dañado o retrasado."
           },
           "Pets": {
+            "Title": "Mascotas",
             "Description": "Se pueden permitir mascotas en ciertos viajes, dependiendo del proveedor de alojamiento. Serás responsable de cualquier costo adicional relacionado con las mascotas."
           }
         },
         "ResponsibilitiesAndSafety": {
           "Title": "Responsabilidades y Seguridad",
           "PersonalResponsibility": {
+            "Title": "Responsabilidad Personal",
             "Description": "Eres responsable de tus acciones y comportamiento durante el viaje, incluyendo en alojamientos, espacios de trabajo y eventos. VIURE proporciona orientación, pero no asume responsabilidad por las acciones individuales o los riesgos asumidos por los participantes."
           },
           "Damages": {
+            "Title": "Daños a la Propiedad",
             "Description": "Si causas daños a los alojamientos o instalaciones, se te cobrarán las reparaciones. Si nadie asume la responsabilidad por daños en alojamientos compartidos, los costos se dividirán equitativamente entre los compañeros de vivienda. Los daños deben reportarse inmediatamente al Anfitrión/Coanfitrión para su resolución."
           },
           "HealthAndSafety": {
+            "Title": "Salud y Seguridad",
             "Description": "Los participantes deben cumplir con las regulaciones locales de salud, incluidos los protocolos de COVID-19, requisitos de vacunación y otras directrices de seguridad. Es obligatorio contar con un seguro de viaje que cubra emergencias médicas, cancelaciones y responsabilidad personal. La prueba de un seguro de viaje válido debe presentarse al menos 30 días antes de la fecha de inicio del viaje."
           }
         },
         "WorkspacesAndBehavior": {
           "Title": "Espacios de Trabajo y Comportamiento",
           "WorkspaceEtiquette": {
+            "Title": "Etiqueta en el Espacio de Trabajo",
             "Description": "Respeta las reglas del espacio de trabajo y mantén un ambiente profesional y colaborativo."
           },
           "Security": {
+            "Title": "Seguridad",
             "Description": "VIURE no es responsable por objetos perdidos o robados en los espacios de trabajo. Siempre asegura tus pertenencias."
           }
         },
         "AgeAndSpecialRequests": {
           "Title": "Edad y Solicitudes Especiales",
           "AgeRequirement": {
+            "Title": "Requerimiento de Edad",
             "Description": "Los participantes deben tener al menos 21 años."
           },
           "SpecialRequests": {
+            "Title": "Solicitudes Especiales",
             "Description": "Si tienes alguna solicitud especial (por ejemplo, restricciones dietéticas, preferencias de habitación), infórmanos al momento de la reserva. Haremos lo mejor para acomodar las solicitudes, pero no podemos garantizar que todas se cumplan."
           }
         },
         "LegalAndLiability": {
           "Title": "Legal y Responsabilidad",
           "IllegalActivity": {
+            "Title": "Actividad Ilegal",
             "Description": "VIURE tiene una política de tolerancia cero para drogas ilegales o comportamientos ilegales. Si participas en actividades ilegales, podrías ser expulsado del viaje a tu propio costo sin reembolso. VIURE no es responsable por las consecuencias legales de actividades ilegales."
           },
           "TravelDocuments": {
+            "Title": "Documentos de Viaje",
             "Description": "Eres responsable de obtener todos los documentos necesarios, como pasaportes, visas y vacunas. Si no tienes los documentos requeridos, serás responsable de cualquier costo adicional causado por la falta de documentación de viaje. VIURE no es responsable de proporcionar asesoramiento legal o relacionado con visas."
           }
         },

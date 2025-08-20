@@ -3,10 +3,12 @@ import React from 'react';
 import { useTranslations } from 'next-intl';
 
 export default function TripPolicies() {
-  const t = useTranslations('TripAndExpeditionsPolicies');
+  const t = useTranslations(
+    'translation.translations.TripAndExpeditionsPolicies',
+  );
 
   return (
-    <div className="max-w-4xl mx-auto p-8 bg-white shadow-lg rounded-lg">
+    <div className="max-w-screen mx-auto p-8 bg-white shadow-lg rounded-lg mt-[86px]">
       <h1 className="text-3xl font-bold mb-6 text-center">{t('Title')}</h1>
       <p className="text-lg mb-8">{t('Introduction.Description')}</p>
 

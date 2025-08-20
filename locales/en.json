@@ -279,66 +279,82 @@
         "AccommodationsAndTravel": {
           "Title": "Accommodations & Travel",
           "Accommodation": {
+            "Title": "Accomodation",
             "Description": "You’ll stay in shared or private housing with access to workspaces and group events. The goal is comfort and community."
           },
           "Flights": {
+            "Title": "Flights",
             "Description": "You’re responsible for booking your own flights to and from the trip destination. VIURE does not cover travel costs or reimburse for flight issues like cancellations or delays."
           },
           "Luggage": {
+            "Title": "Luggage",
             "Description": "Standard luggage includes one carry-on bag. Checked bag (up to 23 kg / 50 lbs) or additional luggage may incur extra fees, subject to availability. VIURE is not responsible for lost, damaged, or delayed luggage."
           },
           "Pets": {
+            "Title": "Pets",
             "Description": "Pets may be allowed on certain trips, depending on the accommodation provider. You’ll be responsible for any extra costs related to pets."
           }
         },
         "ResponsibilitiesAndSafety": {
           "Title": "Responsibilities & Safety",
           "PersonalResponsibility": {
+            "Title": "Personal Responsibility",
             "Description": "You are responsible for your actions and behavior during the trip, including at accommodations, workspaces, and events. VIURE provides guidance, but assumes no liability for individual actions or risks taken by participants."
           },
           "Damages": {
+            "Title": "Damages",
             "Description": "If you cause damage to accommodation or facilities, you will be charged for repairs. If no one takes responsibility for damage in shared accommodations, costs will be split equally among housemates. Damages must be reported immediately to the Host/Co-Host for resolution."
           },
           "HealthAndSafety": {
+            "Title": "Health & Safety",
             "Description": "Participants must comply with local health regulations, including COVID-19 protocols, vaccination requirements, and other safety guidelines. Travel insurance covering medical emergencies, cancellations, and personal liability is mandatory. Proof of valid travel insurance must be submitted at least 30 days before the trip start date."
           }
         },
         "WorkspacesAndBehavior": {
           "Title": "Workspaces & Behavior",
           "WorkspaceEtiquette": {
+            "Title": "Workspace Etiquette",
             "Description": "Respect workspace rules and maintain a professional and collaborative environment."
           },
           "Security": {
+            "Title": "Security",
             "Description": "VIURE is not responsible for lost or stolen items in workspaces. Always secure your belongings."
           }
         },
         "AgeAndSpecialRequests": {
           "Title": "Age & Special Requests",
           "AgeRequirement": {
+            "Title": "Age Requirement",
             "Description": "Participants must be at least 21 years old."
           },
           "SpecialRequests": {
+            "Title": "Special Requests",
             "Description": "If you have any special requests (e.g., dietary restrictions, room preferences), please inform VIURE at the time of booking. We will do our best to accommodate requests, but cannot guarantee all will be fulfilled."
           }
         },
         "LegalAndLiability": {
           "Title": "Legal & Liability",
           "IllegalActivity": {
+            "Title": "Illegal Activity",
             "Description": "VIURE has a zero-tolerance policy for illegal drugs or illegal behavior. If you engage in illegal activities, you may be removed from the trip at your own cost with no refund. VIURE is not responsible for legal consequences of any illegal activities."
           },
           "TravelDocuments": {
+            "Title": "Travel Documents",
             "Description": "You’re responsible for obtaining all necessary documents, like passports, visas, and vaccinations. If you don’t have the required documents, you’ll be responsible for any additional costs caused by missing travel paperwork. VIURE is not responsible for providing legal or visa-related advice."
           }
         },
         "SharedAccommodation": {
           "Title": "Shared Accommodation",
           "SharingRooms": {
+            "Title": "Sharing Rooms",
             "Description": "Unless you're in private accommodation, you’ll share your room with others. Respect your housemates by considering their working, sleeping, and personal needs."
           },
           "RoomAssignments": {
+            "Title": "Room Assignments",
             "Description": "VIURE does not guarantee room preferences. In shared spaces, we may pair participants by sex, but co-ed rooms could happen. Participants should not bring non-participants into shared accommodation."
           },
           "HealthRisks": {
+            "Title": "Health Risks",
             "Description": "By sharing accommodation, you acknowledge the possibility of contracting or spreading illnesses."
           }
         },
@@ -358,7 +374,7 @@
         },
         "ContactAndQuestions": {
           "Title": "Contact & Questions",
-          "Description": "For any questions or concerns, reach out to VIURE support at: hello@viure.co"
+          "Description": "For any questions or concerns, reach out to VIURE support at: hello@viure.com"
         }
       }
     }
