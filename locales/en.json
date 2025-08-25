@@ -49,7 +49,12 @@
           "rights": "Viure Experience © 2025. All rights reserved."
         }
       },
+      "About": {
+        "title": "About Us",
+        "description": "Learn more about Viure Experience, our mission, and how we design experiences for remote workers seeking adventure and community."
+      },
       "TermsAndConditions": {
+        "Title": "Terms and Conditions",
         "LastUpdated": "July 31, 2025",
         "Introduction": {
           "Description": "VIURE acts as an intermediary for booking accommodations, excursions, and other travel-related services ('Third-Party Services'). By participating in a VIURE Trip or Expedition, you acknowledge and agree to our WAIVER and PRIVACY POLICY, and to the following terms:"
@@ -376,6 +381,37 @@
           "Title": "Contact & Questions",
           "Description": "For any questions or concerns, reach out to VIURE support at: hello@viure.com"
         }
+      },
+      "SEO": {
+        "home": {
+          "title": "Viure Experience - Group trips for remote workers who want to live more intensely.",
+          "description": "At Viure Experience, we design experiences for people who can work from anywhere, seek adventure, and want to belong to a community that inspires them to grow."
+        },
+        "about": {
+          "title": "About Us - Viure Experience",
+          "description": "Learn more about Viure Experience, our mission, and how we design experiences for remote workers seeking adventure and community."
+        },
+        "terms-and-conditions": {
+          "title": "Terms and Conditions - Viure Experience",
+          "description": "Read the terms and conditions of Viure Experience to understand our policies and responsibilities as an intermediary in booking accommodations and third-party services."
+        },
+        "privacy-policy": {
+          "title": "Privacy Policy - Viure Experience",
+          "description": "Read our privacy policy to understand how we collect, use, and share your personal information."
+        }
+      },
+      "Newsletter": {
+        "title": "Join our newsletter",
+        "description": "Get the latest news and updates right in your inbox.",
+        "emailPlaceholder": "Enter your email",
+        "namePlaceholder": "Enter your name",
+        "agreePolicy1": "I accept",
+        "agreePolicy2": "the privacy policy",
+        "button": "Suscribirse",
+        "loading": "Subscribing...",
+        "success": "Thank you for subscribing!",
+        "successMessage": "We'll keep you up to date with the latest news and events.",
+        "error": "Something went wrong. Please try again."
       }
     }
   }

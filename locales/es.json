@@ -49,7 +49,12 @@
           "rights": "Viure Experience © 2025. Todos los derechos reservados."
         }
       },
+      "About": {
+        "title": "Sobre Nosotros",
+        "description": "Conoce más sobre Viure Experience, nuestra misión y cómo diseñamos experiencias para trabajadores remotos que buscan aventura y comunidad."
+      },
       "TermsAndConditions": {
+        "Title": "Términos y Condiciones",
         "LastUpdated": "Última actualización: 31 de julio de 2025",
         "Introduction": {
           "Description": "VIURE actúa como intermediario para la reserva de alojamientos, excursiones y otros servicios relacionados con viajes ('Servicios de Terceros'). Al participar en un Viaje o Expedición de VIURE, reconoces y aceptas nuestra EXENCIÓN DE RESPONSABILIDAD y POLÍTICA DE PRIVACIDAD, así como los siguientes términos:"
@@ -346,12 +351,15 @@
         "SharedAccommodation": {
           "Title": "Alojamiento Compartido",
           "SharingRooms": {
+            "Title": "Compartir Habitaciones",
             "Description": "A menos que estés en un alojamiento privado, compartirás tu habitación con otros. Respeta a tus compañeros de vivienda considerando sus necesidades de trabajo, sueño y personales."
           },
           "RoomAssignments": {
+            "Title": "Asignaciones de Habitaciones",
             "Description": "VIURE no garantiza preferencias de habitación. En espacios compartidos, podemos emparejar a los participantes por sexo, pero podrían darse habitaciones mixtas. Los participantes no deben llevar a no participantes al alojamiento compartido."
           },
           "HealthRisks": {
+            "Title": "Riesgos de Salud",
             "Description": "Al compartir alojamiento, reconoces la posibilidad de contraer o propagar enfermedades."
           }
         },
@@ -373,6 +381,41 @@
           "Title": "Contacto y Preguntas",
           "Description": "Para cualquier pregunta o inquietud, contacta al soporte de VIURE en: hello@viure.co"
         }
+      },
+      "SEO": {
+        "home": {
+          "title": "Viure Experience - Viajes en grupo para quienes trabajan remoto y quieren vivir más intensamente.",
+          "description": "En Viure Experience diseñamos experiencias para personas que pueden trabajar desde cualquier lugar, buscan aventura y quieren pertenecer a una comunidad que los inspira a crecer."
+        },
+        "about": {
+          "title": "Sobre Nosotros - Viure Experience",
+          "description": "Conoce más sobre Viure Experience, nuestra misión y cómo diseñamos experiencias para trabajadores remotos que buscan aventura y comunidad."
+        },
+        "terms-and-conditions": {
+          "title": "Términos y Condiciones - Viure Experience",
+          "description": "Lee los términos y condiciones de Viure Experience para entender nuestras políticas y responsabilidades como intermediario en la reserva de alojamientos y servicios de terceros."
+        },
+        "privacy-policy": {
+          "title": "Política de Privacidad - Viure Experience",
+          "description": "Lee nuestra política de privacidad para entender como recopilamos, usamos y compartimos tus datos personales."
+        },
+        "trip-policies": {
+          "title": "Políticas de Viajes y Expediciones - Viure Experience",
+          "description": "Lee nuestras políticas de viajes y expediciones para entender las expectativas y directrices para los participantes que se unan a nuestros viajes."
+        }
+      },
+      "Newsletter": {
+        "title": "Suscribete a nuestro newsletter",
+        "description": "Recibe las últimas noticias y actualizaciones de Viure Experience.",
+        "emailPlaceholder": "Escribe tu correo electrónico",
+        "namePlaceholder": "Escribe tu nombre",
+        "agreePolicy1": "Acepto",
+        "agreePolicy2": "las políticas de privacidad",
+        "button": "Suscribirse",
+        "loading": "Suscribiendo...",
+        "success": "¡Gracias por suscribirte!",
+        "successMessage": "Te mantendremos al día con las últimas noticias y eventos.",
+        "error": "Hubo un error. Por favor, inténtalo de nuevo."
       }
     }
   }

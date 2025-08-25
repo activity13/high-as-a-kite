@@ -1,5 +1,35 @@
 import React from 'react';
 import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
+import type { Metadata } from 'next';
+
+interface MyFunctionProps {
+  params: {
+    locale: string;
+  };
+}
+
+export async function generateMetadata({
+  params,
+}: MyFunctionProps): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({
+    locale,
+    namespace: 'translation.translations.SEO',
+  });
+
+  return {
+    title: t('terms-and-conditions.title'),
+    description: t('terms-and-conditions.description'),
+    alternates: {
+      canonical: `https://tu-dominio.com/${locale}`,
+      languages: {
+        en: 'https://tu-dominio.com/en',
+        es: 'https://tu-dominio.com/es',
+      },
+    },
+  };
+}
 
 export default function TermsConditionsPage() {
   const t = useTranslations('translation.translations.TermsAndConditions');
@@ -7,9 +37,7 @@ export default function TermsConditionsPage() {
   return (
     <main className="min-h-screen w-screen bg-gray-100 py-12">
       <div className="max-w-4xl mx-auto p-8 mt-[64px] shadow-lg rounded-lg">
-        <h1 className="text-3xl font-bold mb-6 text-center">
-          Terms & Conditions
-        </h1>
+        <h1 className="text-3xl font-bold mb-6 text-center">{t('Title')}</h1>
         <p className="text-sm text-gray-500 mb-8 text-center">
           {t('LastUpdated')}
         </p>

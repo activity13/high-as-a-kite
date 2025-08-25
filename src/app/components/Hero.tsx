@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { useTranslations } from 'next-intl';
-import { MessageCircle, Facebook, Instagram } from 'lucide-react';
 interface i18nProps {
   title: string;
   image: string;
@@ -34,26 +33,6 @@ export default function Hero({ title, image, description }: i18nProps) {
           </div>
         </div>
       </main>
-      <footer className="relative z-10 w-full px-6 md:px-12 py-4 flex items-center justify-between border-t border-white/20 mt-auto">
-        <div className="flex items-center gap-4">
-          <span className="text-white/90 text-xs md:text-sm">
-            {t('HomePage.follow')}
-          </span>
-          <button className="p-2 text-white/70 hover:text-white transition-colors">
-            <Facebook size={20} />
-          </button>
-          <button className="p-2 text-white/70 hover:text-white transition-colors">
-            <Instagram size={20} />
-          </button>
-        </div>
-        {/* cta */}
-        <div className="flex items-center text-white/90 text-xs md:text-sm">
-          <span className="invisible md:visible">{t('HomePage.chat')}</span>
-          <button className="p-2 text-white/70 hover:text-white transition-colors">
-            <MessageCircle />
-          </button>
-        </div>
-      </footer>
     </section>
   );
 }
