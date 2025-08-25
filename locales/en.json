@@ -398,6 +398,10 @@
         "privacy-policy": {
           "title": "Privacy Policy - Viure Experience",
           "description": "Read our privacy policy to understand how we collect, use, and share your personal information."
+        },
+        "trip-policies": {
+          "title": "Trip & Expeditions Policies - Viure Experience",
+          "description": "Understand the expectations and guidelines for participants joining Viure trips and expeditions."
         }
       },
       "Newsletter": {

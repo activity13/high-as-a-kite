@@ -1,4 +1,5 @@
-import Ract from 'react';
+import React from 'react';
+
 import type { Metadata } from 'next';
 import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
