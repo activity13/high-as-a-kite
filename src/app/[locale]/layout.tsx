@@ -21,9 +21,7 @@ const geistMono = Geist_Mono({
 });
 
 interface MyFunctionProps {
-  params: {
-    locale: string;
-  };
+  params: Promise<{ locale: string }>;
 }
 
 export async function generateMetadata({

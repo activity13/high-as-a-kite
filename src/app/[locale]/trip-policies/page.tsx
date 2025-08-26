@@ -4,9 +4,7 @@ import { getTranslations } from 'next-intl/server';
 import type { Metadata } from 'next';
 
 interface MyFunctionProps {
-  params: {
-    locale: string;
-  };
+  params: Promise<{ locale: string }>;
 }
 
 export async function generateMetadata({
