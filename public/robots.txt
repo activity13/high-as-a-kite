@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://viure.vercel.app
+
+# Sitemaps
+Sitemap: https://viure.vercel.app/sitemap.xml
