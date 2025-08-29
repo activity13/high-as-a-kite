@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Hero
-        image="/images/nomade.jpeg"
+        image="/images/kite.jpg"
         title={t('Hero.title')}
         description={t('Hero.description')}
       />

@@ -20,7 +20,7 @@
       },
       "Hero": {
         "title": "Group trips for remote workers who want to live more intensely.",
-        "description": "At Viure Experience, we design experiences for people who can work from anywhere, seek adventure, and want to belong to a community that inspires them to grow."
+        "description": "At High As A Kite | HAAK, we design experiences for people who can work from anywhere, seek adventure, and want to belong to a community that inspires them to grow."
       },
       "Navbar": {
         "about": "About Us",
@@ -46,12 +46,12 @@
           "tripPolicies": "Trip & Expeditions Policies",
           "paymentPolicies": "Payment & Refund Policies",
           "privacyPolicies": "Privacy Policies",
-          "rights": "Viure Experience © 2025. All rights reserved."
+          "rights": "High As A Kite | HAAK © 2025. All rights reserved."
         }
       },
       "About": {
         "title": "About Us",
-        "description": "Learn more about Viure Experience, our mission, and how we design experiences for remote workers seeking adventure and community."
+        "description": "Learn more about High As A Kite | HAAK, our mission, and how we design experiences for remote workers seeking adventure and community."
       },
       "TermsAndConditions": {
         "Title": "Terms and Conditions",
@@ -384,23 +384,23 @@
       },
       "SEO": {
         "home": {
-          "title": "Viure Experience - Group trips for remote workers who want to live more intensely.",
-          "description": "At Viure Experience, we design experiences for people who can work from anywhere, seek adventure, and want to belong to a community that inspires them to grow."
+          "title": "HAAK",
+          "description": "High as a Kite"
         },
         "about": {
-          "title": "About Us - Viure Experience",
-          "description": "Learn more about Viure Experience, our mission, and how we design experiences for remote workers seeking adventure and community."
+          "title": "About Us - High As A Kite | HAAK",
+          "description": "Learn more about High As A Kite | HAAK, our mission, and how we design experiences for remote workers seeking adventure and community."
         },
         "terms-and-conditions": {
-          "title": "Terms and Conditions - Viure Experience",
-          "description": "Read the terms and conditions of Viure Experience to understand our policies and responsibilities as an intermediary in booking accommodations and third-party services."
+          "title": "Terms and Conditions - High As A Kite | HAAK",
+          "description": "Read the terms and conditions of High As A Kite | HAAK to understand our policies and responsibilities as an intermediary in booking accommodations and third-party services."
         },
         "privacy-policy": {
-          "title": "Privacy Policy - Viure Experience",
+          "title": "Privacy Policy - High As A Kite | HAAK",
           "description": "Read our privacy policy to understand how we collect, use, and share your personal information."
         },
         "trip-policies": {
-          "title": "Trip & Expeditions Policies - Viure Experience",
+          "title": "Trip & Expeditions Policies - High As A Kite | HAAK",
           "description": "Understand the expectations and guidelines for participants joining Viure trips and expeditions."
         }
       },

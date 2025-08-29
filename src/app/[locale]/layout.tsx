@@ -1,23 +1,23 @@
+// Obligatorios
 import React from 'react';
-import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+// Estilos y fuentes
 import './globals.css';
+import localFont from 'next/font/local';
+// Internacionalización
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
-import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
+import { getTranslations } from 'next-intl/server';
+// Navegación
+import { notFound } from 'next/navigation';
+// SEO Y ANALYTICS
+import type { Metadata } from 'next';
+import { Analytics } from '@vercel/analytics/next';
+// Componentes
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { Analytics } from '@vercel/analytics/next';
-import { getTranslations } from 'next-intl/server';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-});
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
+const primaryFont = localFont({
+  src: '../../../public/fonts/StretchPro.otf',
 });
 
 interface MyFunctionProps {
@@ -61,7 +61,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} bg-amber-600 antialiased h-screen`}>
+        className={`${primaryFont.className} bg-amber-600 antialiased h-screen`}>
         <NextIntlClientProvider>
           <Navbar />
           {children}

@@ -20,7 +20,7 @@
       },
       "Hero": {
         "title": "Viajes en grupo para quienes trabajan remoto y quieren vivir más intensamente.",
-        "description": "En Viure Experience diseñamos experiencias para personas que pueden trabajar desde cualquier lugar, buscan aventura y quieren pertenecer a una comunidad que los inspira a crecer."
+        "description": "En High As A Kite | HAAK diseñamos experiencias para personas que pueden trabajar desde cualquier lugar, buscan aventura y quieren pertenecer a una comunidad que los inspira a crecer."
       },
       "Navbar": {
         "about": "Sobre Nosotros",
@@ -46,12 +46,12 @@
           "tripPolicies": "Politica de Viaje y Expediciones",
           "paymentPolicies": "Policia de Pago y Devoluciones",
           "privacyPolicies": "Politica de Privacidad",
-          "rights": "Viure Experience © 2025. Todos los derechos reservados."
+          "rights": "High As A Kite | HAAK © 2025. Todos los derechos reservados."
         }
       },
       "About": {
         "title": "Sobre Nosotros",
-        "description": "Conoce más sobre Viure Experience, nuestra misión y cómo diseñamos experiencias para trabajadores remotos que buscan aventura y comunidad."
+        "description": "Conoce más sobre High As A Kite | HAAK, nuestra misión y cómo diseñamos experiencias para trabajadores remotos que buscan aventura y comunidad."
       },
       "TermsAndConditions": {
         "Title": "Términos y Condiciones",
@@ -384,29 +384,29 @@
       },
       "SEO": {
         "home": {
-          "title": "Viure Experience - Viajes en grupo para quienes trabajan remoto y quieren vivir más intensamente.",
-          "description": "En Viure Experience diseñamos experiencias para personas que pueden trabajar desde cualquier lugar, buscan aventura y quieren pertenecer a una comunidad que los inspira a crecer."
+          "title": "High As A Kite | HAAK - Viajes en grupo para quienes trabajan remoto y quieren vivir más intensamente.",
+          "description": "En High As A Kite | HAAK diseñamos experiencias para personas que pueden trabajar desde cualquier lugar, buscan aventura y quieren pertenecer a una comunidad que los inspira a crecer."
         },
         "about": {
-          "title": "Sobre Nosotros - Viure Experience",
-          "description": "Conoce más sobre Viure Experience, nuestra misión y cómo diseñamos experiencias para trabajadores remotos que buscan aventura y comunidad."
+          "title": "Sobre Nosotros - High As A Kite | HAAK",
+          "description": "Conoce más sobre High As A Kite | HAAK, nuestra misión y cómo diseñamos experiencias para trabajadores remotos que buscan aventura y comunidad."
         },
         "terms-and-conditions": {
-          "title": "Términos y Condiciones - Viure Experience",
-          "description": "Lee los términos y condiciones de Viure Experience para entender nuestras políticas y responsabilidades como intermediario en la reserva de alojamientos y servicios de terceros."
+          "title": "Términos y Condiciones - High As A Kite | HAAK",
+          "description": "Lee los términos y condiciones de High As A Kite | HAAK para entender nuestras políticas y responsabilidades como intermediario en la reserva de alojamientos y servicios de terceros."
         },
         "privacy-policy": {
-          "title": "Política de Privacidad - Viure Experience",
+          "title": "Política de Privacidad - High As A Kite | HAAK",
           "description": "Lee nuestra política de privacidad para entender como recopilamos, usamos y compartimos tus datos personales."
         },
         "trip-policies": {
-          "title": "Políticas de Viajes y Expediciones - Viure Experience",
+          "title": "Políticas de Viajes y Expediciones - High As A Kite | HAAK",
           "description": "Lee nuestras políticas de viajes y expediciones para entender las expectativas y directrices para los participantes que se unan a nuestros viajes."
         }
       },
       "Newsletter": {
         "title": "Suscribete a nuestro newsletter",
-        "description": "Recibe las últimas noticias y actualizaciones de Viure Experience.",
+        "description": "Recibe las últimas noticias y actualizaciones de High As A Kite | HAAK.",
         "emailPlaceholder": "Escribe tu correo electrónico",
         "namePlaceholder": "Escribe tu nombre",
         "agreePolicy1": "Acepto",
