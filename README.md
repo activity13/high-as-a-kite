@@ -1,69 +1,163 @@
-# Viure Web
+# 🌊 HAAK – High As A Kite
 
-Página web para **Viure**, una agencia de aventuras para nómadas digitales. Desarrollada con Next.js 15, TypeScript, Tailwind CSS, y DaisyUI. Soporta 2 idiomas (español e inglés) y está optimizada para SEO.
+Sitio web oficial de **High As A Kite – Kite School**, una escuela de deportes acuáticos enfocada en kitesurf, surf y experiencias en el mar.
 
-## Propósito
+---
 
-Ofrecer una experiencia digital moderna y responsiva que promueva viajes en grupo para nómadas digitales, con un diseño inspirado en nomatribe.co, formularios de contacto, y un blog para SEO.
+## 🚀 Tecnologías principales
 
-## Tecnologías
+- [Next.js 15](https://nextjs.org/) – framework React con SSR/SSG.
+- [React 19](https://react.dev/) – librería principal para UI.
+- [Tailwind CSS 4](https://tailwindcss.com/) – estilos utilitarios.
+- [DaisyUI 5](https://daisyui.com/) – componentes sobre Tailwind.
+- [Framer Motion 12](https://www.framer.com/motion/) – animaciones fluidas.
+- [Lucide React](https://lucide.dev/) y [React Icons](https://react-icons.github.io/react-icons/) – íconos.
+- [next-intl](https://next-intl-docs.vercel.app/) – internacionalización (multilenguaje).
+- [next-sitemap](https://www.npmjs.com/package/next-sitemap) – generación de sitemap para SEO.
+- [EmailJS](https://www.emailjs.com/) – envío de formularios vía email.
+- [Vercel Analytics](https://vercel.com/analytics) – métricas de uso y rendimiento.
 
-- **Next.js 15**: Framework principal (App Router).
-- **TypeScript**: Tipado estático para robustez.
-- **Tailwind CSS + DaisyUI**: Estilizado moderno y personalizable.
-- **next-intl**: Multilenguaje (es, en, fr, pt).
-- **Framer Motion**: Animaciones suaves.
-- **EmailJS**: Formularios sin backend.
-- **next-seo**: Optimización SEO.
-- **@vercel/analytics**: Analíticas de rendimiento.
+---
 
-## Instalación
+## 📂 Estructura inicial del proyecto
 
-1. Clona el repositorio: `git clone https://github.com/activity13/viure-experience.git`
-2. Instala dependencias: `npm install`
-3. Configura variables de entorno (`.env.local` para EmailJS).
-4. Ejecuta en desarrollo: `npm run dev`
-
-## Estructura
-
-viure-web/
-├── /src
-| ├── /app
-│ | ├── /[...locale] (rutas: /es, /en)
-| │ ├── layout.tsx
-| │ ├── page.tsx
-| │ ├── global.css
-| │ └── /terms-conditions
-| | | └── page.tsx
-│ | └──/components (Hero.tsx, DestinationCard.tsx, etc.)
-| └──/i18n
-| | └── navigation.ts
-| | ├── request.ts
-| | └── routing.ts
-├── /public (imágenes, videos)
-├── /locales (es.json, en.json)
-├── /lib (emailjs.ts, seo.ts)
-├── next.config.js
-├── tsconfig.json
-├── tailwind.config.js
-├── .eslintrc.json
-├── .prettierrc
-├── .env.local
+```bash
+├── public/          # Recursos estáticos (favicon, imágenes, etc.)
+├── src/
+│   ├── app/         # Páginas y layouts de Next.js (App Router)
+│   ├── components/  # Componentes reutilizables
+│   ├── lib/         # Funciones auxiliares y hooks
+│   └── styles/      # Estilos globales y configuraciones
+├── package.json
 └── README.md
-text## Despliegue
 
-- **Plataforma**: Vercel (URL: `viure-web.vercel.app`).
-- **Dominio**: Configurado con GoDaddy (pendiente: `viure.com`).
+🎨 Identidad de marca
 
-## Propiedad
+Arquetipo: El Explorador → aventura, libertad, conexión con la naturaleza.
 
-Código exclusivo para Viure. Desarrollado por [Tu Nombre/VeryFazty]. Transferible al cliente al finalizar.
+Paleta de colores:
 
-## Contribución
+Azul claro #92C2D2
 
-- Reporta issues en GitHub.
-- Contacto: [tu-email@veryfazty.com].
+Azul intenso #0186B8
 
-## Licencia
+Coral #EE715E
 
-Sin licencia pública. Propiedad exclusiva de Viure (ver acuerdo con el cliente).
+Amarillo claro #FFE9A7
+
+Tipografías: Stretch Pro (primaria), Helvetica (secundaria).
+
+Eslogan: “Tan alto como una cometa”.
+
+📌 Funcionalidades previstas
+
+🌐 Landing page con secciones dinámicas.
+
+🏄 Información sobre la escuela, deportes y experiencias.
+
+🎥 Galería multimedia (fotos + videos).
+
+📨 Formulario de contacto / reservas (via EmailJS).
+
+🌍 Internacionalización (next-intl).
+
+📈 SEO optimizado (next-sitemap).
+
+📊 Analítica integrada (@vercel/analytics).
+
+📱 Integración con redes sociales (Instagram feed).
+
+⚡ Instalación y uso
+        # Clonar el repositorio
+        git clone https://github.com/activity13/high-as-a-kite.git
+
+        # Instalar dependencias
+        npm install
+
+        # Ejecutar en desarrollo
+        npm run dev
+
+        # Build de producción
+        npm run build
+
+        # Generar sitemap
+        npm run postbuild
+
+📦 Deploy
+
+Hosting recomendado: Vercel
+
+Compatible con despliegue automático mediante integración con GitHub.
+
+👥 Créditos
+
+Cliente: High As A Kite – Kite School
+
+Diseño y branding: estrategas.pe
+
+Desarrollo web:
+
+📌 Notas técnicas
+
+El proyecto usa Turbopack (next dev --turbopack) para desarrollo rápido.
+
+ESLint y Prettier configurados para mantener buenas prácticas.
+
+Soporte completo para TypeScript.
+
+## 🤝 Contribución
+
+¡Gracias por tu interés en contribuir al proyecto!
+Sigue estas pautas para mantener un flujo de trabajo claro y ordenado.
+
+### 🐛 Issues
+- Usa los **issues de GitHub** para reportar bugs, proponer nuevas funcionalidades o mejoras.
+- Sé claro y específico al describir el problema, agrega pasos para reproducirlo o mockups si aplica.
+
+### 🔀 Pull Requests
+1. Haz un fork del repositorio.
+2. Crea una nueva rama para tu feature/fix:
+
+   git checkout -b feature/nombre-funcionalidad
+Realiza tus cambios siguiendo las guías de estilo.
+
+Asegúrate de que el proyecto compile sin errores:
+
+Copiar código
+npm run build
+npm run lint
+Envía tu PR con una descripción clara de los cambios.
+
+📝 Convenciones de commits
+    Usamos Conventional Commits para mantener un historial legible:
+
+    feat: nueva funcionalidad
+
+    fix: corrección de errores
+
+    docs: cambios en documentación
+
+    style: cambios de formato/estilo (sin lógica)
+
+    refactor: refactorización de código
+
+    test: agregar o corregir tests
+
+    chore: mantenimiento general
+
+    Ejemplos:
+
+    Copiar código
+    feat: agregar sección de galería multimedia
+    fix: corregir bug en formulario de contacto
+    docs: actualizar instrucciones de despliegue
+
+📐 Estilo de código
+Se recomienda usar Prettier para mantener un formato uniforme.
+
+ESLint está configurado para buenas prácticas de React/Next.js.
+
+Usa TypeScript en nuevos módulos y componentes.
+
+
+```
