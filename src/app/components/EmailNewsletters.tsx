@@ -64,7 +64,10 @@ const EmailForm: React.FC = () => {
           <div className="flex flex-col justify-center">
             <div className="flex items-start gap-3">
               <div>
-                <h2 className="text-lg font-semibold">{t('title')}</h2>
+                {/*Titulo de la tarjeta de newsletter */}
+                <h2 className="font-helvetica text-lg font-bold">
+                  {t('title')}
+                </h2>{' '}
                 <p className="text-sm opacity-80 mt-1 leading-relaxed">
                   {t('description')}
                 </p>
@@ -77,7 +80,7 @@ const EmailForm: React.FC = () => {
             <form ref={formRef} onSubmit={sendEmail} className="space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <label className="relative">
-                  <User className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-base-content/70" />
+                  <User className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 " />
                   <input
                     type="text"
                     placeholder={t('namePlaceholder')}

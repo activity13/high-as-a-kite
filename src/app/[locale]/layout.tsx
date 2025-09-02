@@ -16,8 +16,28 @@ import { Analytics } from '@vercel/analytics/next';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
-const primaryFont = localFont({
-  src: '../../../public/fonts/StretchPro.otf',
+export const stretchPro = localFont({
+  src: [
+    {
+      path: '../../../public/fonts/StretchPro.otf',
+      weight: '400',
+      style: 'normal',
+    },
+  ],
+  display: 'swap',
+  variable: '--font-stretch-pro',
+});
+
+export const helvetica = localFont({
+  src: [
+    {
+      path: '../../../public/fonts/Helvetica.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+  ],
+  display: 'swap',
+  variable: '--font-helvetica',
 });
 
 interface MyFunctionProps {
@@ -59,9 +79,9 @@ export default async function LocaleLayout({
   }
 
   return (
-    <html lang={locale}>
+    <html lang={locale} data-theme="mytheme">
       <body
-        className={`${primaryFont.className} bg-amber-600 antialiased h-screen`}>
+        className={`${stretchPro.variable} ${helvetica.variable} font-helvetica bg-amber-600 antialiased h-screen`}>
         <NextIntlClientProvider>
           <Navbar />
           {children}
