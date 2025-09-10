@@ -19,14 +19,24 @@
         "chat": "Conversemos"
       },
       "Hero": {
-        "title": "Viajes en grupo para quienes trabajan remoto y quieren vivir más intensamente.",
-        "description": "En High As A Kite | HAAK diseñamos experiencias para personas que pueden trabajar desde cualquier lugar, buscan aventura y quieren pertenecer a una comunidad que los inspira a crecer."
+        "titles": {
+          "adventure": "Vive la aventura",
+          "freedom": "Siente la libertad",
+          "discover": "Descubre nuevos horizontes",
+          "haak": "Tan alto como una cometa"
+        },
+        "caption": "Escuela de deportes acuáticos, las mejores experiencias en el mar Peruano",
+        "cta": "Reserva ahora",
+        "discover": "Descubre más"
       },
       "Navbar": {
-        "about": "Sobre Nosotros",
-        "trips": "Próximos Viajes",
-        "book": "Reserva",
-        "blog": "Blog"
+        "home": "Inicio",
+        "about": "Quiénes Somos",
+        "sports": "Deportes",
+        "curses": "Cursos",
+        "rent": "Alquiler",
+        "services": "Servicios",
+        "contact": "Contacto"
       },
       "Footer": {
         "services": {

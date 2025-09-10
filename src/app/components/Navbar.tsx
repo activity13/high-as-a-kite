@@ -1,22 +1,32 @@
+'use client';
+
 import React from 'react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import LanguageSwitcher from './LanguageSwitcher';
+import Image from 'next/image';
+import { ChevronRight } from 'lucide-react';
+
 export default function Navbar() {
   const t = useTranslations('translation.translations');
+  const [open, setOpen] = React.useState(false);
   return (
     <div className="drawer">
       <input id="navbar-drawer" type="checkbox" className="drawer-toggle" />
 
       {/* Contenido principal */}
-      <div className="drawer-content">
+      <div
+        className="drawer-content"
+        onMouseEnter={() => setOpen(true)}
+        onMouseLeave={() => setOpen(false)}>
         <nav
           className="
         navbar 
         fixed inset-x-0 top-0 z-20 
         w-full 
+        text-bold
         px-4 md:px-12 
-        py-4 md:py-6 
+        py-1 md:py-2
         flex items-center justify-between
         text-white 
         bg-black/30 backdrop-blur-md 
@@ -24,30 +34,75 @@ export default function Navbar() {
       ">
           {/* Logo */}
           <div className="text-xl md:text-2xl font-semibold">
-            <Link href="/">{t('common.companyName')}</Link>
+            <Link href="/">
+              <Image
+                src="/images/logo.png"
+                alt="HAAK, High as a Kite Logo company"
+                width={125}
+                height={75}
+              />
+            </Link>
           </div>
 
           {/* Menú Desktop */}
           <div className="hidden md:flex items-center gap-8">
             <Link
+              href="/"
+              className="text-white/90 hover:text-white hover:scale-105 transition">
+              {t('Navbar.home')}
+            </Link>
+            <Link
               href="/about"
               className="text-white/90 hover:text-white hover:scale-105 transition">
               {t('Navbar.about')}
             </Link>
+            <div
+              className="dropdown dropdown-hover"
+              onMouseEnter={() => setOpen(true)}
+              onMouseLeave={() => setOpen(false)}>
+              {/* Botón */}
+              <div
+                tabIndex={0}
+                role="button"
+                className="flex items-center  py-2 cursor-pointer">
+                <span>{t('Navbar.sports')}</span>
+                <ChevronRight
+                  className={` transform transition-transform duration-300 ${
+                    open ? 'rotate-90' : 'rotate-0'
+                  }`}
+                />
+              </div>
+
+              {/* Dropdown */}
+              <ul
+                tabIndex={0}
+                className="dropdown-content absolute left-0 mt-2 w-52 bg-white border border-gray-200 rounded-md shadow-lg">
+                <li>
+                  <Link
+                    href="/curses"
+                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                    {t('Navbar.curses')}
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/rent"
+                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                    {t('Navbar.rent')}
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
             <Link
-              href="/trips"
+              href="/services"
               className="text-white/90 hover:text-white hover:scale-105 transition">
-              {t('Navbar.trips')}
+              {t('Navbar.services')}
             </Link>
             <Link
-              href="/book"
+              href="/contact"
               className="text-white/90 hover:text-white hover:scale-105 transition">
-              {t('Navbar.book')}
-            </Link>
-            <Link
-              href="/terms-conditions"
-              className="text-white/90 hover:text-white hover:scale-105 transition">
-              {t('Navbar.blog')}
+              {t('Navbar.contact')}
             </Link>
           </div>
 
@@ -81,16 +136,33 @@ export default function Navbar() {
         <label htmlFor="navbar-drawer" className="drawer-overlay"></label>
         <ul className="menu p-4 w-64 min-h-full bg-black/90 text-white">
           <li>
+            <Link href="/">{t('Navbar.home')}</Link>
+          </li>
+          <li>
             <Link href="/about">{t('Navbar.about')}</Link>
           </li>
           <li>
-            <Link href="/trips">{t('Navbar.trips')}</Link>
+            <div className="collapse px-0 py-0 ">
+              <input type="checkbox" />
+              <div className="collapse-title ">
+                <Link href="/sports">{t('Navbar.sports')}</Link>
+              </div>
+              <div className="collapse-content text-sm">
+                <li>
+                  <Link href="/curses">{t('Navbar.curses')}</Link>
+                </li>
+                <li>
+                  <Link href="/rent">{t('Navbar.rent')}</Link>
+                </li>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <Link href="/services">{t('Navbar.services')}</Link>
           </li>
           <li>
-            <Link href="/book">{t('Navbar.book')}</Link>
-          </li>
-          <li>
-            <Link href="/blog">{t('Navbar.blog')}</Link>
+            <Link href="/contact">{t('Navbar.contact')}</Link>
           </li>
         </ul>
       </div>

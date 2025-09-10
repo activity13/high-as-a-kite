@@ -1,19 +1,16 @@
 'use client';
 import React from 'react';
-import { useTranslations } from 'next-intl';
 import Hero from '../components/Hero';
 import EmailNewsletters from '../components/EmailNewsletters';
 
 export default function Home() {
-  const t = useTranslations('translation.translations');
   return (
     <>
-      <Hero
-        image="/images/kite.jpg"
-        title={t('Hero.title')}
-        description={t('Hero.description')}
-      />
-      <div className="min-h-screen bg-base-100 text-base-content space-y-6 relative">
+      <Hero />
+      {/* probando elementos y componentes */}
+      <div
+        className="min-h-screen bg-base-100 text-base-content space-y-6 relative"
+        id="next-section">
         <h1 className=" font-stretch text-3xl font-bold text-primary">
           Vista previa de mytheme
         </h1>

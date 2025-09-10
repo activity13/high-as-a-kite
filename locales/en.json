@@ -8,8 +8,8 @@
     "translations": {
       "common": {
         "locale": "en",
-        "companyName": "Viure",
-        "slogan": "Aventuraos hijos mios. Since 1999"
+        "companyName": "High As A Kite | HAAK",
+        "slogan": "High As A Kite"
       },
       "HomePage": {
         "title": "Know How make it possible with Viure!",
@@ -19,14 +19,24 @@
         "chat": "Let's talk."
       },
       "Hero": {
-        "title": "Group trips for remote workers who want to live more intensely.",
-        "description": "At High As A Kite | HAAK, we design experiences for people who can work from anywhere, seek adventure, and want to belong to a community that inspires them to grow."
+        "titles": {
+          "adventure": "Live the adventure",
+          "freedom": "Feel the freedom",
+          "discover": "Discover new horizons",
+          "haak": "High As A Kite"
+        },
+        "caption": "Acuatic Sports School the best bays of Peru",
+        "cta": "Book now",
+        "discover": "Discover more"
       },
       "Navbar": {
+        "home": "Home",
         "about": "About Us",
-        "trips": "Upcoming Trips",
-        "book": "Book now",
-        "blog": "Blog"
+        "sports": "Sports",
+        "curses": "Curses",
+        "rent": "Rent",
+        "services": "Services",
+        "contact": "Contact"
       },
       "Footer": {
         "services": {
