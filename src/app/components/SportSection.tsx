@@ -73,7 +73,6 @@ export default function SportsDeck() {
               alt={sport.name}
               className={`absolute inset-0 w-full h-full object-cover ${sport.img_fit} `}
             />
-            <div className="absolute inset-0 bg-black/40 " />
 
             {/* Contenido */}
             <motion.div

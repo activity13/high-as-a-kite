@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import LanguageSwitcher from './LanguageSwitcher';
@@ -9,16 +9,14 @@ import { ChevronRight } from 'lucide-react';
 
 export default function Navbar() {
   const t = useTranslations('translation.translations');
-  const [open, setOpen] = React.useState(false);
+  const [openMenu, setOpenMenu] = useState<'sports' | 'services' | null>(null);
+
   return (
     <div className="drawer">
       <input id="navbar-drawer" type="checkbox" className="drawer-toggle" />
 
       {/* Contenido principal */}
-      <div
-        className="drawer-content"
-        onMouseEnter={() => setOpen(true)}
-        onMouseLeave={() => setOpen(false)}>
+      <div className="drawer-content">
         <nav
           className="
         navbar 
@@ -58,17 +56,17 @@ export default function Navbar() {
             </Link>
             <div
               className="dropdown dropdown-hover"
-              onMouseEnter={() => setOpen(true)}
-              onMouseLeave={() => setOpen(false)}>
-              {/* Botón */}
+              onMouseEnter={() => setOpenMenu('sports')}
+              onMouseLeave={() => setOpenMenu(null)}>
+              {/* Botón Deportes */}
               <div
                 tabIndex={0}
                 role="button"
                 className="flex items-center  py-2 cursor-pointer">
                 <span>{t('Navbar.sports')}</span>
                 <ChevronRight
-                  className={` transform transition-transform duration-300 ${
-                    open ? 'rotate-90' : 'rotate-0'
+                  className={` transform transition-transform duration-100 ${
+                    openMenu?.includes('sports') ? 'rotate-90' : 'rotate-0'
                   }`}
                 />
               </div>
@@ -94,11 +92,43 @@ export default function Navbar() {
               </ul>
             </div>
 
-            <Link
-              href="/services"
-              className="text-white/90 hover:text-white hover:scale-105 transition">
-              {t('Navbar.services')}
-            </Link>
+            <div
+              className="dropdown dropdown-hover"
+              onMouseEnter={() => setOpenMenu('services')}
+              onMouseLeave={() => setOpenMenu(null)}>
+              {/* Botón Deportes */}
+              <div
+                tabIndex={0}
+                role="button"
+                className="flex items-center  py-2 cursor-pointer">
+                <span>{t('Navbar.services')}</span>
+                <ChevronRight
+                  className={` transform transition-transform duration-300 ${
+                    openMenu?.includes('services') ? 'rotate-90' : 'rotate-0'
+                  }`}
+                />
+              </div>
+
+              {/* Dropdown */}
+              <ul
+                tabIndex={0}
+                className="dropdown-content absolute left-0 mt-2 w-52 bg-white border border-gray-200 rounded-md shadow-lg">
+                <li>
+                  <Link
+                    href="/curses"
+                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                    {t('Navbar.curses')}
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/rent"
+                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                    {t('Navbar.rent')}
+                  </Link>
+                </li>
+              </ul>
+            </div>
             <Link
               href="/contact"
               className="text-white/90 hover:text-white hover:scale-105 transition">
@@ -144,8 +174,36 @@ export default function Navbar() {
           <li>
             <div className="collapse px-0 py-0 ">
               <input type="checkbox" />
-              <div className="collapse-title ">
-                <Link href="/sports">{t('Navbar.sports')}</Link>
+              <div className="collapse-title flex h-[10px]">
+                <span>{t('Navbar.sports')}</span>
+                <ChevronRight
+                  size={20}
+                  className={` transform transition-transform duration-100 ${
+                    openMenu?.includes('sports') ? 'rotate-90' : 'rotate-0'
+                  }`}
+                />
+              </div>
+              <div className="collapse-content text-sm">
+                <li>
+                  <Link href="/curses">{t('Navbar.curses')}</Link>
+                </li>
+                <li>
+                  <Link href="/rent">{t('Navbar.rent')}</Link>
+                </li>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div className="collapse px-0 py-0 ">
+              <input type="checkbox" className="p-0" />
+              <div className="collapse-title flex h-[10px]">
+                <span>{t('Navbar.services')}</span>
+                <ChevronRight
+                  size={20}
+                  className={` transform transition-transform duration-100 ${
+                    openMenu?.includes('sports') ? 'rotate-90' : 'rotate-0'
+                  }`}
+                />
               </div>
               <div className="collapse-content text-sm">
                 <li>
@@ -158,9 +216,6 @@ export default function Navbar() {
             </div>
           </li>
 
-          <li>
-            <Link href="/services">{t('Navbar.services')}</Link>
-          </li>
           <li>
             <Link href="/contact">{t('Navbar.contact')}</Link>
           </li>
