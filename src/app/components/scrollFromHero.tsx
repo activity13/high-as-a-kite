@@ -1,7 +1,6 @@
 'use client';
-
+import React, { useCallback } from 'react';
 import { ChevronDown } from 'lucide-react';
-import { useCallback } from 'react';
 import { useTranslations } from 'next-intl';
 export default function DiscoverButton() {
   const t = useTranslations('translation.translations.Hero');
