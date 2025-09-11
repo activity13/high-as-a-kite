@@ -171,7 +171,7 @@ export default function Navbar() {
           <li>
             <Link href="/about">{t('Navbar.about')}</Link>
           </li>
-          <li>
+          <ul>
             <div className="collapse px-0 py-0 ">
               <input type="checkbox" />
               <div className="collapse-title flex h-[10px]">
@@ -192,8 +192,8 @@ export default function Navbar() {
                 </li>
               </div>
             </div>
-          </li>
-          <li>
+          </ul>
+          <ul>
             <div className="collapse px-0 py-0 ">
               <input type="checkbox" className="p-0" />
               <div className="collapse-title flex h-[10px]">
@@ -214,7 +214,7 @@ export default function Navbar() {
                 </li>
               </div>
             </div>
-          </li>
+          </ul>
 
           <li>
             <Link href="/contact">{t('Navbar.contact')}</Link>
