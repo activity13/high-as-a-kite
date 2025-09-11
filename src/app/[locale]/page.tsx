@@ -1,12 +1,14 @@
 'use client';
 import React from 'react';
 import Hero from '../components/Hero';
+import SportsSection from '../components/SportSection';
 import EmailNewsletters from '../components/EmailNewsletters';
 
 export default function Home() {
   return (
     <>
       <Hero />
+      <SportsSection />
       {/* probando elementos y componentes */}
       <div
         className="min-h-screen bg-base-100 text-base-content space-y-6 relative"

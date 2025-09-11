@@ -56,10 +56,10 @@ export default function Hero() {
             </motion.span>
           </AnimatePresence>
         </h1>
-        <p className="relative md:left-20 md:max-w-md mt-50 md:mt-5 text-lg md:text-xl text-white/90 ">
+        <p className="relative md:left-20 md:max-w-md mt-30 md:mt-5 text-lg md:text-xl text-white/90 ">
           {t('caption')}
         </p>
-        <button className="relative md:mt-5 md:left-20 px-6 py-3 bg-sky-600 text-white rounded-lg font-medium shadow hover:bg-sky-700 transition delay-150 duration-300 ease-in-out hover:-rotate-y-1 hover:rotate-90">
+        <button className="relative md:mt-5 md:left-20 px-6 py-3 bg-sky-600 text-white rounded-lg font-medium shadow hover:bg-sky-700 transition transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
           {t('cta')}
         </button>
       </div>
