@@ -8,15 +8,19 @@
     "translations": {
       "common": {
         "locale": "es",
-        "companyName": "Viure",
-        "slogan": "Aventuraos hijos mios. Since 1999"
+        "companyName": "High As A Kite | HAAK",
+        "compnayEmail": "highasakite@haak.com",
+        "contactNumber": "+51 999 999 999",
+        "slogan": "High As A Kite"
       },
-      "HomePage": {
-        "title": "Conoce como lo hacemos posible en Viure!",
-        "description": "Escríbenos para más información.",
-        "cta": "Comenzar",
-        "follow": "Siguenos",
-        "chat": "Conversemos"
+      "Navbar": {
+        "home": "Inicio",
+        "about": "Quiénes Somos",
+        "sports": "Deportes Acúaticos",
+        "curses": "Cursos",
+        "rent": "Alquiler",
+        "marineAdventure": "Aventura Marina",
+        "contact": "Contacto"
       },
       "Hero": {
         "titles": {
@@ -29,32 +33,77 @@
         "cta": "Reserva ahora",
         "discover": "Descubre más"
       },
-      "Navbar": {
-        "home": "Inicio",
-        "about": "Quiénes Somos",
-        "sports": "Deportes",
-        "curses": "Cursos",
-        "rent": "Alquiler",
-        "services": "Servicios",
-        "contact": "Contacto"
+      "Home": {
+        "whyHaak": {
+          "title": "¿Por qué elegirnos?",
+          "instructorsIKO": {
+            "title": "Instructores certificados",
+            "description": "Aprende con profesionales de experiencia internacional."
+          },
+          "equipment": {
+            "title": "Equipos de primera",
+            "description": "Todo el material incluido, seguro y actualizado."
+          },
+          "location": {
+            "title": "Ubicación única",
+            "description": "Aprende con profesionales de Playas con viento constante y agua cálida todo el año."
+          }
+        },
+        "thePlace": {
+          "title": "El Lugar",
+          "description": "Vive tu aventura en las playas de Máncora, Perú: un paraíso para deportes acuáticos con condiciones perfectas durante todo el año."
+        },
+        "howItWorks": {
+          "title": "Cómo Funciona",
+          "step1": {
+            "title": "1. Elige tu experiencia",
+            "description": "Kitesurf, surf, paddle o aventuras marinas."
+          },
+          "step2": {
+            "title": "2. Reserva fácilmente",
+            "description": "Kitesurf, surf, paddle o aventuras marinas."
+          },
+          "step3": {
+            "title": "3. Disfruta la aventura",
+            "description": "Nosotros nos encargamos de todo, tú solo vive la experiencia."
+          }
+        }
+      },
+      "Newsletter": {
+        "title": "Suscribete a nuestro newsletter",
+        "description": "Recibe las últimas noticias y actualizaciones de High As A Kite | HAAK.",
+        "emailPlaceholder": "Escribe tu correo electrónico",
+        "namePlaceholder": "Escribe tu nombre",
+        "agreePolicy1": "Acepto",
+        "agreePolicy2": "las políticas de privacidad",
+        "button": "Suscribirse",
+        "loading": "Suscribiendo...",
+        "success": "¡Gracias por suscribirte!",
+        "successMessage": "Te mantendremos al día con las últimas noticias y eventos.",
+        "error": "Hubo un error. Por favor, inténtalo de nuevo."
       },
       "Footer": {
         "services": {
           "title": "Servicios",
           "trip": "El Viaje"
         },
-        "company": {
-          "title": "Compañía",
-          "about": "Nosotros",
-          "trips": "Próximos Viajes",
-          "book": "Reserva Ahora",
-          "blog": "Blog"
+        "explore": {
+          "title": "Explora",
+          "home": "Inicio",
+          "aboutUs": "Quiénes Somos",
+          "sports": "Deportes Acúaticos",
+          "marineAdventure": "Aventura Marina",
+          "gallery": "Gallery",
+          "contact": "Contact"
+        },
+        "contact": {
+          "title": "Contacto"
         },
         "legal": {
           "title": "Legal",
           "termsAndConditions": "Terminos y Condiciones",
           "tripPolicies": "Politica de Viaje y Expediciones",
-          "paymentPolicies": "Policia de Pago y Devoluciones",
+          "paymentPolicies": "Politica de Pago y Devoluciones",
           "privacyPolicies": "Politica de Privacidad",
           "rights": "High As A Kite | HAAK © 2025. Todos los derechos reservados."
         }
@@ -413,19 +462,6 @@
           "title": "Políticas de Viajes y Expediciones - High As A Kite | HAAK",
           "description": "Lee nuestras políticas de viajes y expediciones para entender las expectativas y directrices para los participantes que se unan a nuestros viajes."
         }
-      },
-      "Newsletter": {
-        "title": "Suscribete a nuestro newsletter",
-        "description": "Recibe las últimas noticias y actualizaciones de High As A Kite | HAAK.",
-        "emailPlaceholder": "Escribe tu correo electrónico",
-        "namePlaceholder": "Escribe tu nombre",
-        "agreePolicy1": "Acepto",
-        "agreePolicy2": "las políticas de privacidad",
-        "button": "Suscribirse",
-        "loading": "Suscribiendo...",
-        "success": "¡Gracias por suscribirte!",
-        "successMessage": "Te mantendremos al día con las últimas noticias y eventos.",
-        "error": "Hubo un error. Por favor, inténtalo de nuevo."
       }
     }
   }

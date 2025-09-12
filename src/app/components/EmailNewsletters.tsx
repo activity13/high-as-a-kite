@@ -44,7 +44,7 @@ const EmailForm: React.FC = () => {
 
   if (isSubmitted) {
     return (
-      <div className="absolute bottom-0 w-full">
+      <div className="w-full">
         <div className="w-full mx-auto bg-success text-success-content p-8 text-center shadow-lg">
           <div className="w-12 h-12 bg-success-content/20 rounded-full flex items-center justify-center mx-auto mb-4">
             <Bell className="w-6 h-6 text-success-content" />
@@ -57,7 +57,7 @@ const EmailForm: React.FC = () => {
   }
 
   return (
-    <div className="absolute bottom-0 w-full bg-base-200 shadow-lg">
+    <div className="w-full bg-secondary text-primary-content shadow-lg">
       <div className="max-w-6xl mx-auto px-4 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
           {/* Columna texto */}
@@ -85,18 +85,18 @@ const EmailForm: React.FC = () => {
                     type="text"
                     placeholder={t('namePlaceholder')}
                     name="user_name"
-                    className="input input-bordered w-full pl-10 h-11 text-sm"
+                    className="input input-bordered w-full pl-10 h-11 text-sm text-neutral"
                     required
                   />
                 </label>
 
                 <label className="relative">
-                  <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-base-content/70" />
+                  <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-neutral" />
                   <input
                     type="email"
                     placeholder={t('emailPlaceholder')}
                     name="user_email"
-                    className="input input-bordered w-full pl-10 h-11 text-sm"
+                    className="input input-bordered w-full pl-10 h-11 text-sm text-neutral"
                     required
                   />
                 </label>

@@ -35,13 +35,15 @@ const sports = [
   },
   {
     name: 'Kayak',
-    description: 'Alquiler y clases de motos acuáticas.',
+    description:
+      'Equipo deportivo, Equipo de seguridad, Instructor certificado 1hora en el agua',
     img: '/images/kayak.webp',
     img_fit: '-300px_0',
   },
   {
     name: 'Skim Board',
-    description: 'Alquiler y clases de motos acuáticas.',
+    description:
+      'Equipo deportivo, Equipo de seguridad, Instructor certificado, 30min de clase y 30min de práctica',
     img: '/images/skim.webp',
     img_fit: '',
   },
@@ -60,7 +62,7 @@ export default function SportsDeck() {
           <motion.div
             key={i}
             onClick={() => setActive(isActive ? null : i)}
-            className="relative h-full cursor-pointer flex-shrink-0 mr-1"
+            className="relative md:max-w-[400px] h-full cursor-pointer flex-shrink-0 mr-1"
             animate={{
               width: isActive ? '60%' : '40%',
               rotate: 0,

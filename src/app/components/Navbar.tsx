@@ -91,44 +91,11 @@ export default function Navbar() {
                 </li>
               </ul>
             </div>
-
-            <div
-              className="dropdown dropdown-hover"
-              onMouseEnter={() => setOpenMenu('services')}
-              onMouseLeave={() => setOpenMenu(null)}>
-              {/* Botón Deportes */}
-              <div
-                tabIndex={0}
-                role="button"
-                className="flex items-center  py-2 cursor-pointer">
-                <span>{t('Navbar.services')}</span>
-                <ChevronRight
-                  className={` transform transition-transform duration-300 ${
-                    openMenu?.includes('services') ? 'rotate-90' : 'rotate-0'
-                  }`}
-                />
-              </div>
-
-              {/* Dropdown */}
-              <ul
-                tabIndex={0}
-                className="dropdown-content absolute left-0 mt-2 w-52 bg-white border border-gray-200 rounded-md shadow-lg">
-                <li>
-                  <Link
-                    href="/curses"
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-                    {t('Navbar.curses')}
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/rent"
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-                    {t('Navbar.rent')}
-                  </Link>
-                </li>
-              </ul>
-            </div>
+            <Link
+              href="/marine-adventure"
+              className="text-white/90 hover:text-white hover:scale-105 transition">
+              {t('Navbar.marineAdventure')}
+            </Link>
             <Link
               href="/contact"
               className="text-white/90 hover:text-white hover:scale-105 transition">
@@ -174,7 +141,7 @@ export default function Navbar() {
           <ul>
             <div className="collapse px-0 py-0 ">
               <input type="checkbox" />
-              <div className="collapse-title flex h-[10px]">
+              <div className="collapse-title flex">
                 <span>{t('Navbar.sports')}</span>
                 <ChevronRight
                   size={20}
@@ -193,28 +160,9 @@ export default function Navbar() {
               </div>
             </div>
           </ul>
-          <ul>
-            <div className="collapse px-0 py-0 ">
-              <input type="checkbox" className="p-0" />
-              <div className="collapse-title flex h-[10px]">
-                <span>{t('Navbar.services')}</span>
-                <ChevronRight
-                  size={20}
-                  className={` transform transition-transform duration-100 ${
-                    openMenu?.includes('sports') ? 'rotate-90' : 'rotate-0'
-                  }`}
-                />
-              </div>
-              <div className="collapse-content text-sm">
-                <li>
-                  <Link href="/curses">{t('Navbar.curses')}</Link>
-                </li>
-                <li>
-                  <Link href="/rent">{t('Navbar.rent')}</Link>
-                </li>
-              </div>
-            </div>
-          </ul>
+          <li>
+            <Link href="/marine-adventure">{t('Navbar.marineAdventure')}</Link>
+          </li>
 
           <li>
             <Link href="/contact">{t('Navbar.contact')}</Link>

@@ -9,14 +9,18 @@
       "common": {
         "locale": "en",
         "companyName": "High As A Kite | HAAK",
+        "compnayEmail": "highasakite@haak.com",
+        "contactNumber": "+51 999 999 999",
         "slogan": "High As A Kite"
       },
-      "HomePage": {
-        "title": "Know How make it possible with Viure!",
-        "description": "Message us for more information.",
-        "cta": "Get Started",
-        "follow": "Follow us",
-        "chat": "Let's talk."
+      "Navbar": {
+        "home": "Home",
+        "about": "About Us",
+        "sports": "Aquatic Sports",
+        "curses": "Curses",
+        "rent": "Rent",
+        "marineAdventure": "Marine Adventure",
+        "contact": "Contact"
       },
       "Hero": {
         "titles": {
@@ -29,26 +33,71 @@
         "cta": "Book now",
         "discover": "Discover more"
       },
-      "Navbar": {
-        "home": "Home",
-        "about": "About Us",
-        "sports": "Sports",
-        "curses": "Curses",
-        "rent": "Rent",
-        "services": "Services",
-        "contact": "Contact"
+      "Home": {
+        "whyHaak": {
+          "title": "Why choose us?",
+          "instructorsIKO": {
+            "title": "Certified instructors",
+            "description": "Learn with professionals with international experience."
+          },
+          "equipment": {
+            "title": "Top-quality equipment",
+            "description": "All equipment included, safe and up to date."
+          },
+          "location": {
+            "title": "Unique location",
+            "description": "Beaches with constant wind and warm water all year round."
+          }
+        },
+        "thePlace": {
+          "title": "The Place",
+          "description": "Live your adventure on the beaches of Máncora, Peru: a paradise for water sports with perfect conditions all year round."
+        },
+        "howItWorks": {
+          "title": "How It Works",
+          "step1": {
+            "title": "1. Choose your experience",
+            "description": "Kitesurfing, surfing, paddleboarding or marine adventures."
+          },
+          "step2": {
+            "title": "2. Book easily",
+            "description": "Kitesurfing, surfing, paddleboarding or marine adventures."
+          },
+          "step3": {
+            "title": "3. Enjoy the adventure",
+            "description": "We take care of everything, you just live the experience."
+          }
+        }
+      },
+      "Newsletter": {
+        "title": "Join our newsletter",
+        "description": "Get the latest news and updates right in your inbox.",
+        "emailPlaceholder": "Enter your email",
+        "namePlaceholder": "Enter your name",
+        "agreePolicy1": "I accept",
+        "agreePolicy2": "the privacy policy",
+        "button": "Suscribirse",
+        "loading": "Subscribing...",
+        "success": "Thank you for subscribing!",
+        "successMessage": "We'll keep you up to date with the latest news and events.",
+        "error": "Something went wrong. Please try again."
       },
       "Footer": {
         "services": {
           "title": "Services",
           "trip": "Our Journey"
         },
-        "company": {
-          "title": "Company",
-          "about": "About Us",
-          "trips": "Next Trips",
-          "book": "Book Now",
-          "blog": "Blog"
+        "explore": {
+          "title": "Explore",
+          "aboutUs": "About Us",
+          "sports": "Aquatic Sports",
+          "marineAdventure": "Marine Adventure",
+          "gallery": "Gallery",
+          "home": "Home",
+          "contact": "Contact"
+        },
+        "contact": {
+          "title": "Contact"
         },
         "legal": {
           "title": "Legal",
@@ -413,19 +462,6 @@
           "title": "Trip & Expeditions Policies - High As A Kite | HAAK",
           "description": "Understand the expectations and guidelines for participants joining Viure trips and expeditions."
         }
-      },
-      "Newsletter": {
-        "title": "Join our newsletter",
-        "description": "Get the latest news and updates right in your inbox.",
-        "emailPlaceholder": "Enter your email",
-        "namePlaceholder": "Enter your name",
-        "agreePolicy1": "I accept",
-        "agreePolicy2": "the privacy policy",
-        "button": "Suscribirse",
-        "loading": "Subscribing...",
-        "success": "Thank you for subscribing!",
-        "successMessage": "We'll keep you up to date with the latest news and events.",
-        "error": "Something went wrong. Please try again."
       }
     }
   }
