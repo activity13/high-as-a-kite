@@ -34,7 +34,7 @@ export default function Hero() {
         muted
         playsInline
         className="absolute inset-0 w-full h-full object-cover">
-        <source src="/videos/lol.mp4" type="video/mp4" />
+        <source src="/videos/caida.mp4" type="video/mp4" />
         Not Supported
       </video>
 
