@@ -441,6 +441,11 @@
           "Description": "Para cualquier pregunta o inquietud, contacta al soporte de VIURE en: hello@viure.co"
         }
       },
+      "NotFound": {
+        "title": "Página no encontrada",
+        "description": "Lo sentimos, no pudimos encontrar lo que buscas.",
+        "button": "Volver al inicio"
+      },
       "SEO": {
         "home": {
           "title": "High As A Kite | HAAK - Viajes en grupo para quienes trabajan remoto y quieren vivir más intensamente.",

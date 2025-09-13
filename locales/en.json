@@ -441,6 +441,11 @@
           "Description": "For any questions or concerns, reach out to VIURE support at: hello@viure.com"
         }
       },
+      "NotFound": {
+        "title": "Page not found",
+        "description": "The page you are looking for could not be found.",
+        "button": "Return to Home"
+      },
       "SEO": {
         "home": {
           "title": "HAAK",
