@@ -1,0 +1,1 @@
+// Placeholder UI: TestimonialCarousel (opcional)
