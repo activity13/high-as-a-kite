@@ -9,9 +9,12 @@
       "common": {
         "locale": "en",
         "companyName": "High As A Kite | HAAK",
-        "compnayEmail": "highasakite@haak.com",
-        "contactNumber": "+51 999 999 999",
-        "slogan": "High As A Kite"
+        "companyNameShort": "HAAK",
+        "companyEmail": "highasakiteperu@gmail.com",
+        "instagram": "https://www.instagram.com/haak.academy/",
+        "contactNumber": "+51 986 677 979",
+        "slogan": "High As A Kite",
+        "address": "Perú"
       },
       "Navbar": {
         "home": "Home",
@@ -83,6 +86,10 @@
         "error": "Something went wrong. Please try again."
       },
       "Footer": {
+        "texts": {
+          "caption": "Aquatic sports school and marine experiences. Your gateway to adventure.",
+          "follow": "Follow us"
+        },
         "services": {
           "title": "Services",
           "trip": "Our Journey"
@@ -97,7 +104,10 @@
           "contact": "Contact"
         },
         "contact": {
-          "title": "Contact"
+          "title": "Contact",
+          "email": "Email",
+          "call": "Call us",
+          "address": "Find us"
         },
         "legal": {
           "title": "Legal",
@@ -105,7 +115,11 @@
           "tripPolicies": "Trip & Expeditions Policies",
           "paymentPolicies": "Payment & Refund Policies",
           "privacyPolicies": "Privacy Policies",
-          "rights": "High As A Kite | HAAK © 2025. All rights reserved."
+          "rights": "HAAK | High As A Kite. All rights reserved."
+        },
+        "certificated": {
+          "title": "Certificated",
+          "since": "Since 2015"
         }
       },
       "About": {

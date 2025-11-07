@@ -9,9 +9,12 @@
       "common": {
         "locale": "es",
         "companyName": "High As A Kite | HAAK",
-        "compnayEmail": "highasakite@haak.com",
-        "contactNumber": "+51 999 999 999",
-        "slogan": "High As A Kite"
+        "companyNameShort": "HAAK",
+        "companyEmail": "highasakiteperu@gmail.com",
+        "instagram": "https://www.instagram.com/haak.academy/",
+        "contactNumber": "+51 986 677 979",
+        "slogan": "High As A Kite",
+        "address": "Perú"
       },
       "Navbar": {
         "home": "Inicio",
@@ -83,6 +86,10 @@
         "error": "Hubo un error. Por favor, inténtalo de nuevo."
       },
       "Footer": {
+        "texts": {
+          "caption": "Escuela de deportes acuáticos y experiencias marinas. Tu puerta de entrada a la aventura.",
+          "follow": "Síguenos"
+        },
         "services": {
           "title": "Servicios",
           "trip": "El Viaje"
@@ -97,15 +104,21 @@
           "contact": "Contact"
         },
         "contact": {
-          "title": "Contacto"
+          "title": "Contacto",
+          "email": "Correo Electrónico",
+          "call": "Llámanos",
+          "address": "Encuéntranos"
         },
         "legal": {
           "title": "Legal",
           "termsAndConditions": "Terminos y Condiciones",
-          "tripPolicies": "Politica de Viaje y Expediciones",
           "paymentPolicies": "Politica de Pago y Devoluciones",
           "privacyPolicies": "Politica de Privacidad",
-          "rights": "High As A Kite | HAAK © 2025. Todos los derechos reservados."
+          "rights": "HAAK | High As A Kite. Todos los derechos reservados."
+        },
+        "certificated": {
+          "title": "Escuela certificada",
+          "since": "Desde 2015"
         }
       },
       "About": {

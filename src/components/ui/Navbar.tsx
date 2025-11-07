@@ -2,10 +2,11 @@
 
 import React, { useState } from 'react';
 import { useTranslations } from 'next-intl';
-import Link from 'next/link';
+// import Link from 'next/link';
 import LanguageSwitcher from './LanguageSwitcher';
 import Image from 'next/image';
 import { ChevronRight } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Navbar() {
   const t = useTranslations('translation.translations');
@@ -66,7 +67,7 @@ export default function Navbar() {
                 <span>{t('Navbar.sports')}</span>
                 <ChevronRight
                   className={` transform transition-transform duration-100 ${
-                    openMenu?.includes('sports') ? 'rotate-90' : 'rotate-0'
+                    openMenu === 'sports' ? 'rotate-90' : 'rotate-0'
                   }`}
                 />
               </div>
@@ -77,14 +78,14 @@ export default function Navbar() {
                 className="dropdown-content absolute left-0 mt-2 w-52 bg-white border border-gray-200 rounded-md shadow-lg">
                 <li>
                   <Link
-                    href="/curses"
+                    href="/lessons"
                     className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
                     {t('Navbar.curses')}
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/rent"
+                    href="/rentals"
                     className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
                     {t('Navbar.rent')}
                   </Link>
@@ -92,7 +93,7 @@ export default function Navbar() {
               </ul>
             </div>
             <Link
-              href="/marine-adventure"
+              href="/trips"
               className="text-white/90 hover:text-white hover:scale-105 transition">
               {t('Navbar.marineAdventure')}
             </Link>
@@ -146,22 +147,22 @@ export default function Navbar() {
                 <ChevronRight
                   size={20}
                   className={` transform transition-transform duration-100 ${
-                    openMenu?.includes('sports') ? 'rotate-90' : 'rotate-0'
+                    openMenu === 'sports' ? 'rotate-90' : 'rotate-0'
                   }`}
                 />
               </div>
               <div className="collapse-content text-sm">
                 <li>
-                  <Link href="/curses">{t('Navbar.curses')}</Link>
+                  <Link href="/lessons">{t('Navbar.curses')}</Link>
                 </li>
                 <li>
-                  <Link href="/rent">{t('Navbar.rent')}</Link>
+                  <Link href="/rentals">{t('Navbar.rent')}</Link>
                 </li>
               </div>
             </div>
           </ul>
           <li>
-            <Link href="/marine-adventure">{t('Navbar.marineAdventure')}</Link>
+            <Link href="/trips">{t('Navbar.marineAdventure')}</Link>
           </li>
 
           <li>
