@@ -18,12 +18,15 @@
       },
       "Navbar": {
         "home": "Inicio",
-        "about": "Quiénes Somos",
-        "sports": "Deportes Acúaticos",
-        "curses": "Cursos",
-        "rent": "Alquiler",
-        "marineAdventure": "Aventura Marina",
-        "contact": "Contacto"
+        "about": "Sobre Nosotros",
+        "lessons": "Clases",
+        "trips": "Excursiones",
+        "rentals": "Alquiler",
+        "spots": "Lugares",
+        "prices": "Precios",
+        "gallery": "Galería",
+        "contact": "Contacto",
+        "services": "Servicios"
       },
       "Hero": {
         "titles": {
@@ -97,11 +100,15 @@
         "explore": {
           "title": "Explora",
           "home": "Inicio",
-          "aboutUs": "Quiénes Somos",
-          "sports": "Deportes Acúaticos",
-          "marineAdventure": "Aventura Marina",
-          "gallery": "Gallery",
-          "contact": "Contact"
+          "about": "Sobre Nosotros",
+          "lessons": "Clases",
+          "trips": "Excursiones",
+          "rentals": "Alquiler",
+          "spots": "Lugares",
+          "prices": "Precios",
+          "gallery": "Galería",
+          "contact": "Contacto",
+          "services": "Servicios"
         },
         "contact": {
           "title": "Contacto",

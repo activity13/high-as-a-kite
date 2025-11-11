@@ -16,6 +16,7 @@ import Image from 'next/image';
 import Fire from '@/../public/images/fire.svg';
 import Air from '@/../public/images/air.svg';
 import Water from '@/../public/images/wave.svg';
+import Haak from '@/../public/images/HAAKAir.png';
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   const t = useTranslations('translation.translations');
@@ -87,7 +88,7 @@ export default function Footer() {
                   className="block text-neutral hover:text-info transition-colors text-sm group">
                   <span className="flex items-center gap-2">
                     <span className="w-1 h-1 rounded-full bg-info opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                    {t('Footer.explore.home')}
+                    {t('Footer.explore.about')}
                   </span>
                 </Link>
                 <Link
@@ -95,7 +96,7 @@ export default function Footer() {
                   className="block text-neutral hover:text-info transition-colors text-sm group">
                   <span className="flex items-center gap-2">
                     <span className="w-1 h-1 rounded-full bg-info opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                    {t('Footer.explore.aboutUs')}
+                    {t('Footer.explore.lessons')}
                   </span>
                 </Link>
                 <Link
@@ -103,7 +104,7 @@ export default function Footer() {
                   className="block text-neutral hover:text-info transition-colors text-sm group">
                   <span className="flex items-center gap-2">
                     <span className="w-1 h-1 rounded-full bg-info opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                    {t('Footer.explore.sports')}
+                    {t('Footer.explore.trips')}
                   </span>
                 </Link>
                 <Link
@@ -111,12 +112,28 @@ export default function Footer() {
                   className="block text-neutral hover:text-info transition-colors text-sm group">
                   <span className="flex items-center gap-2">
                     <span className="w-1 h-1 rounded-full bg-info opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                    {t('Footer.explore.marineAdventure')}
+                    {t('Footer.explore.rentals')}
                   </span>
                 </Link>
                 <Link
                   href="/gallery"
                   className="block text-neutral hover:text-info transition-colors text-sm group">
+                  <span className="flex items-center gap-2">
+                    <span className="w-1 h-1 rounded-full bg-info opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    {t('Footer.explore.spots')}
+                  </span>
+                </Link>
+                <Link
+                  href="/contact"
+                  className="block text-neutral hover:info transition-colors text-sm group">
+                  <span className="flex items-center gap-2">
+                    <span className="w-1 h-1 rounded-full bg-info opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    {t('Footer.explore.prices')}
+                  </span>
+                </Link>
+                <Link
+                  href="/contact"
+                  className="block text-neutral hover:info transition-colors text-sm group">
                   <span className="flex items-center gap-2">
                     <span className="w-1 h-1 rounded-full bg-info opacity-0 group-hover:opacity-100 transition-opacity"></span>
                     {t('Footer.explore.gallery')}
@@ -226,8 +243,8 @@ export default function Footer() {
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <div className="flex items-center gap-2 text-sm text-neutral">
                 <Image
-                  src={Water}
-                  alt="Water"
+                  src={Haak}
+                  alt="High as a kite logotype"
                   width={20}
                   height={20}
                   style={{ animationDelay: '1s' }}
@@ -248,7 +265,7 @@ export default function Footer() {
                   <Image src={Fire} alt="Fire" width={20} height={20} />
                   <Image
                     src={Water}
-                    alt="Water"
+                    alt="haak LoGO"
                     width={20}
                     height={20}
                     style={{ animationDelay: '1s' }}

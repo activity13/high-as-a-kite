@@ -1,173 +1,227 @@
 'use client';
 
-import React, { useState } from 'react';
-import { useTranslations } from 'next-intl';
-// import Link from 'next/link';
-import LanguageSwitcher from './LanguageSwitcher';
+import React from 'react';
 import Image from 'next/image';
-import { ChevronRight } from 'lucide-react';
-import Link from 'next/link';
+import { useTranslations } from 'next-intl';
+import { Link, usePathname } from '@/i18n/navigation';
+import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Navbar() {
   const t = useTranslations('translation.translations');
-  const [openMenu, setOpenMenu] = useState<'sports' | 'services' | null>(null);
+  const rawPath = usePathname();
+  const pathname =
+    rawPath || (typeof window !== 'undefined' ? window.location.pathname : '/');
+
+  // Quita solo el prefijo de locale válido y normaliza la ruta
+  const stripLocale = (p: string) => {
+    if (!p) return '/';
+    // asegúrate de que empiece por '/'
+    const path = p.startsWith('/') ? p : `/${p}`;
+    const parts = path.split('/');
+    // parts[0] = '', parts[1] = primer segmento
+    const first = parts[1] || '';
+    // locales tipo: en, es, en-US, pt-BR, fr, de-AT, etc.
+    const isLocale = /^[a-z]{2}(?:-[A-Z]{2})?$/.test(first);
+    const rest = isLocale ? `/${parts.slice(2).join('/')}` : path;
+    // quitar slashes repetidos y trailing slash (salvo raíz)
+    const cleaned = rest.replace(/\/{2,}/g, '/');
+    return cleaned !== '/' && cleaned.endsWith('/')
+      ? cleaned.slice(0, -1)
+      : cleaned;
+  };
+
+  const normalize = (s: string) => {
+    if (!s || s === '/') return '/';
+    const withSlash = s.startsWith('/') ? s : `/${s}`;
+    return withSlash !== '/' && withSlash.endsWith('/')
+      ? withSlash.slice(0, -1)
+      : withSlash;
+  };
+
+  const current = React.useMemo(
+    () => normalize(stripLocale(pathname)),
+    [pathname],
+  );
+
+  const isActive = (href: string) => {
+    const target = normalize(href);
+    if (target === '/') return current === '/';
+    return current === target || current.startsWith(`${target}/`);
+  };
+
+  const links = [
+    { href: '/', label: t('Navbar.home') },
+    { href: '/about', label: t('Navbar.about') },
+    { href: '/lessons', label: t('Navbar.lessons') },
+    { href: '/trips', label: t('Navbar.trips') },
+    { href: '/rentals', label: t('Navbar.rentals') },
+    { href: '/spots', label: t('Navbar.spots') },
+    { href: '/prices', label: t('Navbar.prices') },
+    { href: '/gallery', label: t('Navbar.gallery') },
+    { href: '/contact', label: t('Navbar.contact') },
+  ];
+
+  const closeDrawer = () => {
+    const el = document.getElementById(
+      'navbar-drawer',
+    ) as HTMLInputElement | null;
+    if (el) el.checked = false;
+  };
+
+  // Agrupar: lessons, trips, rentals
+  const groupedHrefs = ['/lessons', '/trips', '/rentals'];
+  const groupedLinks = links.filter((l) => groupedHrefs.includes(l.href));
+  const mainLinks = links.filter((l) => !groupedHrefs.includes(l.href));
+  const servicesActive = groupedLinks.some((l) => isActive(l.href));
 
   return (
     <div className="drawer">
       <input id="navbar-drawer" type="checkbox" className="drawer-toggle" />
 
-      {/* Contenido principal */}
+      {/* Topbar */}
       <div className="drawer-content">
-        <nav
-          className="
-        navbar 
-        fixed inset-x-0 top-0 z-20 
-        w-full 
-        text-bold
-        px-4 md:px-12 
-        py-1 md:py-2
-        flex items-center justify-between
-        text-white 
-        bg-black/30 backdrop-blur-md 
-        border-b border-white/10
-      ">
-          {/* Logo */}
-          <div className="text-xl md:text-2xl font-semibold">
-            <Link href="/">
-              <Image
-                src="/images/logo.png"
-                alt="HAAK, High as a Kite Logo company"
-                width={125}
-                height={75}
-              />
-            </Link>
-          </div>
-
-          {/* Menú Desktop */}
-          <div className="hidden md:flex items-center gap-8">
-            <Link
-              href="/"
-              className="text-white/90 hover:text-white hover:scale-105 transition">
-              {t('Navbar.home')}
-            </Link>
-            <Link
-              href="/about"
-              className="text-white/90 hover:text-white hover:scale-105 transition">
-              {t('Navbar.about')}
-            </Link>
-            <div
-              className="dropdown dropdown-hover"
-              onMouseEnter={() => setOpenMenu('sports')}
-              onMouseLeave={() => setOpenMenu(null)}>
-              {/* Botón Deportes */}
-              <div
-                tabIndex={0}
-                role="button"
-                className="flex items-center  py-2 cursor-pointer">
-                <span>{t('Navbar.sports')}</span>
-                <ChevronRight
-                  className={` transform transition-transform duration-100 ${
-                    openMenu === 'sports' ? 'rotate-90' : 'rotate-0'
-                  }`}
+        <nav className="fixed inset-x-0 top-0 z-20 bg-primary backdrop-blur supports-[backdrop-filter]:bg-primary/60 border-b border-primary/30">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
+            {/* Logo */}
+            <div className="flex items-center gap-2">
+              <Link
+                href="/"
+                aria-label="HAAK Home"
+                className="inline-flex items-center">
+                <Image
+                  src="/images/logo.png"
+                  alt="HAAK Logo"
+                  width={150}
+                  height={86}
                 />
-              </div>
-
-              {/* Dropdown */}
-              <ul
-                tabIndex={0}
-                className="dropdown-content absolute left-0 mt-2 w-52 bg-white border border-gray-200 rounded-md shadow-lg">
-                <li>
-                  <Link
-                    href="/lessons"
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-                    {t('Navbar.curses')}
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/rentals"
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-                    {t('Navbar.rent')}
-                  </Link>
-                </li>
-              </ul>
+              </Link>
             </div>
-            <Link
-              href="/trips"
-              className="text-white/90 hover:text-white hover:scale-105 transition">
-              {t('Navbar.marineAdventure')}
-            </Link>
-            <Link
-              href="/contact"
-              className="text-white/90 hover:text-white hover:scale-105 transition">
-              {t('Navbar.contact')}
-            </Link>
-          </div>
 
-          {/* Idiomas + Hamburguesa */}
-          <div className="flex items-center gap-4">
-            <LanguageSwitcher />
-            {/* Botón hamburguesa solo en mobile */}
-            <label
-              htmlFor="navbar-drawer"
-              className="md:hidden btn btn-ghost btn-circle">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            </label>
+            {/* Desktop nav */}
+            <ul className="hidden mdd:flex items-center gap-6">
+              {/* Dropdown Servicios */}
+              <li>
+                <div className="dropdown dropdown-hover">
+                  <button
+                    className={[
+                      'text-sm transition-colors border-b-2 pb-1 mt-2 inline-flex items-center gap-1',
+                      servicesActive
+                        ? 'text-white border-white'
+                        : 'text-neutral-100 border-transparent hover:text-white hover:border-neutral-500',
+                    ].join(' ')}
+                    aria-haspopup="menu"
+                    aria-expanded={servicesActive ? 'true' : 'false'}>
+                    {t('Navbar.services')}
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-4 w-4 opacity-80"
+                      viewBox="0 0 20 20"
+                      fill="currentColor">
+                      <path d="M5.23 7.21a.75.75 0 011.06.02L10 11.188l3.71-3.96a.75.75 0 111.08 1.04l-4.24 4.53a.75.75 0 01-1.08 0L5.25 8.27a.75.75 0 01-.02-1.06z" />
+                    </svg>
+                  </button>
+                  <ul
+                    tabIndex={0}
+                    className="dropdown-content menu p-2 mt-1 shadow bg-primary rounded-b-md min-w-35">
+                    {groupedLinks.map((l) => (
+                      <li key={l.href}>
+                        <Link
+                          href={l.href}
+                          className={[
+                            'text-sm transition-colors border-b-2 pb-[2px]',
+                            isActive(l.href)
+                              ? 'text-white border-white'
+                              : 'text-neutral-100 border-transparent hover:text-white hover:border-base-100',
+                          ].join(' ')}
+                          aria-current={isActive(l.href) ? 'page' : undefined}>
+                          {l.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </li>
+              {mainLinks.map((l) => (
+                <li key={l.href}>
+                  <Link
+                    href={l.href}
+                    className={[
+                      'text-sm transition-colors border-b-2 pb-1',
+                      isActive(l.href)
+                        ? 'text-white border-white'
+                        : 'text-neutral-100 border-transparent hover:text-white hover:border-neutral-500',
+                    ].join(' ')}
+                    aria-current={isActive(l.href) ? 'page' : undefined}>
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            {/* Right actions */}
+            <div className="flex items-center gap-2">
+              <LanguageSwitcher />
+              {/* Burger (mobile) */}
+              <label
+                htmlFor="navbar-drawer"
+                className="mdd:hidden btn btn-ghost btn-square">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6 text-white"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  fill="none">
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              </label>
+            </div>
           </div>
         </nav>
+
+        {/* Spacer to avoid content under nav */}
+        <div className="h-14" />
       </div>
 
-      {/* Drawer Side */}
+      {/* Drawer Side (mobile) */}
       <div className="drawer-side z-30">
         <label htmlFor="navbar-drawer" className="drawer-overlay"></label>
-        <ul className="menu p-4 w-64 min-h-full bg-black/90 text-white">
-          <li>
-            <Link href="/">{t('Navbar.home')}</Link>
+        <ul
+          className="menu p-4 w-72 min-h-full bg-primary
+         text-white gap-1">
+          <li className="mb-2 px-2 py-1">
+            <Link
+              href="/"
+              onClick={closeDrawer}
+              className="inline-flex items-center gap-2">
+              <Image
+                src="/images/haakcompress.png"
+                alt="HAAK Logo"
+                width={90}
+                height={40}
+              />
+            </Link>
           </li>
-          <li>
-            <Link href="/about">{t('Navbar.about')}</Link>
-          </li>
-          <ul>
-            <div className="collapse px-0 py-0 ">
-              <input type="checkbox" />
-              <div className="collapse-title flex">
-                <span>{t('Navbar.sports')}</span>
-                <ChevronRight
-                  size={20}
-                  className={` transform transition-transform duration-100 ${
-                    openMenu === 'sports' ? 'rotate-90' : 'rotate-0'
-                  }`}
-                />
-              </div>
-              <div className="collapse-content text-sm">
-                <li>
-                  <Link href="/lessons">{t('Navbar.curses')}</Link>
-                </li>
-                <li>
-                  <Link href="/rentals">{t('Navbar.rent')}</Link>
-                </li>
-              </div>
-            </div>
-          </ul>
-          <li>
-            <Link href="/trips">{t('Navbar.marineAdventure')}</Link>
-          </li>
-
-          <li>
-            <Link href="/contact">{t('Navbar.contact')}</Link>
-          </li>
+          {links.map((l) => (
+            <li key={l.href}>
+              <Link
+                href={l.href}
+                onClick={closeDrawer}
+                className={[
+                  'rounded-md border-b-2',
+                  isActive(l.href)
+                    ? 'bg-neutral-800 text-white border-white'
+                    : 'text-neutral-100 border-transparent hover:text-white hover:border-neutral-100',
+                ].join(' ')}
+                aria-current={isActive(l.href) ? 'page' : undefined}>
+                {l.label}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
     </div>

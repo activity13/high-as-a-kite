@@ -55,6 +55,9 @@ body {
   color: var(--foreground);
   font-family: var(--font-helvetica), sans-serif;
 }
+@theme {
+  --breakpoint-mdd: 60rem;
+}
 
 @theme inline {
   --font-stretch: var(--font-stretch-pro);

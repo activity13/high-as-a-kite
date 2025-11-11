@@ -19,11 +19,14 @@
       "Navbar": {
         "home": "Home",
         "about": "About Us",
-        "sports": "Aquatic Sports",
-        "curses": "Curses",
-        "rent": "Rent",
-        "marineAdventure": "Marine Adventure",
-        "contact": "Contact"
+        "lessons": "Lessons",
+        "trips": "Trips",
+        "rentals": "Rentals",
+        "spots": "Spots",
+        "prices": "Prices",
+        "gallery": "Gallery",
+        "contact": "Contact",
+        "services": "Services"
       },
       "Hero": {
         "titles": {
@@ -96,11 +99,13 @@
         },
         "explore": {
           "title": "Explore",
-          "aboutUs": "About Us",
-          "sports": "Aquatic Sports",
-          "marineAdventure": "Marine Adventure",
+          "about": "About Us",
+          "lessons": "Lessons",
+          "trips": "Trips",
+          "rentals": "Rentals",
+          "spots": "Spots",
+          "prices": "Prices",
           "gallery": "Gallery",
-          "home": "Home",
           "contact": "Contact"
         },
         "contact": {
