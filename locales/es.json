@@ -76,8 +76,8 @@
         }
       },
       "Newsletter": {
-        "title": "Suscribete a nuestro newsletter",
-        "description": "Recibe las últimas noticias y actualizaciones de High As A Kite | HAAK.",
+        "title": "Suscribete a nuestro boletín informativo",
+        "description": "Recibe nuestras últimas noticias y actualizaciones.",
         "emailPlaceholder": "Escribe tu correo electrónico",
         "namePlaceholder": "Escribe tu nombre",
         "agreePolicy1": "Acepto",
