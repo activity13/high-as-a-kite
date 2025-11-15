@@ -129,7 +129,8 @@
         }
       },
       "About": {
-        "title": "Sobre Nosotros",
+        "title": "Sobre HAAK",
+		"subtitle": "Descubre nuestra historia, valores y equipo.",
         "description": "Conoce más sobre High As A Kite | HAAK, nuestra misión y cómo diseñamos experiencias para trabajadores remotos que buscan aventura y comunidad."
       },
       "TermsAndConditions": {
@@ -468,8 +469,9 @@
       },
       "SEO": {
         "home": {
-          "title": "High As A Kite | HAAK - Viajes en grupo para quienes trabajan remoto y quieren vivir más intensamente.",
-          "description": "En High As A Kite | HAAK diseñamos experiencias para personas que pueden trabajar desde cualquier lugar, buscan aventura y quieren pertenecer a una comunidad que los inspira a crecer."
+          "title": "Escuela de Kitesurf en Máncora | Haak Kite",
+          "description": "Cursos y aventuras de kitesurf en la costa norte del Perú: principiantes, intermedios y avanzados. Spots top, metodología clara, seguridad total y equipo apasionado.",
+          "keywords": "kite surf Perú, escuela kitesurf Mancora, cursos kitesurf, aprender kitesurf Peru, clases kitesurf principiantes, downwind Mancora"
         },
         "about": {
           "title": "Sobre Nosotros - High As A Kite | HAAK",
@@ -487,6 +489,397 @@
           "title": "Políticas de Viajes y Expediciones - High As A Kite | HAAK",
           "description": "Lee nuestras políticas de viajes y expediciones para entender las expectativas y directrices para los participantes que se unan a nuestros viajes."
         }
+      },
+      "faqs": {
+        "title": "Preguntas Frecuentes",
+        "items": [
+          {
+            "q": "¿Necesito experiencia previa?",
+            "a": "No. Ajustamos desde cero con evaluación inicial y explicación de seguridad."
+          },
+          {
+            "q": "¿Qué debo traer?",
+            "a": "Bloqueador, agua, gafas con cinta y actitud. El resto lo proveemos."
+          },
+          {
+            "q": "¿Condición física mínima?",
+            "a": "Capacidad básica de nado y movilidad general. No se requiere fuerza alta."
+          },
+          {
+            "q": "¿Cuánto toma ponerse de pie?",
+            "a": "Promedio 4–6 horas con condiciones estables y práctica enfocada."
+          },
+          {
+            "q": "¿Es seguro?",
+            "a": "Uso de casco, chaleco, radios y selección de spot según viento y marea."
+          },
+          {
+            "q": "¿Clases privadas?",
+            "a": "Sí, upgrade a 1:1 disponible como add‑on."
+          },
+          {
+            "q": "¿Edad mínima?",
+            "a": "Desde 12 años con autorización. Menores acompañados al inicio."
+          },
+          {
+            "q": "¿Cancelaciones por clima?",
+            "a": "Reprogramamos o ajustamos bloque. No penalizamos condiciones no aptas."
+          },
+          {
+            "q": "¿Puedo continuar luego solo?",
+            "a": "Te damos plan de práctica y checklist para progresión independiente."
+          },
+          {
+            "q": "¿Medios de pago?",
+            "a": "Transferencia, efectivo local y reservas por WhatsApp."
+          }
+        ]
+      },
+      "gallery": {
+        "title": "Galería",
+        "filters": {
+          "all": "Todo",
+          "action": "Acción",
+          "community": "Comunidad",
+          "nature": "Naturaleza"
+        },
+        "ariaGrid": "Mosaico de imágenes kitesurf",
+        "empty": "Sin resultados para el filtro."
+      },
+      "finalCta": {
+        "title": "Cupos Limitados Temporada Viento",
+        "text": "Aprovecha las semanas de viento más estable. Reserva antes de que se llenen los bloques.",
+        "buttons": {
+          "whatsapp": "WhatsApp Ahora",
+          "form": "Enviar Formulario"
+        }
+      },
+      "form": {
+        "title": "Reserva Rápida",
+        "fields": {
+          "name": { "label": "Nombre", "placeholder": "Tu nombre" },
+          "email": { "label": "Email", "placeholder": "Tu correo" },
+          "level": {
+            "label": "Nivel",
+            "options": {
+              "beginner": "Principiante",
+              "intermediate": "Intermedio",
+              "advanced": "Avanzado"
+            }
+          },
+          "message": {
+            "label": "Mensaje",
+            "placeholder": "Objetivo o duda breve"
+          },
+          "honeypot": { "label": "No completar" }
+        },
+        "submit": "Enviar",
+        "success": "¡Enviado! Te contactaremos pronto.",
+        "error": "Error al enviar. Intenta de nuevo."
+      },
+      "statsBar": {
+        "items": [
+          { "label": "Años enseñando", "value": "8+" },
+          { "label": "Estudiantes felices", "value": "1200+" },
+          { "label": "Spots activos", "value": "5" },
+          { "label": "Ratio instructor", "value": "1:2" },
+          { "label": "Certificaciones", "value": "Intl / Rescue" }
+        ]
+      },
+	  "spots": {
+        "title": "Spots Norte Perú",
+        "subtitle": "Cada spot con personalidad. Elegimos según viento, marea y nivel.",
+        "mapAlt": "Mapa estilizado costa norte Perú con puntos de kitesurf",
+        "cards": [
+          {
+            "name": "Máncora",
+            "level": "All",
+            "wind": "Side / Side-On",
+            "highlight": "Ambiente social y aprendizaje inicial sólido."
+          },
+          {
+            "name": "Punta",
+            "level": "Intermedio+",
+            "wind": "Side-Off técnico",
+            "highlight": "Transiciones y control de ceñida."
+          },
+          {
+            "name": "Las Pocitas",
+            "level": "Beginner",
+            "wind": "Side-On suave",
+            "highlight": "Agua más plana para primeras body drags."
+          },
+          {
+            "name": "Órganos",
+            "level": "Intermedio",
+            "wind": "Constante",
+            "highlight": "Práctica de edging y velocidad controlada."
+          },
+          {
+            "name": "Lobitos",
+            "level": "Avanzado",
+            "wind": "Fuerte / Olas",
+            "highlight": "Wave riding y maniobras con sección limpia."
+          }
+        ]
+      },
+	   "packages": {
+        "title": "Paquetes y Precios",
+        "currency": "USD",
+        "addonsTitle": "Add‑Ons",
+        "addons": [
+          {
+            "id": "media",
+            "name": "Foto / Drone Pack",
+            "price": 45,
+            "note": "Clips crudos + selección editada."
+          },
+          {
+            "id": "private-up",
+            "name": "Upgrade Privado",
+            "price": 60,
+            "note": "Enfoque 1:1 todo el bloque."
+          },
+          {
+            "id": "foil",
+            "name": "Intro Foil Extra",
+            "price": 80,
+            "note": "Sesión técnica adicional."
+          }
+        ],
+        "cards": [
+          {
+            "id": "beginner",
+            "name": "Iniciación",
+            "hours": 6,
+            "sessions": 3,
+            "includes": [
+              "Setup & seguridad",
+              "Control de kite",
+              "Body drag",
+              "Inicio tabla"
+            ],
+            "focus": "Fundamentos sólidos.",
+            "price": 220
+          },
+          {
+            "id": "progress",
+            "name": "Progresión",
+            "hours": 10,
+            "sessions": 5,
+            "includes": ["Ceñida", "Transiciones", "Edging", "Primeros saltos"],
+            "focus": "Construcción de técnica.",
+            "price": 360
+          },
+          {
+            "id": "advanced",
+            "name": "Avanzado",
+            "hours": 14,
+            "sessions": 7,
+            "includes": [
+              "Saltos control",
+              "Downwind táctico",
+              "Wave básico",
+              "Optimización postura"
+            ],
+            "focus": "Pulido y estilo.",
+            "price": 480
+          },
+          {
+            "id": "traveler",
+            "name": "Traveler Pack",
+            "hours": 8,
+            "sessions": 4,
+            "includes": [
+              "Spot mix",
+              "Downwind corto",
+              "Media pack básico",
+              "Feedback video"
+            ],
+            "focus": "Experiencia variada.",
+            "price": 340
+          }
+        ],
+        "cta": "Solicitar cupo"
+      },
+	  "events": {
+        "tracking": {
+          "cta_click": "cta_click",
+          "form_submit": "form_submit",
+          "whatsapp_click": "whatsapp_click",
+          "gallery_filter": "gallery_filter",
+          "package_view": "package_view"
+        }
+      },
+	   "experience": {
+        "title": "Tu Experiencia HAAK",
+        "intro": "Agua para desconectar, Fuego para vivir la aventura y Aire para ampliar horizontes. Así mezclamos la fórmula Haak.",
+        "pillars": [
+          {
+            "title": "Progresión Real",
+            "text": "Estructura clara por niveles con feedback inmediato y refuerzo visual."
+          },
+          {
+            "title": "Ambiente Seguro",
+            "text": "Protocolos activos, radios, revisión de viento y superficie antes de cada sesión."
+          },
+          {
+            "title": "Comunidad Viva",
+            "text": "Riders viajeros, locales y nómadas compartiendo tips, sesiones y downwinds."
+          },
+          {
+            "title": "Memoria Visual",
+            "text": "Opcional media pack foto / drone para analizar postura y compartir."
+          }
+        ],
+        "cta": "Reserva tu cupo"
+      },
+	  "adventures": {
+        "title": "Aventuras Especiales",
+        "items": [
+          {
+            "name": "Downwind Guiado",
+            "text": "Recorrido costero asistido, lectura de línea y transición fluida.",
+            "duration": "Medio día"
+          },
+          {
+            "name": "Camp Weekend",
+            "text": "Dos días: sesiones intensivas + convivencia rider.",
+            "duration": "2 días"
+          },
+          {
+            "name": "Foil Clinic",
+            "text": "Introducción controlada a levantamiento y estabilidad.",
+            "duration": "Sesión técnica"
+          }
+        ]
+      },
+	   "methodology": {
+        "title": "Metodología Haak",
+        "steps": [
+          {
+            "id": 1,
+            "title": "Briefing",
+            "text": "Objetivos, evaluación previa y condiciones del día."
+          },
+          {
+            "id": 2,
+            "title": "Agua",
+            "text": "Práctica guiada por bloques cortos y específicos."
+          },
+          {
+            "id": 3,
+            "title": "Progresión",
+            "text": "Escalada de maniobras: control, ceñida, transiciones, saltos."
+          },
+          {
+            "id": 4,
+            "title": "Feedback",
+            "text": "Revisión técnica + próximos objetivos personales."
+          }
+        ]
+      },
+	    "safety": {
+        "title": "Seguridad y Certificaciones",
+        "intro": "Protocolos activos y equipamiento verificado antes de cada salida.",
+        "items": [
+          {
+            "title": "Chalecos & Casco",
+            "text": "Protección obligatoria según nivel y condición."
+          },
+          {
+            "title": "Radios Directas",
+            "text": "Corrección inmediata sin interrupciones."
+          },
+          {
+            "title": "Kites Revisados",
+            "text": "Chequeo de bridajes, válvulas y líneas."
+          },
+          {
+            "title": "Zonas Control",
+            "text": "Áreas de práctica acotadas según marea."
+          },
+          {
+            "title": "Ratio 1:2",
+            "text": "Seguimiento cercano, progresión acelerada."
+          },
+          {
+            "title": "Cert Int'l",
+            "text": "Estándares internacionales y rescate básico."
+          }
+        ]
+      },
+	   "team": {
+        "title": "Nuestro Equipo",
+        "members": [
+          {
+            "name": "Caro",
+            "role": "Head Coach",
+            "tags": ["8y experiencia", "Wave & Freeride"],
+            "bio": "Paciencia, técnica y pasión por el progreso real."
+          },
+          {
+            "name": "Leo",
+            "role": "Instructor",
+            "tags": ["Rescate", "Transiciones"],
+            "bio": "Explica claro y ajusta cada detalle de postura."
+          },
+          {
+            "name": "Nico",
+            "role": "Instructor",
+            "tags": ["Freestyle", "Saltos"],
+            "bio": "Enfoque divertido con micro-objetivos por sesión."
+          },
+          {
+            "name": "Vale",
+            "role": "Media & Support",
+            "tags": ["Foto Drone", "Video Análisis"],
+            "bio": "Captura momentos y ángulos clave para tu progreso."
+          }
+        ]
+      },
+	     "testimonials": {
+        "title": "Testimonios",
+        "sliderAria": "Carrusel de testimonios",
+        "items": [
+          {
+            "name": "María",
+            "origin": "Chile",
+            "rating": 5,
+            "text": "Pasé de cero a mis primeros bordes en tres días. Claridad total."
+          },
+          {
+            "name": "Thomas",
+            "origin": "Francia",
+            "rating": 5,
+            "text": "El feedback en radio cambió mi control. Equipo muy cercano."
+          },
+          {
+            "name": "Jorge",
+            "origin": "Perú",
+            "rating": 4,
+            "text": "Metodología ordenada y ambiente seguro. Recomendado."
+          },
+          {
+            "name": "Sofie",
+            "origin": "Alemania",
+            "rating": 5,
+            "text": "Downwind guiado inolvidable. Organización impecable."
+          }
+        ]
+      },
+	    "schema": {
+        "localBusiness": {
+          "name": "Haak Kite School",
+          "type": "SportsActivityLocation",
+          "areaServed": "Máncora, Perú",
+          "priceRange": "$$"
+        }
+      },
+       "accessibility": {
+        "skipToContent": "Saltar al contenido",
+        "ariaNav": "Navegación principal",
+        "ariaTestimonials": "Sección de testimonios"
       }
     }
   }

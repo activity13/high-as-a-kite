@@ -2,6 +2,7 @@
 import React from 'react';
 import { CheckCircle, StepForward } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { StatsBar } from '../StatsBar';
 export default function LandingSections() {
   const t = useTranslations('translation.translations.Home');
   return (
@@ -39,6 +40,7 @@ export default function LandingSections() {
           </div>
         </div>
       </section>
+      <StatsBar />
 
       {/* El lugar */}
       <section className="py-16 bg-gray-50 text-gray-800">

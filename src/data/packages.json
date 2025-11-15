@@ -1,0 +1,13 @@
+{
+  "packages": [
+    { "id": "beginner", "hours": 6, "sessions": 3 },
+    { "id": "progress", "hours": 10, "sessions": 5 },
+    { "id": "advanced", "hours": 14, "sessions": 7 },
+    { "id": "traveler", "hours": 8, "sessions": 4 }
+  ],
+  "addons": [
+    { "id": "media", "baseKey": "media" },
+    { "id": "private-up", "baseKey": "private-up" },
+    { "id": "foil", "baseKey": "foil" }
+  ]
+}
