@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 import { track } from '../utils/track';
+import { Button } from '@/components/ui/Button';
 
 export const QuickForm = () => {
   const t = useTranslations('translation.translations');
@@ -78,11 +79,9 @@ export const QuickForm = () => {
           <label>{t('form.fields.honeypot.label')}</label>
           <input name="extra" tabIndex={-1} />
         </div>
-        <button
-          type="submit"
-          className="px-6 py-3 rounded bg-teal-600 text-white text-sm font-medium">
+        <Button type="submit" size="md">
           {t('form.submit')}
-        </button>
+        </Button>
         {status === 'ok' && (
           <p className="text-sm text-teal-600">{t('form.success')}</p>
         )}

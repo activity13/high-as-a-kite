@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
+import { Button } from '@/components/ui/Button';
 
 interface ModalProps {
   open: boolean;
@@ -83,13 +84,14 @@ export const Modal: React.FC<ModalProps> = ({
       <div
         ref={contentRef}
         className="relative w-full max-w-lg max-h-[90vh] overflow-y-auto rounded-lg bg-white p-6 shadow-xl">
-        <button
+        <Button
+          variant="ghost"
           type="button"
           aria-label="Close"
           onClick={onClose}
           className="absolute right-3 top-3 inline-flex h-8 w-8 items-center justify-center rounded hover:bg-neutral-100 text-neutral-500">
           <span aria-hidden>×</span>
-        </button>
+        </Button>
         {title && <h3 className="text-lg font-semibold mb-4 pr-8">{title}</h3>}
         {children}
       </div>

@@ -32,6 +32,7 @@ export default function Home() {
       <SafetySection />
       <TeamSection />
       <TestimonialsSection />
+      <FAQSection />
       <EmailNewsletters />
       <FinalCTASection />
     </>

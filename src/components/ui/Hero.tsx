@@ -5,6 +5,8 @@ import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import DiscoverButton from './scrollFromHero';
 import Link from 'next/link';
+import { CTAButton } from '@/components/ui/CTAButton';
+import { ChevronRight } from 'lucide-react';
 
 export default function Hero() {
   const [index, setIndex] = useState(0);
@@ -86,11 +88,11 @@ export default function Hero() {
             </p>
 
             <div className="mt-2 md:mt-4">
-              <button className="px-6 py-3 bg-sky-600 text-white rounded-lg font-medium shadow-lg shadow-sky-900/20 hover:bg-sky-700 transition-transform duration-300 hover:-translate-y-0.5 hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-sky-400">
+              <CTAButton variant="primary" size="lg" icon={<ChevronRight />}>
                 <Link href={'https://wa.me/51986677979'} target="_blank">
                   {t('cta')}
                 </Link>
-              </button>
+              </CTAButton>
             </div>
           </div>
           {/* Columna derecha vacía en desktop para dar respiro visual sobre el video */}

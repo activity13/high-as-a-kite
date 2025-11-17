@@ -7,16 +7,16 @@
   prefersdark: false; /* set as default dark mode (prefers-color-scheme:dark) */
   color-scheme: light; /* color of browser-provided UI */
 
-  --color-base-100: oklch(98% 0.02 240);
+  --color-base-100: oklch(1 0.0044 220.38);
   --color-base-200: oklch(95% 0.03 240);
-  --color-base-300: oklch(92% 0.04 240);
-  --color-base-content: oklch(20% 0.05 240);
+  --color-base-300: oklch(0.7703 0.03 240)
+    --color-base-content: oklch(92% 0.04 240);
   --color-primary: oklch(55% 0.3 240);
-  --color-primary-content: oklch(98% 0.01 240);
-  --color-secondary: oklch(0.6931 0.1582 30.41);
-  --color-secondary-content: oklch(0.9175 0.090055 85.5145);
-  --color-accent: oklch(65% 0.25 160);
-  --color-accent-content: oklch(98% 0.01 160);
+  --color-primary-content: oklch(1 0.0044 220.38);
+  --color-secondary: oklch(0.7567 0.0564 220.04);
+  --color-secondary-content: oklch(20% 0.05 240);
+  --color-accent: oklch(0.6931 0.1582 30.41);
+  --color-accent-content: oklch(0.9175 0.090055 85.5145);
   --color-neutral: oklch(0.2972 0 0);
   --color-neutral-content: oklch(98% 0.01 240);
   --color-info: oklch(70% 0.2 220);
@@ -43,6 +43,9 @@
   /* effects */
   --depth: 1;
   --noise: 0;
+
+  --font-stretch: var(--font-stretch-pro);
+  --font-helvetica: var(--font-roboto-mono);
 }
 
 :root {
@@ -59,10 +62,6 @@ body {
   --breakpoint-mdd: 60rem;
 }
 
-@theme inline {
-  --font-stretch: var(--font-stretch-pro);
-  --font-helvetica: var(--font-roboto-mono);
-}
 @layer base {
   h1,
   h2,

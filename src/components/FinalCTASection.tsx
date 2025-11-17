@@ -3,7 +3,8 @@
 import { useTranslations } from 'next-intl';
 import { track } from '../utils/track';
 import { QuickFormModal } from './QuickFormModal';
-
+import { CTAButton } from '@/components/ui/CTAButton';
+import { FaWhatsapp } from 'react-icons/fa';
 export const FinalCTASection = () => {
   const t = useTranslations('translation.translations');
   return (
@@ -13,12 +14,14 @@ export const FinalCTASection = () => {
         {t('finalCta.text')}
       </p>
       <div className="flex flex-wrap justify-center gap-4">
-        <a
-          href="https://wa.me/000000000"
-          className="px-6 py-3 rounded bg-white text-teal-700 text-sm font-medium"
-          onClick={() => track(t('events.tracking.whatsapp_click'))}>
-          {t('finalCta.buttons.whatsapp')}
-        </a>
+        <CTAButton variant="ghost" size="lg" icon={<FaWhatsapp />}>
+          <a
+            href="https://wa.me/000000000"
+            target="_blank"
+            onClick={() => track(t('events.tracking.whatsapp_click'))}>
+            {t('finalCta.buttons.whatsapp')}
+          </a>
+        </CTAButton>
         <QuickFormModal
           onOpen={() =>
             track(t('events.tracking.cta_click'), {

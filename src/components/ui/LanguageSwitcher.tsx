@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import { useRouter, usePathname } from 'next/navigation';
+import { Button } from '@/components/ui/Button';
 
 // === Iconos de banderas ===
 function FlagUS({ className = 'w-5 h-5' }: { className?: string }) {
@@ -44,7 +45,8 @@ export default function LanguageSwitcher() {
   ] as const;
 
   const handleLanguageChange = (newLocale: string) => {
-    const newPath = pathname.replace(/^\/[a-z]{2}/, `/${newLocale}`);
+    const newPath =
+      pathname?.replace(/^\/[a-z]{2}/, `/${newLocale}`) ?? `/${newLocale}`;
     router.push(newPath, { scroll: false });
     setOpen(false);
   };
@@ -65,9 +67,11 @@ export default function LanguageSwitcher() {
   return (
     <div ref={ref} className="relative inline-block text-left">
       {/* Botón principal */}
-      <button
-        onClick={() => setOpen((v) => !v)}
-        className="flex items-center gap-2 px-4 py-2 rounded-full bg-black/30 backdrop-blur-md text-white hover:bg-black/40 transition focus:outline-none focus:ring-2 focus:ring-sky-400">
+      <Button
+        variant="primary"
+        size={'sm'}
+        className="rounded-full"
+        onClick={() => setOpen((v) => !v)}>
         <current.Icon />
         <span className="text-sm md:text-base font-medium">
           {current.label}
@@ -86,7 +90,7 @@ export default function LanguageSwitcher() {
             d="M19 9l-7 7-7-7"
           />
         </svg>
-      </button>
+      </Button>
 
       {/* Opciones */}
       {open && (
@@ -94,9 +98,9 @@ export default function LanguageSwitcher() {
           <ul className="py-1">
             {options.map(({ key, label, Icon }) => (
               <li key={key}>
-                <button
+                <p
                   onClick={() => handleLanguageChange(key)}
-                  className={`w-full px-3 py-2 flex items-center gap-3 text-sm ${
+                  className={`w-full items-start px-3 py-2 flex gap-3 text-sm ${
                     locale === key
                       ? 'bg-sky-50 text-sky-700 font-semibold'
                       : 'text-gray-700 hover:bg-gray-100'
@@ -104,7 +108,7 @@ export default function LanguageSwitcher() {
                   <Icon />
                   {label}
                   {locale === key && <span className="ml-auto">✓</span>}
-                </button>
+                </p>
               </li>
             ))}
           </ul>

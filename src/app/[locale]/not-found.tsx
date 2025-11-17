@@ -4,6 +4,10 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import { Button } from '@/components/ui/Button';
+import { CTAButton } from '@/components/ui/CTAButton';
+import { ChevronRight } from 'lucide-react';
+
 export default function NotFound() {
   const t = useTranslations('translation.translations');
   return (
@@ -34,12 +38,9 @@ export default function NotFound() {
           <br />
           {t('NotFound.description')}
         </p>
-
-        <Link
-          href="/"
-          className="inline-block px-6 py-3 bg-primary text-primary-content rounded-full font-semibold hover:bg-primary/90 transition">
-          {t('NotFound.button')}
-        </Link>
+        <Button>
+          <Link href="/">{t('NotFound.button')}</Link>
+        </Button>
       </motion.div>
     </div>
   );

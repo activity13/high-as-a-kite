@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
+import { Button } from '@/components/ui/Button';
 
 export const FAQSection = () => {
   const t = useTranslations('translation.translations');
@@ -13,15 +14,18 @@ export const FAQSection = () => {
       <ul className="space-y-4">
         {items.map((it) => (
           <li key={it.q} className="border rounded">
-            <button
+            <Button
+              variant="ghost"
               className="w-full text-left px-4 py-3 font-medium flex justify-between items-center"
               onClick={() => setOpen((o) => (o === it.q ? null : it.q))}
               aria-expanded={open === it.q}>
               <span>{it.q}</span>
               <span className="text-xs">{open === it.q ? '−' : '+'}</span>
-            </button>
+            </Button>
             {open === it.q && (
-              <div className="px-4 pb-4 text-sm text-neutral-600">{it.a}</div>
+              <div className="px-4 pb-4 py-2 text-sm text-neutral-600">
+                {it.a}
+              </div>
             )}
           </li>
         ))}

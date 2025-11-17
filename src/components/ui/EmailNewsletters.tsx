@@ -4,6 +4,7 @@ import emailjs from '@emailjs/browser';
 import { Mail, User, Bell } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
+import { Button } from '@/components/ui/Button';
 // import TermsConditionsPage from '../[locale]/terms-conditions/page';
 
 const EmailForm: React.FC = () => {
@@ -65,7 +66,7 @@ const EmailForm: React.FC = () => {
             <div className="flex items-start gap-3">
               <div>
                 {/*Titulo de la tarjeta de newsletter */}
-                <h2 className="font-helvetica text-lg font-bold">
+                <h2 className="font-helvetica text-lg font-bold leading-relxed">
                   {t('title')}
                 </h2>{' '}
                 <p className="text-sm opacity-80 mt-1 leading-relaxed">
@@ -103,18 +104,18 @@ const EmailForm: React.FC = () => {
               </div>
 
               {/* Checkbox políticas */}
-              <div className="flex items-start gap-3 bg-base-100 rounded-lg border border-base-300 p-3">
+              <div className="flex items-start gap-3 bg-base-100 rounded-lg border border-base-200 p-3">
                 <input
                   type="checkbox"
                   id="terms"
-                  className="checkbox checkbox-sm mt-1"
+                  className="checkbox checkbox-sm mt-1 bg-base-200 text-black"
                   checked={acceptTerms}
                   onChange={(e) => setAcceptTerms(e.target.checked)}
                   required
                 />
                 <label
                   htmlFor="terms"
-                  className="text-xs leading-relaxed cursor-pointer">
+                  className="text-xs leading-relaxed link-primary cursor-pointer">
                   {t('agreePolicy1')}{' '}
                   <Link
                     href={'/terms-conditions'}
@@ -125,9 +126,10 @@ const EmailForm: React.FC = () => {
                 </label>
               </div>
 
-              <button
+              <Button
                 type="submit"
-                className="btn btn-primary w-full h-11 text-sm normal-case"
+                variant="primary"
+                className="w-full justify-center"
                 disabled={loading || !acceptTerms}>
                 {loading ? (
                   <div className="flex items-center gap-2">
@@ -137,7 +139,7 @@ const EmailForm: React.FC = () => {
                 ) : (
                   <>{t('button')}</>
                 )}
-              </button>
+              </Button>
             </form>
           </div>
         </div>

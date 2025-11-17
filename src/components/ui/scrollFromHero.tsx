@@ -2,6 +2,8 @@
 import React, { useCallback } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { Button } from '@/components/ui/Button';
+
 export default function DiscoverButton() {
   const t = useTranslations('translation.translations.Hero');
   const handleScroll = useCallback(() => {
@@ -13,11 +15,15 @@ export default function DiscoverButton() {
   }, []);
 
   return (
-    <button
-      onClick={handleScroll}
-      className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center text-xl text-primary-content hover:text-white hover:cursor-pointer transition-colors duration-300">
-      <span className="underline mb-1">{t('discover')}</span>
-      <ChevronDown className="animate-bounce" size={28} />
-    </button>
+    <>
+      <Button
+        variant="ghost"
+        size="md"
+        onClick={handleScroll}
+        className="absolute bottom-20 left-1/2 -translate-x-1/2 flex flex-col items-center text-xl text-primary-content hover:text-white hover:cursor-pointer transition-colors duration-300">
+        <span>{t('discover')}</span>
+        <ChevronDown className="animate-bounce" />
+      </Button>
+    </>
   );
 }

@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import Modal from './ui/Modal';
 import { QuickForm } from './QuickForm';
+import { CTAButton } from '@/components/ui/CTAButton';
 
 interface QuickFormModalProps {
   triggerLabel?: string;
@@ -14,7 +15,6 @@ interface QuickFormModalProps {
 export const QuickFormModal = ({
   triggerLabel,
   onOpen,
-  buttonClassName,
 }: QuickFormModalProps) => {
   const [open, setOpen] = useState(false);
   const t = useTranslations('translation.translations');
@@ -26,15 +26,9 @@ export const QuickFormModal = ({
 
   return (
     <>
-      <button
-        type="button"
-        onClick={handleOpen}
-        className={
-          buttonClassName ??
-          'px-6 py-3 rounded bg-teal-900 text-white text-sm font-medium'
-        }>
+      <CTAButton type="button" variant="primary" size="lg" onClick={handleOpen}>
         {triggerLabel ?? t('finalCta.buttons.form')}
-      </button>
+      </CTAButton>
       <Modal open={open} onClose={() => setOpen(false)} title={t('form.title')}>
         {/* QuickForm renders a section; it's fine inside modal context */}
         <QuickForm />
