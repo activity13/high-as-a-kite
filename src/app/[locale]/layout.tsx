@@ -14,7 +14,7 @@ import type { Metadata } from 'next';
 import { Analytics } from '@vercel/analytics/next';
 // Componentes
 import Navbar from '../../components/ui/Navbar';
-import Footer from '../../components/ui/Footer';
+import Footer from '../../components/Footer';
 
 export const stretchPro = localFont({
   src: [

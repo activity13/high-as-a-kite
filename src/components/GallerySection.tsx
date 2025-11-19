@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-import { haakDesign } from '@/lib/design-system';
+import { Section, SectionTitle } from './ui/Section';
 
 type GalleryImage = {
   id: number;
@@ -56,29 +56,27 @@ export const GallerySection = () => {
   const t = useTranslations('translation.translations');
 
   return (
-    <section
-      className={haakDesign.spacing.section}
-      aria-label={t('gallery.ariaGrid')}>
-      <div className={haakDesign.spacing.container}>
-        <h2 className={haakDesign.typography.h2}>{t('gallery.title')}</h2>
+    <Section background="base-200" aria-label={t('gallery.ariaGrid')}>
+      <SectionTitle as="h2" className="mb-8">
+        {t('gallery.title')}
+      </SectionTitle>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8">
-          {galleryImages.map((img) => (
-            <figure
-              key={img.id}
-              className="aspect-square overflow-hidden rounded-lg bg-base-200 hover:opacity-90 transition-opacity cursor-pointer">
-              <Image
-                src={img.src}
-                alt={img.alt}
-                width={800}
-                height={800}
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-            </figure>
-          ))}
-        </div>
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        {galleryImages.map((img) => (
+          <figure
+            key={img.id}
+            className="aspect-square overflow-hidden rounded-lg bg-base-300 hover:scale-105 hover:shadow-lg transition-all duration-300 cursor-pointer">
+            <Image
+              src={img.src}
+              alt={img.alt}
+              width={800}
+              height={800}
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </figure>
+        ))}
       </div>
-    </section>
+    </Section>
   );
 };

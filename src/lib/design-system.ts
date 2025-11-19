@@ -37,7 +37,7 @@ export const haakDesign = {
     card: {
       default: 'card bg-base-100 shadow-lg',
       bordered: 'card bg-base-100 border border-base-300',
-      compact: 'card bg-base-100 shadow-lg card-compact',
+      compact: 'card bg-base-1s00 shadow-lg card-compact',
       body: 'card-body',
     },
 

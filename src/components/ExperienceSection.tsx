@@ -1,4 +1,8 @@
 import { useTranslations } from 'next-intl';
+import { haakDesign } from '@/lib/design-system';
+import { Section, SectionTitle } from './ui/Section';
+import { Card, CardBody, CardTitle } from './ui/Card';
+import { CTAButton } from './ui/CTAButton';
 
 export const ExperienceSection = () => {
   const t = useTranslations('translation.translations');
@@ -6,28 +10,37 @@ export const ExperienceSection = () => {
     title: string;
     text: string;
   }[];
+
   return (
-    <section className="py-16 p-6">
-      <h2 className="text-3xl font-bold mb-2">{t('experience.title')}</h2>
-      <p className="mb-8 max-w-xl text-neutral-700">{t('experience.intro')}</p>
-      <div className="grid card md:grid-cols-4 sm:grid-cols-2 gap-6">
+    <Section background="base-200">
+      <SectionTitle as="h2" className="mb-2">
+        {t('experience.title')}
+      </SectionTitle>
+
+      <p
+        className={`${haakDesign.typography.body} mb-8 max-w-xl text-base-content/70`}>
+        {t('experience.intro')}
+      </p>
+
+      <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-6">
         {pillars.map((p) => (
-          <article
-            key={p.title}
-            className="p-4 card-body rounded-lg border bg-white shadow-sm">
-            <h3 className="font-semibold mb-1 card-title">{p.title}</h3>
-            <p className="text-sm text-neutral-600">{p.text}</p>
-          </article>
+          <Card key={p.title} variant="bordered">
+            <CardBody>
+              <CardTitle as="h3">{p.title}</CardTitle>
+              <p className={haakDesign.typography.body}>{p.text}</p>
+            </CardBody>
+          </Card>
         ))}
       </div>
+
       <div className="mt-8 flex justify-center">
-        <a
-          href="https://wa.me/51986677979"
-          target="_blank"
-          className="px-6 py-3 rounded bg-teal-600 text-white text-sm font-medium inline-block">
+        <CTAButton
+          variant="primary"
+          size="lg"
+          onClick={() => window.open('https://wa.me/51986677979', '_blank')}>
           {t('experience.cta')}
-        </a>
+        </CTAButton>
       </div>
-    </section>
+    </Section>
   );
 };

@@ -1,5 +1,12 @@
 import { useTranslations } from 'next-intl';
+import Link from 'next/link';
 import { track } from '../utils/track';
+import { Section, SectionTitle } from './ui/Section';
+import { PackageCard } from './ui/PackageCard';
+import { CTAButton } from './ui/CTAButton';
+import { Badge } from './ui/Badge';
+import { haakDesign } from '@/lib/design-system';
+import { Card, CardBody, CardTitle } from './ui/Card';
 
 export const PackagesSection = () => {
   const t = useTranslations('translation.translations');
@@ -20,60 +27,88 @@ export const PackagesSection = () => {
   }[];
   const currency = t('packages.currency');
   return (
-    <section className="py-16 bg-neutral-50" id="packages">
-      <h2 className="text-3xl font-bold mb-8">{t('packages.title')}</h2>
+    <Section background="base-100" contained id="packages">
+      <SectionTitle>{t('packages.title')}</SectionTitle>
       <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-6 mb-10">
         {cards.map((c) => (
-          <article
+          <Card
             key={c.id}
-            className="p-5 rounded-lg border bg-white shadow-sm hover:border-teal-500 transition"
+            variant="bordered"
+            className="hover:border-primary hover:shadow-lg transition-all duration-300"
             onMouseEnter={() =>
               track(t('events.tracking.package_view'), {
                 id: c.id,
               })
             }>
-            <h3 className="font-semibold text-lg">{c.name}</h3>
-            <p className="text-xs text-neutral-500">{c.focus}</p>
-            <ul className="mt-3 text-sm space-y-1">
-              {c.includes.map((i) => (
-                <li key={i}>• {i}</li>
-              ))}
-            </ul>
-            <div className="mt-4 flex items-baseline gap-2">
-              <span className="text-2xl font-bold">${c.price}</span>
-              <span className="text-xs text-neutral-500">{currency}</span>
-            </div>
-            <div className="text-xs text-neutral-500 mt-1">
-              {c.hours}h / {c.sessions} sesiones
-            </div>
-          </article>
+            <CardBody className="gap-4">
+              <div>
+                <CardTitle as="h3">{c.name}</CardTitle>
+                <p
+                  className={`${haakDesign.typography.small} text-base-content/70 mt-1`}>
+                  {c.focus}
+                </p>
+              </div>
+
+              <ul className="space-y-2 flex-1">
+                {c.includes.map((i, idx) => (
+                  <li
+                    key={idx}
+                    className="flex gap-2 items-start text-sm text-base-content/80">
+                    <span className="text-primary">•</span>
+                    <span>{i}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="border-t border-base-300 pt-4">
+                <div className="flex items-baseline gap-2 mb-1">
+                  <span className="text-3xl font-bold text-primary">
+                    ${c.price}
+                  </span>
+                  <span
+                    className={`${haakDesign.typography.small} text-base-content/60`}>
+                    {currency}
+                  </span>
+                </div>
+                <p
+                  className={`${haakDesign.typography.small} text-base-content/60`}>
+                  {c.hours}h · {c.sessions} sesiones
+                </p>
+              </div>
+            </CardBody>
+          </Card>
         ))}
       </div>
-      <h4 className="text-sm font-semibold uppercase tracking-wide mb-3">
+      <h4
+        className={`${haakDesign.typography.body} font-semibold uppercase tracking-wide mb-6 mt-8 text-base-content`}>
         {t('packages.addonsTitle')}
       </h4>
       <div className="flex flex-wrap gap-4">
         {addons.map((a) => (
           <div
             key={a.id}
-            className="px-4 py-3 rounded border bg-white shadow-sm text-sm">
-            <span className="font-medium">{a.name}</span> · ${a.price}
-            <div className="text-xs text-neutral-500">{a.note}</div>
+            className="px-4 py-3 rounded-lg border-2 border-base-300 bg-base-100 shadow-sm hover:border-primary hover:shadow-md transition-all duration-300">
+            <span className="font-medium text-base-content">{a.name}</span>
+            <span className="text-primary font-semibold"> · ${a.price}</span>
+            <div
+              className={`${haakDesign.typography.small} text-base-content/60 mt-1`}>
+              {a.note}
+            </div>
           </div>
         ))}
       </div>
-      <div className="mt-8">
-        <a
-          href="#form"
-          className="px-6 py-3 rounded bg-teal-600 text-white text-sm inline-block"
-          onClick={() =>
-            track(t('events.tracking.cta_click'), {
-              source: 'packages',
-            })
-          }>
-          {t('packages.cta')}
-        </a>
+      <div className="mt-10 flex justify-center">
+        <Link href="#form">
+          <CTAButton
+            onClick={() =>
+              track(t('events.tracking.cta_click'), {
+                source: 'packages',
+              })
+            }>
+            {t('packages.cta')}
+          </CTAButton>
+        </Link>
       </div>
-    </section>
+    </Section>
   );
 };

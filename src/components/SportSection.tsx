@@ -1,6 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const sports = [
   {
@@ -55,29 +56,31 @@ export default function SportsDeck() {
   return (
     <section
       id="next-section"
-      className="relative w-full h-screen bg-neutral scrollbar-none overflow-x-auto flex flex-nowrap">
+      className="relative w-full h-screen bg-base-content scrollbar-none overflow-x-auto flex flex-nowrap">
       {sports.map((sport, i) => {
         const isActive = active === i;
         return (
           <motion.div
             key={i}
             onClick={() => setActive(isActive ? null : i)}
-            className="relative md:max-w-[400px] h-full cursor-pointer flex-shrink-0 mr-1"
+            className="relative  h-full cursor-pointer flex-shrink-0 mr-1"
             animate={{
               width: isActive ? '60%' : '40%',
               rotate: 0,
             }}
             transition={{ duration: 0.6, ease: 'easeInOut' }}>
             {/* Fondo */}
-            <img
+            <Image
               src={sport.img}
               alt={sport.name}
-              className={`absolute inset-0 w-full h-full object-cover ${sport.img_fit} `}
+              fill
+              className={`object-cover ${sport.img_fit}`}
+              sizes="(max-width: 768px) 100vw, 60vw"
             />
 
             {/* Contenido */}
             <motion.div
-              className="absolute bottom-10 left-6 right-6 text-white"
+              className="absolute bottom-10 left-6 right-6 text-white z-10"
               animate={{ opacity: isActive ? 1 : 0.8 }}
               transition={{ delay: 0.2 }}>
               <h2 className="text-2xl md:text-3xl font-bold">{sport.name}</h2>

@@ -3,7 +3,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
-import DiscoverButton from './scrollFromHero';
+import DiscoverButton from './ui/scrollFromHero';
 import Link from 'next/link';
 import { CTAButton } from '@/components/ui/CTAButton';
 import { ChevronRight } from 'lucide-react';
@@ -40,10 +40,10 @@ export default function Hero() {
         muted
         playsInline
         preload="auto"
-        poster="/images/hero-poster.jpg"
+        poster="/images/jetsky.webp"
         aria-hidden="true"
         className="absolute inset-0 w-full h-full object-cover">
-        <source src="/videos/caida.mp4" type="video/mp4" />
+        <source src="/videos/hero.mp4" type="video/mp4" />
         {/* Fallback accesible si el navegador no soporta video */}
         Your browser does not support the video tag.
       </video>

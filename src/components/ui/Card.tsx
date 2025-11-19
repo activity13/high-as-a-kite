@@ -64,14 +64,17 @@ interface CardTitleProps extends HTMLAttributes<HTMLHeadingElement> {
 
 /**
  * CardTitle - Título de la card
- * Por defecto usa h3 del design system
+ * Usa un tamaño más moderado que h3 para evitar desbordamiento en grids
  */
 export const CardTitle = forwardRef<HTMLHeadingElement, CardTitleProps>(
   ({ children, as: Component = 'h3', className, ...props }, ref) => {
     return (
       <Component
         ref={ref}
-        className={cn('card-title', haakDesign.typography.h3, className)}
+        className={cn(
+          'card-title text-lg  font-semibold text-base-content',
+          className,
+        )}
         {...props}>
         {children}
       </Component>

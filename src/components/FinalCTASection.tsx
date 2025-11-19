@@ -1,27 +1,39 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import { haakDesign } from '@/lib/design-system';
 import { track } from '../utils/track';
+import { Section, SectionTitle } from './ui/Section';
+import { CTAButton } from './ui/CTAButton';
 import { QuickFormModal } from './QuickFormModal';
-import { CTAButton } from '@/components/ui/CTAButton';
 import { FaWhatsapp } from 'react-icons/fa';
+
 export const FinalCTASection = () => {
   const t = useTranslations('translation.translations');
+
   return (
-    <section className="py-20 bg-teal-700 text-white text-center">
-      <h2 className="text-3xl font-bold mb-3">{t('finalCta.title')}</h2>
-      <p className="max-w-xl mx-auto mb-8 text-sm opacity-90">
+    <Section background="primary" className="text-center">
+      <SectionTitle as="h2" className="mb-3 text-primary-content">
+        {t('finalCta.title')}
+      </SectionTitle>
+
+      <p
+        className={`${haakDesign.typography.body} max-w-xl mx-auto mb-8 text-primary-content/90`}>
         {t('finalCta.text')}
       </p>
+
       <div className="flex flex-wrap justify-center gap-4">
-        <CTAButton variant="ghost" size="lg" icon={<FaWhatsapp />}>
-          <a
-            href="https://wa.me/000000000"
-            target="_blank"
-            onClick={() => track(t('events.tracking.whatsapp_click'))}>
-            {t('finalCta.buttons.whatsapp')}
-          </a>
+        <CTAButton
+          variant="secondary"
+          size="lg"
+          icon={<FaWhatsapp />}
+          onClick={() => {
+            track(t('events.tracking.whatsapp_click'));
+            window.open('https://wa.me/51986677979', '_blank');
+          }}>
+          {t('finalCta.buttons.whatsapp')}
         </CTAButton>
+
         <QuickFormModal
           onOpen={() =>
             track(t('events.tracking.cta_click'), {
@@ -30,6 +42,6 @@ export const FinalCTASection = () => {
           }
         />
       </div>
-    </section>
+    </Section>
   );
 };

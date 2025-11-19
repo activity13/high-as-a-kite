@@ -1,4 +1,7 @@
 import { useTranslations } from 'next-intl';
+import { haakDesign } from '@/lib/design-system';
+import { Section, SectionTitle } from './ui/Section';
+import { Card, CardBody, CardTitle } from './ui/Card';
 
 export const SafetySection = () => {
   const t = useTranslations('translation.translations');
@@ -6,18 +9,33 @@ export const SafetySection = () => {
     title: string;
     text: string;
   }[];
+
   return (
-    <section className="py-16 bg-neutral-50">
-      <h2 className="text-3xl font-bold mb-2">{t('safety.title')}</h2>
-      <p className="mb-8 text-neutral-700 max-w-xl">{t('safety.intro')}</p>
+    <Section background="base-200">
+      <SectionTitle as="h2" className="mb-2">
+        {t('safety.title')}
+      </SectionTitle>
+
+      <p
+        className={`${haakDesign.typography.body} mb-8 max-w-xl text-base-content/70`}>
+        {t('safety.intro')}
+      </p>
+
       <div className="grid md:grid-cols-3 gap-6">
         {items.map((i) => (
-          <article key={i.title} className="p-5 rounded-lg border bg-white">
-            <h3 className="font-semibold">{i.title}</h3>
-            <p className="text-sm text-neutral-600 mt-1">{i.text}</p>
-          </article>
+          <Card key={i.title} variant="bordered">
+            <CardBody>
+              <CardTitle as="h3" className="mb-2">
+                {i.title}
+              </CardTitle>
+              <p
+                className={`${haakDesign.typography.body} text-base-content/70`}>
+                {i.text}
+              </p>
+            </CardBody>
+          </Card>
         ))}
       </div>
-    </section>
+    </Section>
   );
 };

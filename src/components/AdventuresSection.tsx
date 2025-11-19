@@ -1,4 +1,13 @@
 import { useTranslations } from 'next-intl';
+import { haakDesign } from '@/lib/design-system';
+import {
+  Badge,
+  Card,
+  CardBody,
+  CardTitle,
+  Section,
+  SectionTitle,
+} from '@/components/ui';
 
 export const AdventuresSection = () => {
   const t = useTranslations('translation.translations');
@@ -7,22 +16,24 @@ export const AdventuresSection = () => {
     text: string;
     duration: string;
   }[];
+
   return (
-    <section className="py-16">
-      <h2 className="text-3xl font-bold mb-8">{t('adventures.title')}</h2>
+    <Section background="secondary">
+      <SectionTitle as="h2" className="mb-8">
+        {t('adventures.title')}
+      </SectionTitle>
+
       <div className="grid md:grid-cols-3 gap-6">
         {items.map((a) => (
-          <article
-            key={a.name}
-            className="p-5 rounded-lg border bg-white shadow-sm">
-            <h3 className="font-semibold">{a.name}</h3>
-            <p className="text-sm text-neutral-600 mt-2">{a.text}</p>
-            <span className="text-xs mt-3 inline-block bg-neutral-100 px-2 py-1 rounded">
-              {a.duration}
-            </span>
-          </article>
+          <Card key={a.name} variant="bordered">
+            <CardBody>
+              <CardTitle as="h3">{a.name}</CardTitle>
+              <p className={haakDesign.typography.body}>{a.text}</p>
+              <Badge variant="primary">{a.duration}</Badge>
+            </CardBody>
+          </Card>
         ))}
       </div>
-    </section>
+    </Section>
   );
 };
