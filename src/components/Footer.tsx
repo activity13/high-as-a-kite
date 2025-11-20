@@ -80,16 +80,16 @@ export default function Footer() {
               </h4>
               <nav className="space-y-3">
                 {[
-                  { href: '/', label: t('Footer.explore.about') },
-                  { href: '/about', label: t('Footer.explore.lessons') },
-                  { href: '/sports', label: t('Footer.explore.trips') },
+                  { href: '/', label: t('Footer.explore.home') },
+                  { href: '/about', label: t('Footer.explore.about') },
+                  { href: '/sports', label: t('Footer.explore.sports') },
                   {
                     href: '/marine-adventure',
                     label: t('Footer.explore.rentals'),
                   },
-                  { href: '/gallery', label: t('Footer.explore.spots') },
-                  { href: '/contact', label: t('Footer.explore.prices') },
-                  { href: '/contact', label: t('Footer.explore.gallery') },
+                  { href: '/spots', label: t('Footer.explore.spots') },
+                  { href: '/packs', label: t('Footer.explore.packs') },
+                  { href: '/gallery', label: t('Footer.explore.gallery') },
                   { href: '/contact', label: t('Footer.explore.contact') },
                 ].map((link) => (
                   <Link

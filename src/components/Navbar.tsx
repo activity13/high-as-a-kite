@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/i18n/navigation';
-import LanguageSwitcher from './LanguageSwitcher';
+import LanguageSwitcher from './ui/LanguageSwitcher';
 
 export default function Navbar() {
   const t = useTranslations('translation.translations');
@@ -52,11 +52,11 @@ export default function Navbar() {
   const links = [
     { href: '/', label: t('Navbar.home') },
     { href: '/about', label: t('Navbar.about') },
-    { href: '/lessons', label: t('Navbar.lessons') },
+    { href: '/sports', label: t('Navbar.sports') },
     { href: '/trips', label: t('Navbar.trips') },
     { href: '/rentals', label: t('Navbar.rentals') },
     { href: '/spots', label: t('Navbar.spots') },
-    { href: '/prices', label: t('Navbar.prices') },
+    { href: '/packs', label: t('Navbar.packs') },
     { href: '/gallery', label: t('Navbar.gallery') },
     { href: '/contact', label: t('Navbar.contact') },
   ];
@@ -68,8 +68,8 @@ export default function Navbar() {
     if (el) el.checked = false;
   };
 
-  // Agrupar: lessons, trips, rentals
-  const groupedHrefs = ['/lessons', '/trips', '/rentals'];
+  // Agrupar: sports, trips, rentals
+  const groupedHrefs = ['/sports', '/trips', '/rentals'];
   const groupedLinks = links.filter((l) => groupedHrefs.includes(l.href));
   const mainLinks = links.filter((l) => !groupedHrefs.includes(l.href));
   const servicesActive = groupedLinks.some((l) => isActive(l.href));
@@ -182,9 +182,6 @@ export default function Navbar() {
             </div>
           </div>
         </nav>
-
-        {/* Spacer to avoid content under nav */}
-        <div className="h-14" />
       </div>
 
       {/* Drawer Side (mobile) */}

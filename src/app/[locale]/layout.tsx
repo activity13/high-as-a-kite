@@ -13,7 +13,7 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { Analytics } from '@vercel/analytics/next';
 // Componentes
-import Navbar from '../../components/ui/Navbar';
+import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 
 export const stretchPro = localFont({

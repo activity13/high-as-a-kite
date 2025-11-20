@@ -21,7 +21,7 @@ export { Badge } from './Badge';
 export { Modal } from './Modal';
 
 // Navigation
-export { Navbar } from './Navbar';
+export { Navbar } from '../Navbar';
 export { Footer } from '../Footer';
 
 // Other

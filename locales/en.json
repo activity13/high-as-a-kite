@@ -19,11 +19,11 @@
       "Navbar": {
         "home": "Home",
         "about": "About Us",
-        "lessons": "Lessons",
+        "sports": "Sports",
         "trips": "Trips",
         "rentals": "Rentals",
         "spots": "Spots",
-        "prices": "Prices",
+        "packs": "Packs",
         "gallery": "Gallery",
         "contact": "Contact",
         "services": "Services"
@@ -99,12 +99,13 @@
         },
         "explore": {
           "title": "Explore",
+          "home": "Home",
           "about": "About Us",
-          "lessons": "Lessons",
+          "sports": "Sports",
           "trips": "Trips",
           "rentals": "Rentals",
           "spots": "Spots",
-          "prices": "Prices",
+          "packs": "Packs",
           "gallery": "Gallery",
           "contact": "Contact"
         },
@@ -129,7 +130,7 @@
       },
       "About": {
         "title": "About Us",
-		      "subtitle": "Discover our story, values, and team.",
+        "subtitle": "Discover our story, values, and team.",
 
         "description": "Learn more about High As A Kite | HAAK, our mission, and how we design experiences for remote workers seeking adventure and community."
       },
@@ -809,7 +810,7 @@
           }
         ]
       },
-	    "team": {
+      "team": {
         "title": "Our Team",
         "members": [
           {
@@ -838,7 +839,7 @@
           }
         ]
       },
-	    "testimonials": {
+      "testimonials": {
         "title": "Testimonials",
         "sliderAria": "Testimonials carousel",
         "items": [
@@ -868,7 +869,7 @@
           }
         ]
       },
-	   "schema": {
+      "schema": {
         "localBusiness": {
           "name": "Haak Kite School",
           "type": "SportsActivityLocation",
@@ -876,10 +877,276 @@
           "priceRange": "$$"
         }
       },
-         "accessibility": {
+      "accessibility": {
         "skipToContent": "Skip to content",
         "ariaNav": "Main navigation",
         "ariaTestimonials": "Testimonials section"
+      },
+      "sportsInfo": {
+        "section": {
+          "title": "Water Sports in Los Órganos",
+          "subtitle": "Experience the thrill of water sports in Los Órganos, a coastal paradise known for its perfect conditions and stunning scenery. Whether you're a beginner or an experienced enthusiast, our range of activities offers something for everyone.",
+          "people": "person",
+          "perPerson": "per person",
+          "modalities": "Modalities",
+          "prices": "Prices",
+          "addons": "Add-ons",
+          "pricePerPerson": "Price per person",
+          "optRent": "Optional rental",
+          "boats": "Price by boat",
+          "ppShared": "p/p shared",
+          "noPrice": "Contact us for pricing",
+          "loading": "Loading sports...",
+          "sports": "Sports"
+        },
+        "items": [
+          {
+            "id": "surf",
+            "name": "Surf",
+            "description": "",
+            "location": "Punta Veleros - Los Órganos",
+            "includes": [
+              "Sports and safety equipment",
+              "Certified instructor",
+              "1 hour in the water",
+              "Round-trip transportation"
+            ]
+          },
+          {
+            "id": "kitesurf",
+            "name": "Kite Surf",
+            "description": "",
+            "includes": [
+              "Sports and safety equipment",
+              "Certified instructor",
+              "IKO certificate"
+            ],
+            "modalities": [
+              { "id": "kitesurf-private", "name": "Private class per hour" },
+              {
+                "id": "kitesurf-group",
+                "name": "Group class (2 people) per hour"
+              },
+              { "id": "kitesurf-course-3", "name": "3-day course (6 hours)" },
+              { "id": "kitesurf-course-5", "name": "5-day course (10 hours)" }
+            ]
+          },
+          {
+            "id": "wakesurf",
+            "name": "Wake Surf",
+            "description": "",
+            "includes": [
+              "Sports and safety equipment",
+              "Certified instructor",
+              "1 hour in the water",
+              "Round-trip transportation"
+            ]
+          },
+          {
+            "id": "stand-up-paddle",
+            "name": "Stand Up Paddle",
+            "description": "",
+            "includes": [
+              "Sports and safety equipment",
+              "Certified instructor",
+              "1 hour in the water",
+              "Round-trip transportation"
+            ],
+            "rental": {
+              "id": "sup-rental",
+              "name": "Equipment rental (1 hour)"
+            },
+            "addons": [{ "id": "sup-snorkel", "name": "Snorkel and fins" }]
+          },
+          {
+            "id": "jetsky",
+            "name": "Jetsky",
+            "description": "",
+            "includes": ["Jet ski", "Safety equipment", "Certified instructor"],
+            "modalities": [
+              { "id": "jetsky-class", "name": "45 min class" },
+              { "id": "jetsky-rental", "name": "1 hour rental" }
+            ]
+          },
+          {
+            "id": "kayak",
+            "name": "Kayak",
+            "description": "",
+            "includes": [
+              "Sports equipment",
+              "Safety equipment",
+              "Certified instructor",
+              "1 hour in the water"
+            ],
+            "addons": [{ "id": "kayak-snorkel", "name": "Snorkel and fins" }]
+          },
+          {
+            "id": "skimboard",
+            "name": "Skim Board",
+            "description": "",
+            "includes": [
+              "Sports equipment",
+              "Safety equipment",
+              "Certified instructor",
+              "30 min class + 30 min practice"
+            ]
+          },
+          {
+            "id": "swimming-open-sea",
+            "name": "Open Sea Swimming",
+            "description": "",
+            "includes": [
+              "Sports equipment",
+              "Safety equipment",
+              "Certified instructor",
+              "1 hour in the water"
+            ]
+          },
+          {
+            "id": "banano",
+            "name": "Banana Boat",
+            "description": "Coastal ride.",
+            "includes": [
+              "Sports equipment",
+              "Safety equipment",
+              "Certified instructor",
+              "45 minutes"
+            ]
+          },
+          {
+            "id": "whale-turtle-tour",
+            "name": "Whale Watching and Turtle Swimming",
+            "description": "",
+            "includes": ["Transportation"],
+            "location": "Los Órganos Pier – Piura",
+            "schedule": "Departure time: 6:30 am",
+            "duration": "Duration: 4 hours",
+            "boats": [
+              { "id": "whale-boat-sailboat", "name": "Sailboat" },
+              { "id": "whale-boat-artisanal", "name": "Artisanal boat" },
+              { "id": "whale-boat-jetski", "name": "Jet ski" }
+            ]
+          },
+          {
+            "id": "turtle-swimming",
+            "name": "Turtle Swimming",
+            "description": "",
+            "includes": ["Transportation"],
+            "location": "Los Órganos Pier",
+            "duration": "Duration: 2 hours",
+            "boats": [
+              { "id": "turtle-boat-sailboat", "name": "Sailboat" },
+              { "id": "turtle-boat-artisanal", "name": "Artisanal boat" },
+              { "id": "turtle-boat-jetski", "name": "Jet ski" },
+              { "id": "turtle-boat-sup", "name": "Stand Up Paddle" }
+            ]
+          },
+          {
+            "id": "fishing-ceviche",
+            "name": "Fishing and Make Your Own Ceviche",
+            "description": "",
+            "includes": [
+              "Pier ticket",
+              "Life jackets",
+              "1 beer per person",
+              "Juices/sodas",
+              "Snacks",
+              "Kayak or paddle (upon coordination)",
+              "Music",
+              "Fishing gear (trolling, jigging, lines)",
+              "Ceviche on board",
+              "Transportation"
+            ],
+            "boats": [
+              { "id": "fishing-boat-sailboat", "name": "Sailboat" },
+              { "id": "fishing-boat-artisanal", "name": "Artisanal boat" },
+              { "id": "fishing-boat-kayak", "name": "Kayak" }
+            ]
+          },
+          {
+            "id": "sunset-sailboat",
+            "name": "Sunset Sailboat",
+            "description": "45–60 minute tour; then anchoring for activities (dancing, singing, paddling, etc.).",
+            "includes": [
+              "1 beer per person",
+              "Music",
+              "Snacks",
+              "Ice",
+              "BYOB",
+              "Mats",
+              "Bean bags",
+              "Kayak or paddle"
+            ],
+            "capacity": "1-10 people",
+            "duration": "Duration: 3 hours"
+          },
+          {
+            "id": "deep-sea-fishing",
+            "name": "Deep Sea Fishing",
+            "description": "Boarding: 11 pm the night before.",
+            "includes": [
+              "Light breakfast",
+              "Snacks",
+              "Drinks",
+              "Ceviche or catch of the day",
+              "Fishing equipment",
+              "4 beds"
+            ],
+            "capacity": "Max. 8 people",
+            "duration": "Duration: 12-15 hours"
+          },
+          {
+            "id": "lobitos-fishing-tour",
+            "name": "Experiential Fishing Tour - Lobitos",
+            "description": "",
+            "includes": [
+              "Safety equipment",
+              "GoPro videos/photos",
+              "Breakfast",
+              "Seasickness pills",
+              "Drinks",
+              "Ceviche preparation at sea"
+            ],
+            "location": "Lobitos",
+            "transport": {
+              "id": "lobitos-transport",
+              "name": "Transportation"
+            }
+          },
+          {
+            "id": "lobitos-fishing-tour-2",
+            "name": "Fishing Tour - Lobitos",
+            "description": "",
+            "includes": [
+              "Safety equipment",
+              "Videos",
+              "Breakfast",
+              "Seasickness pills",
+              "Fishing",
+              "Ceviche"
+            ],
+            "location": "Lobitos",
+            "transport": {
+              "id": "lobitos-transport-2",
+              "name": "Transportation"
+            }
+          },
+          {
+            "id": "diving",
+            "name": "Diving / Scuba Diving",
+            "description": "",
+            "includes": [
+              "Introduction talk",
+              "Equipment rental",
+              "PADI instructor",
+              "Assistant",
+              "Boat expenses",
+              "Snacks",
+              "Transportation"
+            ],
+            "location": "Los Órganos"
+          }
+        ]
       }
     }
   }
