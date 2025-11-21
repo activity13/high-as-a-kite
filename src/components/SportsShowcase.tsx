@@ -58,8 +58,7 @@ const sports = [
   },
 ];
 
-// todo cambiar nombre de componente: este es un carrusel personalizado que ofrece imagen principal y expande información al hacer click
-export default function SportsDeck() {
+export default function SportsShowcase() {
   const [active, setActive] = useState<number | null>(null);
 
   return (
@@ -90,7 +89,7 @@ export default function SportsDeck() {
               className={`object-cover ${sport.img_fit}`}
               sizes="(max-width: 768px) 100vw, 60vw"
             />
-            {/* Contenido */}
+            {/* todo Contenido */}
             {/* // todo Mejorar en como el contenido se muestra, los deportes
              con titulos y descripciones largas se ven mal, es como si el contenido
             quedara por debajo del borde. Debería tener un padding inferior

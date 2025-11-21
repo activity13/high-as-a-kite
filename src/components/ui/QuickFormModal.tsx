@@ -2,8 +2,8 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
-import Modal from './ui/Modal';
-import { QuickForm } from './QuickForm';
+import Modal from './Modal';
+import { QuickForm } from '../QuickForm';
 import { CTAButton } from '@/components/ui/CTAButton';
 
 interface QuickFormModalProps {

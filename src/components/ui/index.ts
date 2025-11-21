@@ -1,29 +1,24 @@
-// Layout Components
-export { Section, SectionHeader, SectionTitle } from './Section';
-export { Container } from './Container';
-
-// Card Components
-export { Card, CardBody, CardTitle } from './Card';
-export { PackageCard } from './PackageCard';
-export { ServiceCard } from './ServiceCard';
-export { TestimonialCard } from './TestimonialCard';
-
-// Button Components
-export { Button } from './Button';
-export { CTAButton } from './CTAButton';
-
-// Form Components
-export { Input } from './Input';
-export { Textarea } from './Textarea';
-
-// UI Elements
-export { Badge } from './Badge';
+// Layout & Structure
+export * from './Container';
+export * from './Section';
+export * from './Card';
 export { Modal } from './Modal';
 
-// Navigation
-export { Navbar } from '../Navbar';
-export { Footer } from '../Footer';
+// Elements & Atoms
+export * from './Button';
+export * from './CTAButton';
+export * from './Badge';
+export * from './Input';
+export * from './Textarea';
+export { default as LanguageSwitcher } from './LanguageSwitcher';
+export { default as DiscoverButton } from './scrollFromHero';
+export { default as WhatsAppFloatingButton } from './WhatsAppFloatingButton';
 
-// Other
-export { Hero } from '../Hero';
-export { WhatsAppFloatingButton } from './WhatsAppFloatingButton';
+// Molecules & Cards
+export * from './PackageCard';
+export * from './ServiceCard';
+export * from './SpotCard';
+export * from './TestimonialCard';
+
+// Feature Components
+export { QuickFormModal } from './QuickFormModal';

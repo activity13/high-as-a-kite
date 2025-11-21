@@ -230,7 +230,7 @@ const PricingComponent = ({ sport }: { sport: Sport }) => {
   }
 };
 
-export default function SportsSlider() {
+export default function SportsSection() {
   // *traducciones de items generales de la UI
   const t = useTranslations('translation.translations');
 
@@ -345,7 +345,7 @@ export default function SportsSlider() {
   return (
     <>
       {/* Desktop Layout */}
-      <section className="hidden lg:flex h-screen bg-base-300 text-base-content">
+      <section className="hidden lg:flex h-screen bg-base-300 text-base-content mt-14">
         {/* Barra deslizable horizontal, permite seleccionar el deporte y darle una mirada a su página.  */}
         <div className="w-1/4 bg-base-200 p-4 scrollbar-none overflow-y-auto border-r border-base-300">
           <h2 className={`${haakDesign.typography.h2} mb-6`}>
@@ -470,6 +470,8 @@ export default function SportsSlider() {
         </div>
 
         {/* Horizontal Slider - Middle */}
+        {/* // todo Considerar si este scroll control es necesario
+        // o se mejora el diseño a un estilo más minimalista sen o se quita.*/}
         <div className="bg-base-200 p-3 border-y border-base-300">
           <div className="flex items-center gap-2">
             <button

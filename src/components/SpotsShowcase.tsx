@@ -3,7 +3,7 @@ import { haakDesign } from '@/lib/design-system';
 import { Section, SectionTitle } from './ui/Section';
 import { SpotCard } from './ui/SpotCard';
 
-export const SpotsSection = () => {
+export const SpotsShowcase = () => {
   const t = useTranslations('translation.translations');
   const cards = t.raw('spots.cards') as {
     name: string;

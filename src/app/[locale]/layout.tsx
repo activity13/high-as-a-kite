@@ -13,8 +13,8 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { Analytics } from '@vercel/analytics/next';
 // Componentes
-import Navbar from '../../components/Navbar';
-import Footer from '../../components/Footer';
+import { WhatsAppFloatingButton } from '@/components/ui';
+import { Navbar, Footer } from '@/components';
 
 export const stretchPro = localFont({
   src: [
@@ -85,6 +85,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider>
           <Navbar />
           {children}
+          <WhatsAppFloatingButton />
           <Footer />
         </NextIntlClientProvider>
         <Analytics />

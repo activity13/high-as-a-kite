@@ -1,5 +1,5 @@
 import React from 'react';
-import SportsSlider from '@/components/SportsSlider';
+import SportsSlider from '@/components/SportsSection';
 export default function LessonsPage() {
   return (
     <div>

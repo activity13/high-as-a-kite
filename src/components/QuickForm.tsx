@@ -1,7 +1,10 @@
+'use client';
+
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 import { track } from '../utils/track';
 import { Button } from '@/components/ui/Button';
+// todo mejorar la accesibilidad del formulario, mejorar el diseño.
 
 export const QuickForm = () => {
   const t = useTranslations('translation.translations');

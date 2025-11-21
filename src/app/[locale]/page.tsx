@@ -1,39 +1,32 @@
 'use client';
 import React from 'react';
-import Hero from '../../components/Hero';
-import SportsSection from '../../components/SportSection';
-import EmailNewsletters from '../../components/EmailNewsletters';
-import LandingSections from '../../components/ui/HomeComponent';
 import {
-  FAQSection,
+  Hero,
+  WhyChooseUsSection,
+  StatsBar,
+  SportsShowcase,
+  MainSpotShowcase,
+  SpotsShowcase,
   GallerySection,
-  FinalCTASection,
-  SpotsSection,
-  ExperienceSection,
-  AdventuresSection,
   PackagesSection,
-  MethodologySection,
-  SafetySection,
-  TeamSection,
+  AdventuresSection,
   TestimonialsSection,
+  FinalCTASection,
 } from '@/components';
+
 export default function Home() {
   return (
     <>
       <Hero />
-      <SportsSection />
-      <LandingSections />
-      <SpotsSection />
-      <ExperienceSection />
-      <AdventuresSection />
+      <WhyChooseUsSection />
+      <StatsBar />
+      <SportsShowcase />
+      <MainSpotShowcase />
+      <SpotsShowcase /> // todo considerar si debo añadir este componente.
       <GallerySection />
       <PackagesSection />
-      <MethodologySection />
-      <SafetySection />
-      <TeamSection />
+      <AdventuresSection />
       <TestimonialsSection />
-      <FAQSection />
-      <EmailNewsletters />
       <FinalCTASection />
     </>
   );

@@ -5,7 +5,7 @@ import { haakDesign } from '@/lib/design-system';
 import { track } from '../utils/track';
 import { Section, SectionTitle } from './ui/Section';
 import { CTAButton } from './ui/CTAButton';
-import { QuickFormModal } from './QuickFormModal';
+import { QuickFormModal } from './ui/QuickFormModal';
 import { FaWhatsapp } from 'react-icons/fa';
 
 export const FinalCTASection = () => {

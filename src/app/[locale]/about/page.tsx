@@ -1,15 +1,18 @@
 import React from 'react';
-
-import { MethodologySection } from '@/components/MethodologySection';
-import { TeamSection } from '@/components/TeamSection';
-import { FinalCTASection } from '@/components/FinalCTASection';
+import {
+  HowItWorksSection,
+  MethodologySection,
+  SafetySection,
+  TeamSection,
+  FinalCTASection,
+} from '@/components';
 import { useTranslations } from 'next-intl';
 
 export default function About() {
   const t = useTranslations('translation.translations');
 
   return (
-    <div className="h-full pt-[96px]">
+    <div className="min-h-screen mt-14">
       {/* Hero Section */}
       <section className="text-center bg-gradient-to-b from-teal-500 to-teal-700 text-white py-16">
         <h1 className="text-5xl font-bold drop-shadow-lg animate-fade-in">
@@ -20,13 +23,10 @@ export default function About() {
         </p>
       </section>
 
-      {/* Methodology Section */}
+      <HowItWorksSection />
       <MethodologySection />
-
-      {/* Team Section */}
+      <SafetySection />
       <TeamSection />
-
-      {/* Final Call to Action */}
       <FinalCTASection />
     </div>
   );
