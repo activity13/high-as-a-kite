@@ -50,7 +50,6 @@ export default function Navbar() {
   };
 
   const links = [
-    { href: '/', label: t('Navbar.home') },
     { href: '/about', label: t('Navbar.about') },
     { href: '/sports', label: t('Navbar.sports') },
     { href: '/trips', label: t('Navbar.trips') },
