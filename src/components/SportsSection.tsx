@@ -118,7 +118,7 @@ const PricingComponent = ({ sport }: { sport: Sport }) => {
     case 'by_person_optional_addons':
       return (
         <div>
-          <h4 className="font-semibold text-base-100 text-xs">
+          <h4 className="font-semibold uppercase text-base-100 text-xs">
             {t('section.prices')}:
           </h4>
           <ul className="space-y-1 mt-1">
@@ -171,7 +171,7 @@ const PricingComponent = ({ sport }: { sport: Sport }) => {
     case 'by_person_optional_rental':
       return (
         <div>
-          <h4 className="font-semibold text-base-100 text-xs">
+          <h4 className="font-semibold uppercase text-base-100 text-xs">
             {t('section.prices')}:
           </h4>
           <ul className="space-y-1 mt-1">
@@ -342,6 +342,17 @@ export default function SportsSection() {
     setSelectedSport(sport);
   };
 
+  // Simple rotating palette (3 colors). Replace these with brand colors later.
+  const palette = [
+    { bg: 'oklch(0.7567 0.0564 220.04)', fg: 'oklch(1 0.0044 220.38)' }, // warm sand / dark text
+    { bg: 'oklch(0.6931 0.1582 30.41)', fg: 'oklch(1 0.0044 220.38)' }, // light cyan / dark blue
+    { bg: 'oklch(0.9175 0.090055 85.5145)', fg: 'oklch(55% 0.3 240)' }, // soft rose / dark maroon
+  ];
+  const selectedIndex = mergedSports.findIndex(
+    (s) => s.id === selectedSport.id,
+  );
+  const pal = palette[selectedIndex >= 0 ? selectedIndex % palette.length : 0];
+
   return (
     <>
       {/* Desktop Layout */}
@@ -413,7 +424,7 @@ export default function SportsSection() {
                     selectedSport.includes.length > 0 && (
                       <div className="mt-4">
                         <h3 className="font-semibold text-base-100 text-sm">
-                          Incluye:
+                          {t('sportsInfo.section.includes')}
                         </h3>
                         <ul className="list-disc list-inside text-white/80 text-sm mt-1 space-y-1">
                           {selectedSport.includes.map((item, index) => (
@@ -473,15 +484,10 @@ export default function SportsSection() {
         {/* // todo Considerar si este scroll control es necesario
         // o se mejora el diseño a un estilo más minimalista sen o se quita.*/}
         <div className="bg-base-200 p-3 border-y border-base-300">
-          <div className="flex items-center gap-2">
-            <button
-              onClick={() => scroll('left')}
-              className="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary/80 transition">
-              ←
-            </button>
+          <div className="flex items-center">
             <div
               ref={sliderRef}
-              className="flex-1 overflow-x-auto scrollbar-hide flex gap-3">
+              className="w-full overflow-x-auto scrollbar-hide flex gap-3">
               {mergedSports.map((sport) => (
                 <button
                   key={sport.id}
@@ -501,11 +507,6 @@ export default function SportsSection() {
                 </button>
               ))}
             </div>
-            <button
-              onClick={() => scroll('right')}
-              className="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary/80 transition">
-              →
-            </button>
           </div>
         </div>
 
@@ -518,35 +519,30 @@ export default function SportsSection() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
               className="h-full relative">
-              <Image
-                src={selectedSport.image}
-                alt={selectedSport.name!}
-                fill
-                className="object-cover"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/70 to-black/50 p-4 flex flex-col justify-start">
+              <div
+                className="absolute inset-0 p-4 flex flex-col justify-start overflow-y-auto"
+                style={{ backgroundColor: pal.bg, color: pal.fg }}>
                 <div className="space-y-2">
                   {selectedSport.location && (
-                    <p className="text-xs text-primary font-semibold">
+                    <p className="text-xs font-semibold">
                       📍 {selectedSport.location}
                     </p>
                   )}
-                  <h2 className="text-lg font-bold text-white leading-tight">
+                  <h2 className="text-lg font-bold leading-tight">
                     {selectedSport.name}
                   </h2>
                   {selectedSport.description && (
-                    <p className="text-xs text-white/90 leading-snug">
+                    <p className="text-xs leading-snug opacity-90">
                       {selectedSport.description}
                     </p>
                   )}
                   {selectedSport.includes &&
                     selectedSport.includes.length > 0 && (
                       <div className="mt-3">
-                        <h3 className="font-semibold text-white text-xs">
-                          Incluye:
+                        <h3 className="font-semibold text-xs">
+                          {t('sportsInfo.section.includes')}
                         </h3>
-                        <ul className="list-disc list-inside text-white/80 text-xs mt-1 space-y-1">
+                        <ul className="list-disc list-inside text-xs mt-1 space-y-1 opacity-80">
                           {selectedSport.includes.map((item, index) => (
                             <li key={index}>{item}</li>
                           ))}
@@ -555,14 +551,25 @@ export default function SportsSection() {
                     )}
                   {selectedSport.capacity && (
                     <div className="mt-2">
-                      <p className="text-xs text-white/90">
+                      <p className="text-xs opacity-90">
                         👥 {selectedSport.capacity}
                       </p>
                     </div>
                   )}
-                  <div className="pt-2 border-t border-white/20 text-xs space-y-1">
+                  <div
+                    className="pt-2 border-t text-xs mt-3 "
+                    style={{ borderColor: `${pal.fg}33` }}>
                     <PricingComponent sport={selectedSport} />
                   </div>
+
+                  {/* <div className="mt-4">
+                    <Link
+                      href={`/sports?sport=${selectedSport.id}`}
+                      className="inline-block px-3 py-2 rounded-md text-sm font-medium"
+                      style={{ backgroundColor: pal.fg, color: pal.bg }}>
+                      {t('sportsInfo.section.moreDetails') || 'Más detalles'}
+                    </Link>
+                  </div> */}
                 </div>
               </div>
             </motion.div>

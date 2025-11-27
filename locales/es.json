@@ -59,8 +59,29 @@
           }
         },
         "thePlace": {
-          "title": "El Lugar",
-          "description": "Vive tu aventura en las playas de Máncora, Perú: un paraíso para deportes acuáticos con condiciones perfectas durante todo el año."
+          "title": "El Lugar: Vichayito, Perú",
+          "description": "Vichayito es una playa amplia de arena fina y color claro, con un ambiente tranquilo y turístico pero sin ser masificada. El borde costero es limpio y libre de rocas en las zonas de lanzamiento, lo que facilita montar equipo y disfrutar del mar; el pueblo cercano ofrece servicios básicos, restaurantes y atardeceres muy fotogénicos. Para deportes acuáticos es especialmente valorada: presenta vientos térmicos bastante constantes gran parte del año y bahías protegidas con agua relativamente plana en sectores, perfectas para clases de kitesurf, downwinds y paseos en kayak. Su combinación de condiciones y accesibilidad la convierte en una base cómoda tanto para aprendizaje como para sesiones de progresión.",
+          "features": {
+            "title": "Características Clave",
+            "vichayito": {
+              "consistentWind": {
+                "title": "Viento Constante",
+                "description": "Vientos térmicos estables la mayor parte del año — fiables para clases, progresión y downwinds costeros."
+              },
+              "protectedWaters": {
+                "title": "Aguas Protegidas",
+                "description": "Bahías resguardadas con aguas mayormente planas y corrientes suaves — ideales para kayak y los primeros contactos con la tabla."
+              },
+              "sandyBeach": {
+                "title": "Playa de Arena Fina",
+                "description": "Playas amplias de arena fina sin rocas — zonas seguras y cómodas para montar equipo y hacer despegues/aterrizajes."
+              },
+              "calmVillage": {
+                "title": "Pueblo Tranquilo",
+                "description": "Pueblo costero céntrico con servicios y restaurantes, atardeceres espectaculares y acceso cómodo a los spots."
+              }
+            }
+          }
         },
         "howItWorks": {
           "title": "Cómo Funciona",
@@ -881,7 +902,8 @@
           "ppShared": "p/p compartido",
           "noPrice": "Contáctanos para precios",
           "loading": "Cargando deportes...",
-          "sports": "Deportes"
+          "sports": "Deportes",
+          "includes": "Incluye:"
         },
         "items": [
           {

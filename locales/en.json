@@ -59,8 +59,29 @@
           }
         },
         "thePlace": {
-          "title": "The Place",
-          "description": "Live your adventure on the beaches of Máncora, Peru: a paradise for water sports with perfect conditions all year round."
+          "title": "The Place: Vichayito, Peru",
+          "description": "Vichayito is a wide beach with fine, light-colored sand, a calm and tourist-friendly atmosphere without being overcrowded. The coastline is clean and free of rocks in the launch zones, making it easy to set up equipment and enjoy the sea; the nearby town offers basic services, restaurants, and very photogenic sunsets. It is especially valued for water sports: it features fairly consistent thermal winds for most of the year and protected bays with relatively flat water in some areas, perfect for kitesurfing lessons, downwinds, and kayaking. Its combination of conditions and accessibility makes it a comfortable base for both learning and progression sessions.",
+          "features": {
+            "title": "Key Features",
+            "vichayito": {
+              "consistentWind": {
+                "title": "Consistent Wind",
+                "description": "Thermal winds that are steady through most of the year — reliable for lessons, progression and coastal downwinds."
+              },
+              "protectedWaters": {
+                "title": "Protected & Flat Waters",
+                "description": "Sheltered bays with predominantly flat water and gentle currents — excellent for kayaking and first kiteboard rides."
+              },
+              "sandyBeach": {
+                "title": "Wide Sandy Beach",
+                "description": "Expansive fine-sand beaches with no rocks — safe and easy launch/landing zones for water sports."
+              },
+              "calmVillage": {
+                "title": "Calm Coastal Village",
+                "description": "A small, service-friendly coastal town with restaurants and memorable sunsets — a convenient base for sessions and rest."
+              }
+            }
+          }
         },
         "howItWorks": {
           "title": "How It Works",
@@ -882,7 +903,8 @@
           "ppShared": "p/p shared",
           "noPrice": "Contact us for pricing",
           "loading": "Loading sports...",
-          "sports": "Sports"
+          "sports": "Sports",
+          "includes": "Includes:"
         },
         "items": [
           {
