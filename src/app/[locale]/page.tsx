@@ -22,7 +22,7 @@ export default function Home() {
       <StatsBar />
       <SportsShowcase />
       <MainSpotShowcase />
-      <SpotsShowcase /> // todo considerar si debo añadir este componente.
+      <SpotsShowcase />
       <GallerySection />
       <PackagesSection />
       <AdventuresSection />

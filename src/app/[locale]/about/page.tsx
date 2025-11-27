@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  HowItWorksSection,
-  MethodologySection,
-  SafetySection,
-  TeamSection,
-  FinalCTASection,
-} from '@/components';
+import { TeamSection, FinalCTASection } from '@/components';
 import { useTranslations } from 'next-intl';
 
 export default function About() {
@@ -23,9 +17,6 @@ export default function About() {
         </p>
       </section>
 
-      <HowItWorksSection />
-      <MethodologySection />
-      <SafetySection />
       <TeamSection />
       <FinalCTASection />
     </div>

@@ -1,9 +1,17 @@
 import React from 'react';
-import SportsSlider from '@/components/SportsSection';
+import {
+  SportsSection,
+  HowItWorksSection,
+  MethodologySection,
+  SafetySection,
+} from '@/components';
 export default function LessonsPage() {
   return (
     <div>
-      <SportsSlider />
+      <SportsSection />
+      <HowItWorksSection />
+      <MethodologySection />
+      <SafetySection />
     </div>
   );
 }

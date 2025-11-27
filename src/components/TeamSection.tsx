@@ -14,7 +14,7 @@ export const TeamSection = () => {
   }[];
 
   return (
-    <Section background="base-200">
+    <Section background="base-200" className="flex justify-center">
       <SectionTitle as="h2" className="text-center mb-12">
         {t('team.title')}
       </SectionTitle>

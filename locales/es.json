@@ -40,6 +40,9 @@
         "discover": "Descubre más"
       },
       "Home": {
+        "sportsShowCase": {
+          "disoverButton": "Descubre más"
+        },
         "whyHaak": {
           "title": "¿Por qué elegirnos?",
           "instructorsIKO": {
@@ -813,28 +816,10 @@
         "title": "Nuestro Equipo",
         "members": [
           {
-            "name": "Caro",
+            "name": "Bruno",
             "role": "Head Coach",
             "tags": ["8y experiencia", "Wave & Freeride"],
             "bio": "Paciencia, técnica y pasión por el progreso real."
-          },
-          {
-            "name": "Leo",
-            "role": "Instructor",
-            "tags": ["Rescate", "Transiciones"],
-            "bio": "Explica claro y ajusta cada detalle de postura."
-          },
-          {
-            "name": "Nico",
-            "role": "Instructor",
-            "tags": ["Freestyle", "Saltos"],
-            "bio": "Enfoque divertido con micro-objetivos por sesión."
-          },
-          {
-            "name": "Vale",
-            "role": "Media & Support",
-            "tags": ["Foto Drone", "Video Análisis"],
-            "bio": "Captura momentos y ángulos clave para tu progreso."
           }
         ]
       },
