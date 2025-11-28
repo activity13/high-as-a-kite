@@ -4,12 +4,14 @@ import { haakDesign } from '@/lib/design-system';
 import { Card, CardBody, CardTitle } from './Card';
 import { Badge } from './Badge';
 import { Wind, TrendingUp } from 'lucide-react';
+import Image from 'next/image';
 
 interface SpotCardProps {
   name: string;
   level: string;
   wind: string;
   highlight: string;
+  image?: string;
   className?: string;
 }
 
@@ -22,6 +24,7 @@ export function SpotCard({
   level,
   wind,
   highlight,
+  image,
   className,
 }: SpotCardProps) {
   // Determinar color del badge según nivel
@@ -46,10 +49,23 @@ export function SpotCard({
   };
 
   return (
-    <Card variant="bordered" className={className}>
+    <Card variant="bordered" className={`overflow-hidden ${className || ''}`}>
+      {image && (
+        <div className="relative h-48 w-full bg-base-300">
+          <Image
+            src={image}
+            alt={`Spot ${name}`}
+            fill
+            className="object-cover transition-transform duration-700 hover:scale-105"
+          />
+        </div>
+      )}
       <CardBody>
         <CardTitle as="h3">{name}</CardTitle>
-
+        <p
+          className={`${haakDesign.typography.body} mt-4 text-base-content/70`}>
+          {highlight}
+        </p>
         <div className="flex flex-wrap gap-2 mt-3">
           <Badge variant={getLevelVariant(level)} size="sm">
             <TrendingUp className="w-3 h-3 mr-1" />
@@ -60,11 +76,6 @@ export function SpotCard({
             {wind}
           </Badge>
         </div>
-
-        <p
-          className={`${haakDesign.typography.body} mt-4 text-base-content/70`}>
-          {highlight}
-        </p>
       </CardBody>
     </Card>
   );

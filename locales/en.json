@@ -60,7 +60,7 @@
         },
         "thePlace": {
           "title": "The Place: Vichayito, Peru",
-          "description": "Vichayito is a wide beach with fine, light-colored sand, a calm and tourist-friendly atmosphere without being overcrowded. The coastline is clean and free of rocks in the launch zones, making it easy to set up equipment and enjoy the sea; the nearby town offers basic services, restaurants, and very photogenic sunsets. It is especially valued for water sports: it features fairly consistent thermal winds for most of the year and protected bays with relatively flat water in some areas, perfect for kitesurfing lessons, downwinds, and kayaking. Its combination of conditions and accessibility makes it a comfortable base for both learning and progression sessions.",
+          "description": "A fine sandy coastal refuge ideal for relaxation and beach life. Its consistent winds and protected waters create the perfect setting to enjoy water sports in a calm and exclusive environment.",
           "features": {
             "title": "Key Features",
             "vichayito": {
@@ -617,34 +617,34 @@
         "mapAlt": "Stylized north Peru coast map with kitesurf points",
         "cards": [
           {
-            "name": "Mancora",
+            "name": "Máncora",
             "level": "All",
-            "wind": "Side / Side-On",
-            "highlight": "Social vibe and solid early learning."
+            "wind": "Consistent Side-On",
+            "highlight": "Reliable wind, warm water, and vibrant social vibe."
           },
           {
-            "name": "Punta",
-            "level": "Intermediate+",
-            "wind": "Technical Side-Off",
-            "highlight": "Transitions and upwind refinement."
-          },
-          {
-            "name": "Las Pocitas",
-            "level": "Beginner",
-            "wind": "Gentle Side-On",
-            "highlight": "Flatter water for first body drags."
-          },
-          {
-            "name": "Órganos",
+            "name": "Los Órganos",
             "level": "Intermediate",
-            "wind": "Consistent",
-            "highlight": "Edging practice and controlled speed."
+            "wind": "Gentle Side-On",
+            "highlight": "Wide, quiet beach perfect for freeride and turtles."
+          },
+          {
+            "name": "Cabo Blanco",
+            "level": "Expert",
+            "wind": "Side-Off / Gusty",
+            "highlight": "Legendary barrels and demanding technical conditions."
           },
           {
             "name": "Lobitos",
             "level": "Advanced",
-            "wind": "Strong / Waves",
-            "highlight": "Wave riding and maneuver sections."
+            "wind": "Strong Side-Off",
+            "highlight": "World-class left waves and prime wave riding wind."
+          },
+          {
+            "name": "Vichayito",
+            "level": "All",
+            "wind": "Consistent Side-On",
+            "highlight": "Wide sandy beach without rocks, ideal for beginners and relaxed freeride sessions."
           }
         ]
       },
@@ -825,7 +825,7 @@
             "text": "Practice areas adjusted by tide."
           },
           {
-            "title": "Ratio 1:2",
+            "title": "Ratio 1:1",
             "text": "Close follow‑up accelerates progress."
           },
           {

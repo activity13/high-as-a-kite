@@ -10,7 +10,7 @@ export default function LessonsPage() {
     <div>
       <SportsSection />
       <HowItWorksSection />
-      <MethodologySection />
+      {/* <MethodologySection /> */} {/* // todo Temporarily removed */}
       <SafetySection />
     </div>
   );

@@ -60,7 +60,7 @@
         },
         "thePlace": {
           "title": "El Lugar: Vichayito, Perú",
-          "description": "Vichayito es una playa amplia de arena fina y color claro, con un ambiente tranquilo y turístico pero sin ser masificada. El borde costero es limpio y libre de rocas en las zonas de lanzamiento, lo que facilita montar equipo y disfrutar del mar; el pueblo cercano ofrece servicios básicos, restaurantes y atardeceres muy fotogénicos. Para deportes acuáticos es especialmente valorada: presenta vientos térmicos bastante constantes gran parte del año y bahías protegidas con agua relativamente plana en sectores, perfectas para clases de kitesurf, downwinds y paseos en kayak. Su combinación de condiciones y accesibilidad la convierte en una base cómoda tanto para aprendizaje como para sesiones de progresión.",
+          "description": "Un refugio costero de arena fina ideal para el relax y la vida de playa. Sus vientos constantes y aguas protegidas crean el escenario perfecto para disfrutar de deportes acuáticos en un ambiente tranquilo y exclusivo.",
           "features": {
             "title": "Características Clave",
             "vichayito": {
@@ -617,33 +617,33 @@
         "cards": [
           {
             "name": "Máncora",
-            "level": "All",
-            "wind": "Side / Side-On",
-            "highlight": "Ambiente social y aprendizaje inicial sólido."
+            "level": "Todos",
+            "wind": "Side-On Constante",
+            "highlight": "Viento confiable, agua cálida y ambiente social vibrante."
           },
           {
-            "name": "Punta",
-            "level": "Intermedio+",
-            "wind": "Side-Off técnico",
-            "highlight": "Transiciones y control de ceñida."
-          },
-          {
-            "name": "Las Pocitas",
-            "level": "Beginner",
-            "wind": "Side-On suave",
-            "highlight": "Agua más plana para primeras body drags."
-          },
-          {
-            "name": "Órganos",
+            "name": "Los Órganos",
             "level": "Intermedio",
-            "wind": "Constante",
-            "highlight": "Práctica de edging y velocidad controlada."
+            "wind": "Side-On Suave",
+            "highlight": "Playa amplia y tranquila, ideal para freeride y tortugas."
+          },
+          {
+            "name": "Cabo Blanco",
+            "level": "Experto",
+            "wind": "Side-Off / Racheado",
+            "highlight": "Tubos legendarios y condiciones técnicas exigentes."
           },
           {
             "name": "Lobitos",
             "level": "Avanzado",
-            "wind": "Fuerte / Olas",
-            "highlight": "Wave riding y maniobras con sección limpia."
+            "wind": "Side-Off Fuerte",
+            "highlight": "Olas izquierdas de clase mundial y viento para wave riding."
+          },
+          {
+            "name": "Vichayito",
+            "level": "Todos",
+            "wind": "Side-On Consistente",
+            "highlight": "Playa amplia de arena sin rocas, ideal para principiantes y sesiones de freeride relajadas."
           }
         ]
       },
@@ -824,7 +824,7 @@
             "text": "Áreas de práctica acotadas según marea."
           },
           {
-            "title": "Ratio 1:2",
+            "title": "Ratio 1:1",
             "text": "Seguimiento cercano, progresión acelerada."
           },
           {

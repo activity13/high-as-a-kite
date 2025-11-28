@@ -67,7 +67,7 @@ const PricingComponent = ({ sport }: { sport: Sport }) => {
       return (
         <div>
           <div className="flex items-baseline gap-2">
-            <span className="text-2xl font-bold text-primary">
+            <span className="text-4xl font-bold text-primary">
               ${sport.price}
             </span>
             <span className="text-base-100 text-xs">
@@ -80,7 +80,7 @@ const PricingComponent = ({ sport }: { sport: Sport }) => {
       return (
         <div>
           <div className="flex items-baseline gap-2">
-            <span className="text-2xl font-bold text-primary">
+            <span className="text-4xl font-bold text-primary">
               ${sport.price}
             </span>
           </div>
@@ -89,10 +89,12 @@ const PricingComponent = ({ sport }: { sport: Sport }) => {
     case 'by_person':
       return (
         <div>
-          <h4 className="font-semibold text-base-100 text-xs">Precios:</h4>
-          <ul className="space-y-1 mt-1">
+          <h4 className="font-semibold text-base-100 text-xl">
+            {t('section.prices')}:
+          </h4>
+          <ul className="space-y-1 mt-1 4xl">
             {sport.prices?.map((p, i) => (
-              <li key={i} className="text-base-100/80">
+              <li key={i} className="text-base-100/80 text-xl">
                 {p.people} {t('section.people')}
                 {p.people > 1 ? 's' : ''}: ${p.price}
               </li>
@@ -103,12 +105,12 @@ const PricingComponent = ({ sport }: { sport: Sport }) => {
     case 'modalities':
       return (
         <div>
-          <h4 className="font-semibold text-base-100 text-xs">
+          <h4 className="font-semibold text-base-100 text-xl">
             {t('section.modalities')}
           </h4>
           <ul className="space-y-1 mt-1">
             {sport.modalities?.map((m, i) => (
-              <li key={i} className="text-base-100/80">
+              <li key={i} className="text-base-100/80 text-xl">
                 {m.name}: ${m.price}
               </li>
             ))}
@@ -118,12 +120,12 @@ const PricingComponent = ({ sport }: { sport: Sport }) => {
     case 'by_person_optional_addons':
       return (
         <div>
-          <h4 className="font-semibold uppercase text-base-100 text-xs">
+          <h4 className="font-semibold uppercase text-base-100 text-xl">
             {t('section.prices')}:
           </h4>
           <ul className="space-y-1 mt-1">
             {sport.prices?.map((p, i) => (
-              <li key={i} className="text-base-100/80">
+              <li key={i} className="text-base-100/80 text-xl">
                 {p.people} {t('section.people')}
                 {p.people > 1 ? 's' : ''}: ${p.price}
               </li>
@@ -131,12 +133,12 @@ const PricingComponent = ({ sport }: { sport: Sport }) => {
           </ul>
           {sport.addons && sport.addons.length > 0 && (
             <div className="mt-2 pt-2 border-t border-white/20">
-              <p className="text-xs text-base-100/60 mb-1 mt-1">
+              <p className="text-lg text-base-100/60 mb-1 mt-1">
                 {t('section.addons')}:
               </p>
               <ul className="space-y-1">
                 {sport.addons.map((a, i) => (
-                  <li key={i} className="text-sm text-base-100">
+                  <li key={i} className="text-lg text-base-100">
                     {a.name}: ${a.price}
                   </li>
                 ))}
@@ -148,12 +150,12 @@ const PricingComponent = ({ sport }: { sport: Sport }) => {
     case 'by_person_optional_transport':
       return (
         <div>
-          <h4 className="font-semibold text-base-100 text-xs">
+          <h4 className="font-semibold text-base-100 text-xl">
             {t('section.pricePerPerson')}:
           </h4>
           <ul className="space-y-1 mt-1">
             {sport.prices?.map((p, i) => (
-              <li key={i} className="text-base-100/80">
+              <li key={i} className="text-base-100/80 text-xl">
                 {p.people} {t('section.people')}
                 {p.people > 1 ? 's' : ''}: ${p.price}
               </li>
@@ -161,7 +163,7 @@ const PricingComponent = ({ sport }: { sport: Sport }) => {
           </ul>
           {sport.transport && (
             <div className="mt-2 pt-2 border-t border-white/20">
-              <p className="text-xs text-base-100 mt-1">
+              <p className="text-lg text-base-100 mt-1">
                 {sport.transport.name}: ${sport.transport.price}
               </p>
             </div>
@@ -171,12 +173,12 @@ const PricingComponent = ({ sport }: { sport: Sport }) => {
     case 'by_person_optional_rental':
       return (
         <div>
-          <h4 className="font-semibold uppercase text-base-100 text-xs">
+          <h4 className="font-semibold uppercase text-base-100 text-xl">
             {t('section.prices')}:
           </h4>
           <ul className="space-y-1 mt-1">
             {sport.prices?.map((p, i) => (
-              <li key={i} className="text-base-100/80">
+              <li key={i} className="text-base-100/80 text-xl">
                 {p.people} {t('section.people')}
                 {p.people > 1 ? 's' : ''}: ${p.price}
               </li>
@@ -184,10 +186,10 @@ const PricingComponent = ({ sport }: { sport: Sport }) => {
           </ul>
           {sport.rental && (
             <div className="mt-2">
-              <h4 className="font-semibold text-base-100">
+              <h4 className="font-semibold text-base-100 text-lg">
                 {t('section.optRent')}:
               </h4>
-              <p className="text-base-100/80">
+              <p className="text-base-100/80 text-lg">
                 {sport.rental.name}: ${sport.rental.price}
               </p>
             </div>
@@ -197,14 +199,14 @@ const PricingComponent = ({ sport }: { sport: Sport }) => {
     case 'by_boat_type':
       return (
         <div>
-          <h4 className="font-semibold text-base-100 text-xs">
+          <h4 className="font-semibold text-base-100 text-xl">
             {t('section.boats')}:
           </h4>
           <ul className="space-y-1 mt-1">
             {sport.boats?.map((b, i) => (
-              <li key={i} className="text-base-100/80">
+              <li key={i} className="text-base-100/80 text-xl">
                 <div className="font-medium">{b.name}</div>
-                <div className="text-sm mt-1">
+                <div className="text-xl mt-1">
                   {b.perPerson ? (
                     <span>
                       ${b.price} {t('section.perPerson')}
@@ -213,7 +215,7 @@ const PricingComponent = ({ sport }: { sport: Sport }) => {
                     <>
                       <span>${b.price}</span>
                       {b.shared && (
-                        <span className="text-base-100/60 ml-2">
+                        <span className="text-base-100/60 ml-2 text-lg">
                           (${b.shared} {t('section.ppShared')})
                         </span>
                       )}
@@ -423,19 +425,22 @@ export default function SportsSection() {
                   {selectedSport.includes &&
                     selectedSport.includes.length > 0 && (
                       <div className="mt-4">
-                        <h3 className="font-semibold text-base-100 text-sm">
+                        <h3 className="font-semibold text-base-100 text-md">
                           {t('sportsInfo.section.includes')}
                         </h3>
-                        <ul className="list-disc list-inside text-white/80 text-sm mt-1 space-y-1">
+                        <ul
+                          className={`text-white/80 h-[400px] text-md mt-1 space-y-1 list-disc list-inside ${selectedSport.includes.length > 6 ? 'columns-2 gap-4' : ''}`}>
                           {selectedSport.includes.map((item, index) => (
-                            <li key={index}>{item}</li>
+                            <li key={index} className="break-inside-avoid">
+                              {item}
+                            </li>
                           ))}
                         </ul>
                       </div>
                     )}
                   {selectedSport.capacity && (
                     <div className="mt-3">
-                      <p className="text-sm text-white/90">
+                      <p className="text-xl text-white/90">
                         👥 {selectedSport.capacity}
                       </p>
                     </div>
@@ -445,7 +450,7 @@ export default function SportsSection() {
                   </div>
                   {/* valida si la locacion existe */}
                   {selectedSport.location && (
-                    <p className="absolute bottom-20 text-sm text-base-100 font-semibold justify-self-end">
+                    <p className="absolute top-5 text-sm text-base-100 font-semibold justify-self-end">
                       📍 {selectedSport.location}
                     </p>
                   )}
