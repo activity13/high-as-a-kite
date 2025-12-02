@@ -6,10 +6,7 @@ import {
   StatsBar,
   SportsShowcase,
   MainSpotShowcase,
-  SpotsShowcase,
   GallerySection,
-  PackagesSection,
-  AdventuresSection,
   TestimonialsSection,
   FinalCTASection,
 } from '@/components';
@@ -22,10 +19,9 @@ export default function Home() {
       <StatsBar />
       <SportsShowcase />
       <MainSpotShowcase />
-      <SpotsShowcase />
       <GallerySection />
-      <PackagesSection />
-      <AdventuresSection />
+      {/* // todo revisar los paquetes que tendrá. <PackagesSection /> */}
+      {/* // todo Revisar las aventuras que ofrecerá para darle forma o ver si es necesario. <AdventuresSection /> */}
       <TestimonialsSection />
       <FinalCTASection />
     </>

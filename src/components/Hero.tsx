@@ -89,9 +89,7 @@ export default function Hero() {
 
             <div className="mt-2 md:mt-4">
               <CTAButton variant="primary" size="lg" icon={<ChevronRight />}>
-                <Link href={'https://wa.me/51986677979'} target="_blank">
-                  {t('cta')}
-                </Link>
+                <Link href={'/contact'}>{t('cta')}</Link>
               </CTAButton>
             </div>
           </div>
@@ -101,7 +99,7 @@ export default function Hero() {
       </div>
 
       {/* Botón descubrir anclado abajo, conservando clics */}
-      <div className="absolute inset-x-0 bottom-6 z-10 flex justify-center pointer-events-none">
+      <div className="absolute inset-x-0 bottom-1 z-10 flex justify-center pointer-events-none">
         <div className="pointer-events-auto">
           <DiscoverButton />
         </div>

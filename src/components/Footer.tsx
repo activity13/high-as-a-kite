@@ -83,13 +83,14 @@ export default function Footer() {
                   { href: '/', label: t('Footer.explore.home') },
                   { href: '/about', label: t('Footer.explore.about') },
                   { href: '/sports', label: t('Footer.explore.sports') },
-                  {
-                    href: '/marine-adventure',
-                    label: t('Footer.explore.rentals'),
-                  },
+                  // {
+                  // href: '/marine-adventure',
+                  // label: t('Footer.explore.rentals'),
+                  // },
                   { href: '/spots', label: t('Footer.explore.spots') },
-                  { href: '/packs', label: t('Footer.explore.packs') },
-                  { href: '/gallery', label: t('Footer.explore.gallery') },
+                  { href: '/faq', label: t('Footer.explore.faq') },
+                  // { href: '/packs', label: t('Footer.explore.packs') },
+                  // { href: '/gallery', label: t('Footer.explore.gallery') },
                   { href: '/contact', label: t('Footer.explore.contact') },
                 ].map((link) => (
                   <Link
@@ -162,7 +163,7 @@ export default function Footer() {
               </h4>
               <nav className="space-y-3 mb-6">
                 <Link
-                  href="/terms-conditions"
+                  href="/terminos"
                   className="block text-base-content/70 hover:text-primary transition-colors text-sm group">
                   <span className="flex items-center gap-2">
                     <span className="w-1 h-1 rounded-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity"></span>
@@ -170,7 +171,7 @@ export default function Footer() {
                   </span>
                 </Link>
                 <Link
-                  href="/privacy-policy"
+                  href="/privacidad"
                   className="block text-base-content/70 hover:text-primary transition-colors text-sm group">
                   <span className="flex items-center gap-2">
                     <span className="w-1 h-1 rounded-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity"></span>

@@ -16,6 +16,11 @@
         "slogan": "High As A Kite",
         "address": "Perú"
       },
+      "miselaneous": {
+        "telephone": "Teléfono",
+        "email": "Correo electrónico",
+        "contactUs": "Contáctanos"
+      },
       "Navbar": {
         "home": "Inicio",
         "about": "Sobre Nosotros",
@@ -26,7 +31,8 @@
         "packs": "Paquetes",
         "gallery": "Galería",
         "contact": "Contacto",
-        "services": "Servicios"
+        "services": "Servicios",
+        "faq": "FAQ"
       },
       "Hero": {
         "titles": {
@@ -132,7 +138,8 @@
           "packs": "Paquetes",
           "gallery": "Galería",
           "contact": "Contacto",
-          "services": "Servicios"
+          "services": "Servicios",
+          "faq": "Preguntas Frecuentes"
         },
         "contact": {
           "title": "Contacto",
@@ -155,7 +162,31 @@
       "About": {
         "title": "Sobre HAAK",
         "subtitle": "Descubre nuestra historia, valores y equipo.",
-        "description": "Conoce más sobre High As A Kite | HAAK, nuestra misión y cómo diseñamos experiencias para trabajadores remotos que buscan aventura y comunidad."
+        "description": "Conoce más sobre High As A Kite | HAAK, nuestra misión y cómo diseñamos experiencias para trabajadores remotos que buscan aventura y comunidad.",
+        "values": {
+          "title": "Nuestros Valores",
+          "subtitle": "Los pilares que guían cada sesión e interacción en HAAK.",
+          "passion": {
+            "title": "Pasión",
+            "text": "Vivimos por el viento y las olas, compartiendo nuestro amor por el océano en cada lección."
+          },
+          "safety": {
+            "title": "Seguridad Primero",
+            "text": "Protocolos rigurosos y equipo certificado garantizan tu tranquilidad en el agua."
+          },
+          "community": {
+            "title": "Comunidad",
+            "text": "Construyendo conexiones entre viajeros, locales y amantes del océano."
+          },
+          "progression": {
+            "title": "Progresión",
+            "text": "Rutas de aprendizaje estructuradas diseñadas para ayudarte a alcanzar tus metas personales."
+          }
+        },
+        "story": {
+          "title": "Nuestra Historia",
+          "p1": "High As A Kite nació de un deseo simple: compartir la magia de la costa peruana con el mundo. Lo que comenzó como un pequeño grupo de amigos persiguiendo el viento se ha convertido en una academia de kitesurf de primer nivel.\n\nCreemos que el océano es la mejor aula. A lo largo de los años, hemos refinado nuestra metodología de enseñanza para asegurar que cada estudiante, independientemente de su punto de partida, pueda experimentar la emoción de aprovechar el viento. Nuestra base en el norte de Perú ofrece algunas de las condiciones más consistentes del planeta, convirtiéndolo en el lugar perfecto para comenzar tu viaje."
+        }
       },
       "TermsAndConditions": {
         "Title": "Términos y Condiciones",
@@ -1157,6 +1188,126 @@
             "location": "Los Órganos"
           }
         ]
+      },
+      "ParacasPage": {
+        "seo": {
+          "title": "Kitesurf en Paracas | El Mejor Spot de Viento en Perú",
+          "description": "Descubre Paracas, el paraíso del viento en Perú. Guía completa: dónde hacer kitesurf, cómo llegar desde Lima, mejores hoteles y actividades en la Reserva Nacional."
+        },
+        "hero": {
+          "title": "Paracas: La Capital del Viento",
+          "subtitle": "Agua plana, viento garantizado y naturaleza salvaje a solo 3 horas de Lima.",
+          "cta": "Reservar Clases en Paracas"
+        },
+        "theSpot": {
+          "title": "El Spot: Santo Domingo",
+          "description": "Nuestra escuela opera en la bahía de Paracas, específicamente en la zona de Santo Domingo. Es un spot de clase mundial conocido por su seguridad y consistencia.",
+          "features": [
+            {
+              "title": "Agua Plana",
+              "desc": "Una inmensa piscina natural sin olas, ideal para aprender y perfeccionar trucos de freestyle."
+            },
+            {
+              "title": "Viento 'Paracas'",
+              "desc": "Famoso por su intensidad. El viento térmico entra fuerte desde el mediodía hasta el atardecer (20-30 nudos)."
+            },
+            {
+              "title": "Fondo de Arena",
+              "desc": "Sin rocas ni peligros bajo el agua. Profundidad progresiva que facilita el aprendizaje."
+            },
+            {
+              "title": "Reserva Nacional",
+              "desc": "Navega rodeado de desierto y fauna marina en un entorno protegido espectacular."
+            }
+          ]
+        },
+        "guide": {
+          "title": "Guía de Viaje: Paracas",
+          "gettingThere": {
+            "title": "Cómo Llegar",
+            "bus": "Bus: La opción más común. Empresas como Cruz del Sur y Oltursa salen diariamente desde Lima (Javier Prado). El viaje dura aprox. 3.5 horas.",
+            "car": "Auto: Toma la Panamericana Sur hasta el km 245. La carretera es autopista casi todo el camino. Tiempo estimado: 3 horas."
+          },
+          "accommodation": {
+            "title": "Dónde Hospedarse",
+            "luxury": "Lujo: Hotel Paracas (Luxury Collection), DoubleTree by Hilton.",
+            "mid": "Confort: Aranwa, San Agustín.",
+            "budget": "Económico/Social: Kokopelli Hostel, Selina (ideal para nómadas digitales y ambiente joven)."
+          },
+          "activities": {
+            "title": "Qué más hacer",
+            "islands": "Islas Ballestas: Tour en bote para ver lobos marinos y pingüinos.",
+            "reserve": "Reserva Nacional: Recorrido por playas vírgenes como La Mina y el Desierto Rojo.",
+            "food": "Gastronomía: Disfruta del ceviche fresco y mariscos en el malecón El Chaco."
+          }
+        }
+      },
+      "PrivacyPolicy": {
+        "title": "Política de Privacidad",
+        "lastUpdated": "Última actualización: {date}",
+        "intro": "En <strong>Haak</strong> (en adelante, 'nosotros'), nos comprometemos a proteger tu privacidad. Esta política explica cómo recopilamos, usamos y protegemos tu información personal cuando utilizas nuestro sitio web y formulario de contacto.",
+        "sections": {
+          "infoCollected": {
+            "title": "1. Información que recopilamos",
+            "content": "Actualmente, solo recopilamos información que tú nos proporcionas voluntariamente a través de nuestro formulario de contacto, la cual puede incluir:",
+            "list": [
+              "Nombre completo.",
+              "Dirección de correo electrónico.",
+              "Número de teléfono (opcional).",
+              "Cualquier otro dato que incluyas en tu mensaje."
+            ]
+          },
+          "purpose": {
+            "title": "2. Finalidad del uso de datos",
+            "content": "Usamos tus datos personales exclusivamente para los siguientes fines:",
+            "list": [
+              "<strong>Responder a tu solicitud:</strong> Para contestar tus dudas, cotizaciones o mensajes enviados a través del formulario.",
+              "<strong>Comunicaciones de Marketing:</strong> Si has dado tu consentimiento explícito (marcando la casilla correspondiente en el formulario), utilizaremos tu correo para enviarte novedades, promociones o información relevante sobre nuestros servicios."
+            ]
+          },
+          "cookies": {
+            "title": "3. Cookies y Tecnologías de Rastreo",
+            "content": "Este sitio web no utiliza cookies de terceros con fines publicitarios o de rastreo de comportamiento. Sin embargo, la plataforma tecnológica sobre la que está construido el sitio puede utilizar cookies técnicas esenciales para garantizar el correcto funcionamiento y seguridad de la página."
+          },
+          "sharing": {
+            "title": "4. Compartir información con terceros",
+            "content": "No vendemos, comercializamos ni transferimos tu información personal a terceros externos. Esto no incluye a los socios de alojamiento de sitios web y otras partes que nos ayudan a operar nuestro sitio web, siempre que esas partes acuerden mantener esta información confidencial."
+          },
+          "rights": {
+            "title": "5. Tus Derechos (ARCO)",
+            "content": "Tienes derecho a acceder, rectificar, cancelar u oponerte al tratamiento de tus datos. Si deseas darte de baja de nuestra lista de marketing o solicitar la eliminación de tus datos, puedes hacerlo en cualquier momento enviando un correo a través de nuestro formulario de contacto."
+          },
+          "contact": {
+            "title": "6. Contacto",
+            "content": "Si tienes preguntas sobre esta política de privacidad, puedes contactarnos a través de nuestro formulario en la página principal."
+          }
+        }
+      },
+      "TermsAndConditionsSimple": {
+        "title": "Términos y Condiciones",
+        "lastUpdated": "Última actualización: {date}",
+        "sections": {
+          "acceptance": {
+            "title": "1. Aceptación de los Términos",
+            "content": "Al acceder y utilizar el sitio web de <strong>Haak</strong>, aceptas estar sujeto a estos términos y condiciones de uso, así como a todas las leyes y regulaciones aplicables. Si no estás de acuerdo con alguno de estos términos, te recomendamos no utilizar este sitio."
+          },
+          "usage": {
+            "title": "2. Uso del Sitio",
+            "content": "El contenido de este sitio web es para tu información general y uso personal. Está sujeto a cambios sin previo aviso. Este sitio web tiene como objetivo principal proporcionar información sobre nuestros servicios y facilitar un medio de contacto."
+          },
+          "intellectualProperty": {
+            "title": "3. Propiedad Intelectual",
+            "content": "Todo el contenido publicado en este sitio (textos, gráficos, logotipos, imágenes y código fuente) es propiedad de Haak o de sus proveedores de contenido y está protegido por las leyes de propiedad intelectual."
+          },
+          "liability": {
+            "title": "4. Limitación de Responsabilidad",
+            "content": "Haak no será responsable de ningún daño directo, indirecto, incidental o consecuente que resulte del uso o la imposibilidad de uso de los materiales en este sitio web."
+          },
+          "modifications": {
+            "title": "5. Modificaciones",
+            "content": "Nos reservamos el derecho de revisar y modificar estos términos de servicio en cualquier momento sin previo aviso. Al utilizar este sitio web, aceptas estar vinculado por la versión actual de estos términos y condiciones."
+          }
+        }
       }
     }
   }

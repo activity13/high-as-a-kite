@@ -52,11 +52,12 @@ export default function Navbar() {
   const links = [
     { href: '/about', label: t('Navbar.about') },
     { href: '/sports', label: t('Navbar.sports') },
-    { href: '/trips', label: t('Navbar.trips') },
-    { href: '/rentals', label: t('Navbar.rentals') },
+    // { href: '/trips', label: t('Navbar.trips') },
+    // { href: '/rentals', label: t('Navbar.rentals') },
     { href: '/spots', label: t('Navbar.spots') },
-    { href: '/packs', label: t('Navbar.packs') },
-    { href: '/gallery', label: t('Navbar.gallery') },
+    { href: '/faq', label: t('Navbar.faq') },
+    // { href: '/packs', label: t('Navbar.packs') },
+    // { href: '/gallery', label: t('Navbar.gallery') },
     { href: '/contact', label: t('Navbar.contact') },
   ];
 

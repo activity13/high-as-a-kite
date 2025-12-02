@@ -4,7 +4,7 @@ import { haakDesign } from '@/lib/design-system';
 import { cn } from '@/lib/utils';
 import { Card, CardBody } from './Card';
 import Image from 'next/image';
-import { Quote, Star } from 'lucide-react';
+import { Quote } from 'lucide-react';
 
 interface TestimonialCardProps {
   quote: string;
@@ -34,20 +34,6 @@ export function TestimonialCard({
       <CardBody className="gap-4">
         <div className="flex justify-between items-start">
           <Quote className="w-8 h-8 text-primary/20" />
-
-          {rating > 0 && (
-            <div className="flex gap-1">
-              {Array.from({ length: 5 }).map((_, i) => (
-                <Star
-                  key={i}
-                  className={cn(
-                    'w-4 h-4',
-                    i < rating ? 'fill-warning text-warning' : 'text-base-300',
-                  )}
-                />
-              ))}
-            </div>
-          )}
         </div>
 
         <blockquote className={cn(haakDesign.typography.body, 'italic')}>

@@ -40,12 +40,15 @@ export function SpotCard({
       lowerLevel.includes('intermediate') ||
       lowerLevel.includes('intermedio')
     ) {
-      return 'warning';
+      return 'success';
+    }
+    if (lowerLevel.includes('todos') || lowerLevel.includes('all')) {
+      return 'secondary';
     }
     if (lowerLevel.includes('advanced') || lowerLevel.includes('avanzado')) {
-      return 'error';
+      return 'warning';
     }
-    return 'neutral';
+    return 'error';
   };
 
   return (

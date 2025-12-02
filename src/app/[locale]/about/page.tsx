@@ -1,22 +1,44 @@
 import React from 'react';
-import { TeamSection, FinalCTASection } from '@/components';
+import {
+  TeamSection,
+  FinalCTASection,
+  MissionValues,
+  StorySection,
+} from '@/components';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 
 export default function About() {
   const t = useTranslations('translation.translations');
 
   return (
-    <div className="min-h-screen mt-14">
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="text-center bg-gradient-to-b from-teal-500 to-teal-700 text-white py-16">
-        <h1 className="text-5xl font-bold drop-shadow-lg animate-fade-in">
-          {t('About.title')}
-        </h1>
-        <p className="text-lg mt-4 max-w-2xl mx-auto animate-fade-in delay-200">
-          {t('About.subtitle')}
-        </p>
+      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/kite.jpg"
+            alt="About HAAK"
+            fill
+            className="object-cover brightness-50"
+            priority
+          />
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-lg">
+            {t('About.title')}
+          </h1>
+          <p className="text-xl md:text-2xl text-white/90 font-light leading-relaxed">
+            {t('About.subtitle')}
+          </p>
+        </div>
       </section>
 
+      <MissionValues />
+      <StorySection />
       <TeamSection />
       <FinalCTASection />
     </div>
