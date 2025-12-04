@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import { haakDesign } from '@/lib/design-system';
 import { Card, CardBody, CardTitle } from './Card';
 import { Badge } from './Badge';

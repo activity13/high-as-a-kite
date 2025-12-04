@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import { useTranslations } from 'next-intl';
 import { haakDesign } from '@/lib/design-system';
 import { track } from '../utils/track';

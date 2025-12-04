@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import { useTranslations } from 'next-intl';
 import { Section, SectionTitle } from './ui/Section';
 import { motion } from 'framer-motion';

@@ -1,6 +1,6 @@
 'use client';
 
-import { haakDesign } from '@/lib/design-system';
+import React from 'react';
 import { cn } from '@/lib/utils';
 import { forwardRef, TextareaHTMLAttributes } from 'react';
 

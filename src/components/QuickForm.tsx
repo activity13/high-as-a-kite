@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { useTranslations } from 'next-intl';

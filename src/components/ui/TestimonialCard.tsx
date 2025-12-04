@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import { haakDesign } from '@/lib/design-system';
 import { cn } from '@/lib/utils';
 import { Card, CardBody } from './Card';
