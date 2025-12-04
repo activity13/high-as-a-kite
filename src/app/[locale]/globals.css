@@ -60,6 +60,7 @@ body {
 }
 @theme {
   --breakpoint-mdd: 60rem;
+  --font-helvetica: var(--font-helvetica), sans-serif;
 }
 
 @layer base {

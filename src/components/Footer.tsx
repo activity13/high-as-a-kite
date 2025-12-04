@@ -28,7 +28,7 @@ export default function Footer() {
               <div className="flex flex-col justify-center gap-3 mb-6">
                 <div className="w-24 h-24 flex items-center justify-center">
                   <Image
-                    src="/images/HaakAir.png"
+                    src="/images/Haakair.png"
                     alt="HAAK Logo"
                     width={120}
                     height={60}

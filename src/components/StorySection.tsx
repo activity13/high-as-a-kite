@@ -18,7 +18,7 @@ export const StorySection = () => {
           viewport={{ once: true }}
           className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
           <Image
-            src="/images/kite-school.jpg"
+            src="/images/sunset.webp"
             alt="HAAK Kitesurf School"
             fill
             className="object-cover"

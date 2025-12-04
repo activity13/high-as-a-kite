@@ -95,8 +95,10 @@ export default function Navbar() {
                   height={86}
                 />
               </Link>
-              <div className="font-stretch-semi-condensed text-base-100">
-                <h5 className="font-helvetica">{t('common.academy')}</h5>
+              <div className="font-stretch-semi-condensed  text-base-100">
+                <h5 className="font-helvetica uppercase">
+                  {t('common.academy')}
+                </h5>
               </div>
             </div>
 

@@ -38,17 +38,17 @@ const galleryImages: GalleryImage[] = [
   },
   {
     id: 6,
-    src: '/images/HAAKFIRE.PNG',
+    src: '/images/haakfire.png',
     alt: 'Wave action',
   },
   {
     id: 7,
-    src: '/images/KAYAK_2.webp',
+    src: '/images/kayak_2.webp',
     alt: 'Coastal landscape',
   },
   {
     id: 8,
-    src: '/images/SURF.webp',
+    src: '/images/surf.webp',
     alt: 'Equipment closeup',
   },
 ];
