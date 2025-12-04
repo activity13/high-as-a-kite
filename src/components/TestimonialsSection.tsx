@@ -1,6 +1,5 @@
 import React from 'react';
 import { useTranslations } from 'next-intl';
-import { haakDesign } from '@/lib/design-system';
 import { Section, SectionTitle } from './ui/Section';
 import { TestimonialCard } from './ui/TestimonialCard';
 

@@ -330,16 +330,6 @@ export default function SportsSection() {
 
   const sliderRef = useRef<HTMLDivElement>(null);
 
-  const scroll = (direction: 'left' | 'right') => {
-    if (sliderRef.current) {
-      const scrollAmount = 300;
-      sliderRef.current.scrollBy({
-        left: direction === 'left' ? -scrollAmount : scrollAmount,
-        behavior: 'smooth',
-      });
-    }
-  };
-
   const handleSelectSport = (sport: Sport) => {
     setSelectedSport(sport);
   };

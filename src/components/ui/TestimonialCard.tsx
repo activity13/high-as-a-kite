@@ -27,7 +27,6 @@ export function TestimonialCard({
   role,
   location,
   avatar,
-  rating = 5,
   className,
 }: TestimonialCardProps) {
   return (
@@ -38,7 +37,7 @@ export function TestimonialCard({
         </div>
 
         <blockquote className={cn(haakDesign.typography.body, 'italic')}>
-          "{quote}"
+          &quot;{quote}&quot;
         </blockquote>
 
         <div className="flex items-center gap-3 mt-2">
