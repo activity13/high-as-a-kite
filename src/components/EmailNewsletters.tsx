@@ -8,7 +8,6 @@ import Link from 'next/link';
 import { haakDesign } from '@/lib/design-system';
 import { Section } from './ui/Section';
 import { Button } from './ui/Button';
-import { Input } from './ui/Input';
 
 const EmailForm: React.FC = () => {
   const formRef = useRef<HTMLFormElement>(null);

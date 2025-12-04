@@ -3,9 +3,7 @@ import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { track } from '../utils/track';
 import { Section, SectionTitle } from './ui/Section';
-import { PackageCard } from './ui/PackageCard';
 import { CTAButton } from './ui/CTAButton';
-import { Badge } from './ui/Badge';
 import { haakDesign } from '@/lib/design-system';
 import { Card, CardBody, CardTitle } from './ui/Card';
 

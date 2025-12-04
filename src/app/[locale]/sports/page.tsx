@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-  SportsSection,
-  HowItWorksSection,
-  MethodologySection,
-  SafetySection,
-} from '@/components';
+import { SportsSection, HowItWorksSection, SafetySection } from '@/components';
 export default function LessonsPage() {
   return (
     <div>

@@ -5,8 +5,6 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/Button';
-import { CTAButton } from '@/components/ui/CTAButton';
-import { ChevronRight } from 'lucide-react';
 
 export default function NotFound() {
   const t = useTranslations('translation.translations');
