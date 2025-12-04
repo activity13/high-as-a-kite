@@ -25,7 +25,7 @@ export default function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 lg:gap-12">
             {/* Columna 1: Branding & Social */}
             <div className="lg:col-span-1">
-              <div className="flex flex-col gap-3 mb-6">
+              <div className="flex flex-col justify-center gap-3 mb-6">
                 <div className="w-24 h-24 flex items-center justify-center">
                   <Image
                     src="/images/HaakAir.png"
@@ -36,8 +36,8 @@ export default function Footer() {
                   />
                 </div>
                 <div>
-                  <h3 className="text-base-content tracking-wider font-semibold">
-                    {t('common.companyNameShort')}
+                  <h3 className="text-base-content uppercase font-helvetica tracking-wider ">
+                    {t('common.academy')}
                   </h3>
                   <p className="text-xs text-primary">{t('common.slogan')}</p>
                 </div>

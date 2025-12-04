@@ -99,7 +99,7 @@ export default function Hero() {
       </div>
 
       {/* Botón descubrir anclado abajo, conservando clics */}
-      <div className="absolute inset-x-0 bottom-1 z-10 flex justify-center pointer-events-none">
+      <div className="absolute inset-x-0 bottom-16 lg:bottom-0 z-10 flex justify-center pointer-events-none">
         <div className="pointer-events-auto">
           <DiscoverButton />
         </div>

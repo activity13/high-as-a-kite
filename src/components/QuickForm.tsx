@@ -62,7 +62,7 @@ export const QuickForm = () => {
   const levels = t.raw('form.fields.level.options') as Record<string, string>;
 
   return (
-    <section id="form" className="py-8">
+    <section id="form" className="py-1">
       <h2 className="text-3xl font-bold mb-8">{t('form.title')}</h2>
       <form
         ref={formRef}
@@ -132,19 +132,19 @@ export const QuickForm = () => {
             <label
               htmlFor="terms"
               className="text-xs text-base-content/80 leading-tight">
-              He leído y acepto la{' '}
+              {t('form.fields.termsAndConditions.label')}{' '}
               <Link
                 href="/privacidad"
                 className="underline hover:text-primary"
                 target="_blank">
-                Política de Privacidad
+                {t('form.fields.termsAndConditions.linkPrivacy')}
               </Link>{' '}
-              y los{' '}
+              {t('form.fields.termsAndConditions.and')}{' '}
               <Link
                 href="/terminos"
                 className="underline hover:text-primary"
                 target="_blank">
-                Términos y Condiciones
+                {t('form.fields.termsAndConditions.linkTerms')}
               </Link>
               .
             </label>

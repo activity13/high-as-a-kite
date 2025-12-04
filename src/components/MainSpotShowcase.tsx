@@ -1,14 +1,17 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import Link from 'next/link';
 import { haakDesign } from '@/lib/design-system';
+import { CTAButton } from '@/components/ui/CTAButton';
 import { Section, SectionTitle } from './ui/Section';
 import { Wind, ShieldCheck, Sun, Home as HomeIcon } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export const MainSpotShowcase = () => {
   const t = useTranslations('translation.translations.Home.thePlace');
-  const actualPlace: string = 'vichayito'; // Aquí puedes cambiar el spot principal si es necesario
+  const tHero = useTranslations('translation.translations.Hero');
+  const actualPlace: string = 'paracas'; // Aquí puedes cambiar el spot principal si es necesario
   const features = [
     {
       id: 'consistentWind',
@@ -45,7 +48,7 @@ export const MainSpotShowcase = () => {
             <iframe
               width="100%"
               height="100%"
-              src="https://www.youtube.com/embed/4Pp6K5lhS4U"
+              src="https://www.youtube.com/embed/n0zRQC0QYv8"
               title="High as a Kite - Location Video"
               style={{ border: 'none' }}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -98,6 +101,12 @@ export const MainSpotShowcase = () => {
                 </motion.li>
               ))}
             </ul>
+          </div>
+
+          <div className="mt-8">
+            <CTAButton variant="primary">
+              <Link href="/spots">{tHero('discover')}</Link>
+            </CTAButton>
           </div>
         </div>
       </div>

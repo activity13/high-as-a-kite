@@ -12,42 +12,42 @@ type GalleryImage = {
 const galleryImages: GalleryImage[] = [
   {
     id: 1,
-    src: 'https://picsum.photos/seed/kite1/800/800',
+    src: '/images/kite.jpg',
     alt: 'Kitesurfing action shot',
   },
   {
     id: 2,
-    src: 'https://picsum.photos/seed/kite2/800/800',
+    src: '/images/jump.webp',
     alt: 'Beach and ocean view',
   },
   {
     id: 3,
-    src: 'https://picsum.photos/seed/kite3/800/800',
+    src: '/images/down-wind.webp',
     alt: 'Kite in the sky',
   },
   {
     id: 4,
-    src: 'https://picsum.photos/seed/kite4/800/800',
+    src: '/images/jetsky.webp',
     alt: 'Sunset kitesurfing',
   },
   {
     id: 5,
-    src: 'https://picsum.photos/seed/kite5/800/800',
+    src: '/images/sunset.webp',
     alt: 'Group of riders',
   },
   {
     id: 6,
-    src: 'https://picsum.photos/seed/kite6/800/800',
+    src: '/images/HAAKFIRE.PNG',
     alt: 'Wave action',
   },
   {
     id: 7,
-    src: 'https://picsum.photos/seed/kite7/800/800',
+    src: '/images/KAYAK_2.webp',
     alt: 'Coastal landscape',
   },
   {
     id: 8,
-    src: 'https://picsum.photos/seed/kite8/800/800',
+    src: '/images/SURF.webp',
     alt: 'Equipment closeup',
   },
 ];

@@ -11,11 +11,11 @@ export default function ContactSection() {
     <section className="bg-primary min-h-screen flex flex-col lg:flex-row items-center justify-center text-primary-content px-6 py-12 gap-10 lg:gap-20">
       {/* Columna 1 - Info y Logo */}
       <div className="flex flex-col items-center lg:items-start gap-8 max-w-md">
-        <div className="flex justify-center lg:justify-start">
+        <div className="flex mt-20 justify-center lg:justify-start">
           <picture>
             <source srcSet="/images/HAAKFire.png" media="(max-width: 768px)" />
             <Image
-              src="/images/HAAKHAir.png"
+              src="/images/logo.png"
               alt="HAAK Logo"
               width={220}
               height={120}
@@ -68,7 +68,7 @@ export default function ContactSection() {
       </div>
 
       {/* Columna 2 - Formulario */}
-      <div className="w-full max-w-md bg-base-100 text-base-content p-6 rounded-2xl shadow-xl">
+      <div className="w-full max-w-md bg-base-100 text-base-content p-6 mt-4 rounded-2xl shadow-xl">
         <QuickForm />
       </div>
     </section>

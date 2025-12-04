@@ -26,7 +26,11 @@ export const QuickFormModal = ({
 
   return (
     <>
-      <CTAButton type="button" variant="primary" size="lg" onClick={handleOpen}>
+      <CTAButton
+        type="button"
+        variant="secondary"
+        size="lg"
+        onClick={handleOpen}>
         {triggerLabel ?? t('finalCta.buttons.form')}
       </CTAButton>
       <Modal open={open} onClose={() => setOpen(false)} title={t('form.title')}>

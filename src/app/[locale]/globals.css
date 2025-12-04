@@ -45,7 +45,7 @@
   --noise: 0;
 
   --font-stretch: var(--font-stretch-pro);
-  --font-helvetica: var(--font-roboto-mono);
+  --font-helvetica: var(--font-helvetica);
 }
 
 :root {

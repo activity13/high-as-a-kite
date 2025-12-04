@@ -83,7 +83,7 @@ export default function Navbar() {
         <nav className="fixed inset-x-0 top-0 z-20 bg-primary backdrop-blur supports-[backdrop-filter]:bg-primary/60 border-b border-primary/30">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
             {/* Logo */}
-            <div className="flex items-center gap-2">
+            <div className="flex flex-col items-center pt-2 mb-1">
               <Link
                 href="/"
                 aria-label="HAAK Home"
@@ -95,6 +95,9 @@ export default function Navbar() {
                   height={86}
                 />
               </Link>
+              <div className="font-stretch-semi-condensed text-base-100">
+                <h5 className="font-helvetica">{t('common.academy')}</h5>
+              </div>
             </div>
 
             {/* Desktop nav */}

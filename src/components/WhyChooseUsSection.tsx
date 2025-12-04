@@ -30,7 +30,7 @@ export const WhyChooseUsSection = () => {
   ];
 
   return (
-    <Section background="primary">
+    <Section background="secondary">
       <SectionTitle as="h2" className="text-center text-primary-content mb-12">
         {t('title')}
       </SectionTitle>

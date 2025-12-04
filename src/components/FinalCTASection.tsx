@@ -24,7 +24,7 @@ export const FinalCTASection = () => {
 
       <div className="flex flex-wrap justify-center gap-4">
         <CTAButton
-          variant="secondary"
+          variant="accent"
           size="lg"
           icon={<FaWhatsapp />}
           onClick={() => {

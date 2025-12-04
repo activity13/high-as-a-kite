@@ -1,7 +1,7 @@
 [
   {
     "id": "surf",
-    "thumbnail": "https://picsum.photos/150/150.webp?random=1",
+    "thumbnail": "/images/surf.webp",
     "image": "/images/surf.webp",
     "pricingType": "by_person",
     "prices": [
@@ -13,7 +13,7 @@
   },
   {
     "id": "kitesurf",
-    "thumbnail": "https://picsum.photos/150/150.webp?random=2",
+    "thumbnail": "/images/kite.jpg",
     "image": "/images/kite.jpg",
     "pricingType": "modalities",
     "modalities": [
@@ -25,14 +25,14 @@
   },
   {
     "id": "wakesurf",
-    "thumbnail": "https://picsum.photos/150/150.webp?random=3",
+    "thumbnail": "/images/wake.webp",
     "image": "/images/wake.webp",
     "pricingType": "fixed",
     "price": 70
   },
   {
     "id": "stand-up-paddle",
-    "thumbnail": "https://picsum.photos/150/150.webp?random=4",
+    "thumbnail": "/images/paddle.webp",
     "image": "/images/paddle.webp",
     "pricingType": "by_person_optional_rental",
     "prices": [
@@ -48,7 +48,7 @@
   },
   {
     "id": "jetsky",
-    "thumbnail": "https://picsum.photos/150/150.webp?random=15",
+    "thumbnail": "/images/jetsky.webp",
     "image": "/images/jetsky.webp",
     "pricingType": "modalities",
     "modalities": [
@@ -58,8 +58,8 @@
   },
   {
     "id": "kayak",
-    "thumbnail": "https://picsum.photos/150/150.webp?random=74",
-    "image": "/images/kayak.webp",
+    "thumbnail": "/images/kayak.webp",
+    "image": "/images/kayak_2.webp",
     "pricingType": "by_person_optional_addons",
     "prices": [
       { "people": 1, "price": 40 },
@@ -69,15 +69,15 @@
   },
   {
     "id": "skimboard",
-    "thumbnail": "https://picsum.photos/150/150.webp?random=7",
+    "thumbnail": "/images/skim.webp",
     "image": "/images/skim.webp",
     "pricingType": "fixed",
     "price": 25
   },
   {
     "id": "swimming-open-sea",
-    "thumbnail": "https://picsum.photos/150/150.webp?random=8",
-    "image": "https://picsum.photos/1200/800.webp?random=74",
+    "thumbnail": "/images/swim.webp",
+    "image": "/images/open-waters.webp",
     "pricingType": "by_person",
     "prices": [
       { "people": 1, "price": 35 },
@@ -88,8 +88,8 @@
   },
   {
     "id": "banano",
-    "thumbnail": "https://picsum.photos/150/150.webp?random=9",
-    "image": "https://picsum.photos/1200/800.webp?random=9",
+    "thumbnail": "/images/banano.webp",
+    "image": "/images/banano.webp",
     "pricingType": "by_person",
     "prices": [
       { "people": 1, "price": 30 },
@@ -100,8 +100,8 @@
   },
   {
     "id": "whale-turtle-tour",
-    "thumbnail": "https://picsum.photos/150/150.webp?random=10",
-    "image": "https://picsum.photos/1200/800.webp?random=10",
+    "thumbnail": "/images/whales.webp",
+    "image": "/images/whales.webp",
     "pricingType": "by_boat_type",
     "boats": [
       { "id": "whale-boat-sailboat", "price": 900, "shared": 90 },
@@ -111,8 +111,8 @@
   },
   {
     "id": "turtle-swimming",
-    "thumbnail": "https://picsum.photos/150/150.webp?random=11",
-    "image": "https://picsum.photos/1200/800.webp?random=11",
+    "thumbnail": "/images/turtles.webp",
+    "image": "/images/turtles.webp",
     "pricingType": "by_boat_type",
     "boats": [
       { "id": "turtle-boat-sailboat", "price": 450 },
@@ -123,8 +123,8 @@
   },
   {
     "id": "fishing-ceviche",
-    "thumbnail": "https://picsum.photos/150/150.webp?random=12",
-    "image": "https://picsum.photos/1200/800.webp?random=12",
+    "thumbnail": "/images/deep-fishing.webp",
+    "image": "/images/deep-fishing.webp",
     "pricingType": "by_boat_type",
     "boats": [
       { "id": "fishing-boat-sailboat", "price": 650 },
@@ -134,22 +134,22 @@
   },
   {
     "id": "sunset-sailboat",
-    "thumbnail": "https://picsum.photos/150/150.webp?random=16",
-    "image": "https://picsum.photos/1200/800.webp?random=13",
+    "thumbnail": "/images/sunset.webp",
+    "image": "/images/sunset.webp",
     "pricingType": "full_fixed",
     "price": 550
   },
   {
     "id": "deep-sea-fishing",
-    "thumbnail": "https://picsum.photos/150/150.webp?random=114",
-    "image": "https://picsum.photos/1200/800.webp?random=14",
+    "thumbnail": "/images/deep-fishing.webp",
+    "image": "/images/deep-fishing.webp",
     "pricingType": "full_fixed",
     "price": 1150
   },
   {
     "id": "lobitos-fishing-tour",
-    "thumbnail": "https://picsum.photos/150/150.webp?random=115",
-    "image": "https://picsum.photos/1200/800.webp?random=15",
+    "thumbnail": "/images/fishing2.webp",
+    "image": "/images/fishing2.webp",
     "pricingType": "by_person_optional_transport",
     "prices": [
       { "people": 1, "price": 60 },
@@ -164,8 +164,8 @@
   },
   {
     "id": "lobitos-fishing-tour-2",
-    "thumbnail": "https://picsum.photos/150/150.webp?random=16",
-    "image": "https://picsum.photos/1200/800.webp?random=16",
+    "thumbnail": "/images/fishing.webp",
+    "image": "/images/fishing.webp",
     "pricingType": "by_person_optional_transport",
     "prices": [
       { "people": 1, "price": 80 },
@@ -180,8 +180,8 @@
   },
   {
     "id": "diving",
-    "thumbnail": "https://picsum.photos/150/150.webp?random=117",
-    "image": "https://picsum.photos/1200/800.webp?random=117",
+    "thumbnail": "/images/scuba.webp",
+    "image": "/images/scuba.webp",
     "pricingType": "by_person",
     "prices": [
       { "people": 1, "price": 150 },
