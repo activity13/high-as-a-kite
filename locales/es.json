@@ -215,6 +215,22 @@
         "trip-policies": {
           "title": "Políticas de Viajes y Expediciones - High As A Kite | HAAK",
           "description": "Lee nuestras políticas de viajes y expediciones para entender las expectativas y directrices para los participantes que se unan a nuestros viajes."
+        },
+        "sports": {
+          "title": "Deportes y Clases - High As A Kite | HAAK",
+          "description": "Descubre nuestra oferta de deportes acuáticos: Kitesurf, Surf, Paddle, Wing Foil y más. Clases para todos los niveles en el norte de Perú."
+        },
+        "spots": {
+          "title": "Spots de Kitesurf - High As A Kite | HAAK",
+          "description": "Explora los mejores spots de kitesurf en Perú: Máncora, Los Órganos, Lobitos, Cabo Blanco. Guía de viento y condiciones."
+        },
+        "contact": {
+          "title": "Contacto - High As A Kite | HAAK",
+          "description": "Contáctanos para reservar tus clases o aventuras. Estamos listos para responder tus dudas y planear tu viaje."
+        },
+        "faq": {
+          "title": "Preguntas Frecuentes - High As A Kite | HAAK",
+          "description": "Respuestas a las dudas más comunes sobre nuestras clases, equipos, seguridad y logística de viaje."
         }
       },
       "faqs": {

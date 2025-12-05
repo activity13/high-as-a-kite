@@ -1,12 +1,38 @@
-'use client';
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Instagram, Youtube, Music } from 'lucide-react';
 import { QuickForm } from '@/components';
-import { useTranslations } from 'next-intl';
-export default function ContactSection() {
-  const t = useTranslations('translation.translations');
+import { getTranslations } from 'next-intl/server';
+import { Metadata } from 'next';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({
+    locale,
+    namespace: 'translation.translations.SEO.contact',
+  });
+  return {
+    title: t('title'),
+    description: t('description'),
+  };
+}
+
+export default async function ContactSection({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({
+    locale,
+    namespace: 'translation.translations',
+  });
+
   return (
     <section className="bg-primary min-h-screen flex flex-col lg:flex-row items-center justify-center text-primary-content px-6 py-12 gap-10 lg:gap-20">
       {/* Columna 1 - Info y Logo */}

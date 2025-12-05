@@ -216,6 +216,22 @@
         "trip-policies": {
           "title": "Trip & Expeditions Policies - High As A Kite | HAAK",
           "description": "Understand the expectations and guidelines for participants joining HAAK trips and expeditions."
+        },
+        "sports": {
+          "title": "Sports & Lessons - High As A Kite | HAAK",
+          "description": "Discover our water sports offerings: Kitesurfing, Surfing, Paddleboarding, Wing Foil, and more. Lessons for all levels in Northern Peru."
+        },
+        "spots": {
+          "title": "Kitesurf Spots - High As A Kite | HAAK",
+          "description": "Explore the best kitesurf spots in Peru: Máncora, Los Órganos, Lobitos, Cabo Blanco. Wind guide and conditions."
+        },
+        "contact": {
+          "title": "Contact - High As A Kite | HAAK",
+          "description": "Contact us to book your lessons or adventures. We are ready to answer your questions and plan your trip."
+        },
+        "faq": {
+          "title": "FAQs - High As A Kite | HAAK",
+          "description": "Answers to common questions about our lessons, equipment, safety, and trip logistics."
         }
       },
       "faqs": {

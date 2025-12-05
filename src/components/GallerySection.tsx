@@ -14,7 +14,7 @@ const galleryImages: GalleryImage[] = [
   {
     id: 1,
     src: '/images/kite.jpg',
-    alt: 'Kitesurfing action shot',
+    alt: 'Kitesurfing action  shot',
   },
   {
     id: 2,

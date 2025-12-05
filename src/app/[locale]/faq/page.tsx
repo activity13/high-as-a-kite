@@ -10,13 +10,12 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({
     locale,
-    namespace: 'translation.translations',
+    namespace: 'translation.translations.SEO.faq',
   });
 
   return {
-    title: `${t('faqs.title')} | Haak`,
-    description:
-      'Encuentra respuestas a las preguntas más comunes sobre nuestros servicios, metodología y precios.',
+    title: t('title'),
+    description: t('description'),
   };
 }
 
