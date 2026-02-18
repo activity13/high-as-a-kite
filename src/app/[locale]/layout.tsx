@@ -44,6 +44,8 @@ interface MyFunctionProps {
   params: Promise<{ locale: string }>;
 }
 
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://highasakite.pe';
+
 export async function generateMetadata({
   params,
 }: MyFunctionProps): Promise<Metadata> {
@@ -54,13 +56,56 @@ export async function generateMetadata({
   });
 
   return {
-    title: t('home.title'),
+    metadataBase: new URL(BASE_URL),
+    title: {
+      default: t('home.title'),
+      template: `%s | ${t('home.title')}`,
+    },
     description: t('home.description'),
+    keywords: t('home.keywords'),
     alternates: {
-      canonical: `https://tu-dominio.com/${locale}`,
+      canonical: `${BASE_URL}/${locale}`,
       languages: {
-        en: 'https://tu-dominio.com/en',
-        es: 'https://tu-dominio.com/es',
+        en: `${BASE_URL}/en`,
+        es: `${BASE_URL}/es`,
+      },
+    },
+    openGraph: {
+      title: t('home.title'),
+      description: t('home.description'),
+      url: `${BASE_URL}/${locale}`,
+      siteName: 'High As A Kite | HAAK',
+      images: [
+        {
+          url: '/images/og-image.jpg', // Asegúrate de tener esta imagen en public/images/
+          width: 1200,
+          height: 630,
+          alt: t('home.title'),
+        },
+      ],
+      locale: locale,
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('home.title'),
+      description: t('home.description'),
+      images: ['/images/twitter-image.jpg'], // Asegúrate de tener esta imagen
+    },
+    icons: {
+      icon: '/favicon.ico',
+      shortcut: '/favicon-16x16.png',
+      apple: '/apple-touch-icon.png',
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
       },
     },
   };

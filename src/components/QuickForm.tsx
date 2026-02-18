@@ -2,13 +2,11 @@
 
 import React from 'react';
 import { useRef, useState } from 'react';
-import emailjs from '@emailjs/browser';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 
 import { track } from '../utils/track';
 import { Button } from '@/components/ui/Button';
-// todo mejorar la accesibilidad del formulario, mejorar el diseño.
 
 export const QuickForm = () => {
   const formRef = useRef<HTMLFormElement>(null);
@@ -35,17 +33,31 @@ export const QuickForm = () => {
     setLoading(true);
     setStatus('idle');
 
+    const formData = new FormData(formRef.current);
+    const data = {
+      name: formData.get('user_name'),
+      email: formData.get('user_email'),
+      level: formData.get('level'),
+      persons: formData.get('persons'),
+      phone: formData.get('phone'),
+      message: formData.get('message'),
+      marketingConsent: acceptedMarketing,
+    };
+
     try {
       // Track event
       track(t('events.tracking.form_submit'));
 
-      // Send email
-      await emailjs.sendForm(
-        'service_wlrahqv',
-        'template_cyruobb',
-        formRef.current,
-        'TRtyI8tzw0gMhCajE',
-      );
+      // Send email via API Route
+      const response = await fetch('/api/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) throw new Error('Error sending email');
 
       setStatus('ok');
       formRef.current.reset();
@@ -89,6 +101,30 @@ export const QuickForm = () => {
             type="email"
             required
             placeholder={t('form.fields.email.placeholder')}
+            className="mt-1 w-full px-3 py-2 border rounded text-sm"
+          />
+        </div>
+        <div>
+          <label className="text-xs font-medium">
+            {t('form.fields.persons.label')}
+          </label>
+          <input
+            name="persons"
+            type="number"
+            required
+            placeholder={t('form.fields.persons.placeholder')}
+            className="mt-1 w-full px-3 py-2 border rounded text-sm"
+          />
+        </div>
+        <div>
+          <label className="text-xs font-medium">
+            {t('form.fields.phone.label')}
+          </label>
+          <input
+            name="phone"
+            type="tel"
+            required
+            placeholder={t('form.fields.phone.placeholder')}
             className="mt-1 w-full px-3 py-2 border rounded text-sm"
           />
         </div>

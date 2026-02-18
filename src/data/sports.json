@@ -9,6 +9,19 @@
       { "people": 2, "price": 50 },
       { "people": 3, "price": 45 },
       { "people": 4, "price": 40 }
+    ],
+    "media": [
+      {
+        "type": "video",
+        "src": "/videos/surf-lesson.mp4",
+        "thumbnail": "/images/surf-aerea.jpg",
+        "alt": "Surf session highlights"
+      },
+      {
+        "type": "image",
+        "src": "/images/surf.webp",
+        "alt": "Surf action shot"
+      }
     ]
   },
   {
@@ -21,6 +34,24 @@
       { "id": "kitesurf-group", "price": 70 },
       { "id": "kitesurf-course-3", "price": 330 },
       { "id": "kitesurf-course-5", "price": 510 }
+    ],
+    "media": [
+      {
+        "type": "video",
+        "src": "/videos/kite-try.mp4",
+        "thumbnail": "/images/kitesurf-parcas-header.jpg",
+        "alt": "Kitesurf session"
+      },
+      {
+        "type": "image",
+        "src": "/images/jump.webp",
+        "alt": "Kitesurf lessons"
+      },
+      {
+        "type": "image",
+        "src": "/images/kitesurf-parcas-header.jpg",
+        "alt": "Kitesurf beach"
+      }
     ]
   },
   {
@@ -28,7 +59,20 @@
     "thumbnail": "/images/wake.webp",
     "image": "/images/wake.webp",
     "pricingType": "fixed",
-    "price": 70
+    "price": 70,
+    "media": [
+      {
+        "type": "video",
+        "src": "/videos/hero.mp4",
+        "thumbnail": "/images/wake.webp",
+        "alt": "Wakesurf highlights"
+      },
+      {
+        "type": "image",
+        "src": "/images/wake.webp",
+        "alt": "Wakesurf action"
+      }
+    ]
   },
   {
     "id": "stand-up-paddle",
@@ -44,7 +88,20 @@
       "id": "sup-rental",
       "price": 15
     },
-    "addons": [{ "id": "sup-snorkel", "price": 5 }]
+    "addons": [{ "id": "sup-snorkel", "price": 5 }],
+    "media": [
+      {
+        "type": "video",
+        "src": "/videos/sup-tour.mp4",
+        "thumbnail": "/images/paddle.webp",
+        "alt": "SUP tour highlights"
+      },
+      {
+        "type": "image",
+        "src": "/images/paddle.webp",
+        "alt": "Stand up paddle"
+      }
+    ]
   },
   {
     "id": "jetsky",
@@ -54,6 +111,19 @@
     "modalities": [
       { "id": "jetsky-class", "price": 100 },
       { "id": "jetsky-rental", "price": 120 }
+    ],
+    "media": [
+      {
+        "type": "video",
+        "src": "/videos/jetsky-action.mp4",
+        "thumbnail": "/images/jetsky.webp",
+        "alt": "Jet ski action"
+      },
+      {
+        "type": "image",
+        "src": "/images/jetsky.webp",
+        "alt": "Jet ski rental"
+      }
     ]
   },
   {

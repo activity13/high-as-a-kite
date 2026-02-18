@@ -1,8 +1,8 @@
 'use client';
 
 import React, { useRef, useState } from 'react';
-import emailjs from '@emailjs/browser';
-import { Mail, User, Bell } from 'lucide-react';
+// import emailjs from '@emailjs/browser';
+import { Mail, User } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { haakDesign } from '@/lib/design-system';
@@ -13,7 +13,7 @@ const EmailForm: React.FC = () => {
   const formRef = useRef<HTMLFormElement>(null);
   const [loading, setLoading] = useState(false);
   const [acceptTerms, setAcceptTerms] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  // const [isSubmitted, setIsSubmitted] = useState(false);
   const t = useTranslations('translation.translations.Newsletter');
 
   const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -27,41 +27,41 @@ const EmailForm: React.FC = () => {
 
     setLoading(true);
 
-    try {
-      await emailjs.sendForm(
-        'service_wlrahqv',
-        'template_cyruobb',
-        formRef.current,
-        'TRtyI8tzw0gMhCajE',
-      );
-    } catch (error) {
-      console.error('Error sending email:', error);
-    } finally {
-      setTimeout(() => {
-        setIsSubmitted(true);
-        setLoading(false);
-      }, 1000);
-      formRef.current.reset();
-    }
+    // try {
+    //   await emailjs.sendForm(
+    //     'service_wlrahqv',
+    //     'template_cyruobb',
+    //     formRef.current,
+    //     'TRtyI8tzw0gMhCajE',
+    //   );
+    // } catch (error) {
+    //   console.error('Error sending email:', error);
+    // } finally {
+    //   setTimeout(() => {
+    //     setIsSubmitted(true);
+    //     setLoading(false);
+    //   }, 1000);
+    //   formRef.current.reset();
+    // }
   };
 
-  if (isSubmitted) {
-    return (
-      <Section background="accent">
-        <div className="max-w-md mx-auto text-center">
-          <div className="w-16 h-16 bg-accent-content/20 rounded-full flex items-center justify-center mx-auto mb-4">
-            <Bell className="w-8 h-8 text-accent-content" />
-          </div>
-          <h3 className="text-xl font-semibold text-accent-content mb-2">
-            {t('success')}
-          </h3>
-          <p className={`${haakDesign.typography.body} text-accent-content/90`}>
-            {t('successMessage')}
-          </p>
-        </div>
-      </Section>
-    );
-  }
+  // if (isSubmitted) {
+  //   return (
+  //     <Section background="accent">
+  //       <div className="max-w-md mx-auto text-center">
+  //         <div className="w-16 h-16 bg-accent-content/20 rounded-full flex items-center justify-center mx-auto mb-4">
+  //           <Bell className="w-8 h-8 text-accent-content" />
+  //         </div>
+  //         <h3 className="text-xl font-semibold text-accent-content mb-2">
+  //           {t('success')}
+  //         </h3>
+  //         <p className={`${haakDesign.typography.body} text-accent-content/90`}>
+  //           {t('successMessage')}
+  //         </p>
+  //       </div>
+  //     </Section>
+  //   );
+  // }
 
   return (
     <Section background="secondary">

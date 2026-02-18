@@ -5,10 +5,11 @@ import { Section, SectionTitle } from './ui/Section';
 import { SpotCard } from './ui/SpotCard';
 
 const spotImages: Record<string, string> = {
-  Máncora: '/images/kite.jpg',
-  'Los Órganos': '/images/wake.webp',
-  'Cabo Blanco': '/images/surf.webp',
-  Lobitos: '/images/jetsky.webp',
+  Máncora: '/images/mancora.jpg',
+  'Los Órganos': '/images/los-organos.jpg',
+  'Cabo Blanco': '/images/cabo-blanco.jpg',
+  Vichayito: '/images/vichayito.jpg',
+  Lobitos: '/images/lobitos.jpg',
 };
 
 export const SpotsShowcase = () => {
@@ -40,7 +41,7 @@ export const SpotsShowcase = () => {
               level={c.level}
               wind={c.wind}
               highlight={c.highlight}
-              image={spotImages[c.name] || '/images/kite.jpg'}
+              image={spotImages[c.name] || '/images/haakfire.png'}
               className="h-full"
             />
           </div>

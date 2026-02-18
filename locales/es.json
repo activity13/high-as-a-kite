@@ -302,6 +302,14 @@
         "fields": {
           "name": { "label": "Nombre", "placeholder": "Tu nombre" },
           "email": { "label": "Email", "placeholder": "Tu correo" },
+          "persons": {
+            "label": "Número de Personas",
+            "placeholder": "Número de personas"
+          },
+          "phone": {
+            "label": "Teléfono",
+            "placeholder": "Tu número de teléfono"
+          },
           "level": {
             "label": "Nivel",
             "options": {
@@ -631,11 +639,25 @@
           "noPrice": "Contáctanos para precios",
           "loading": "Cargando deportes...",
           "sports": "Deportes",
-          "includes": "Incluye:"
+          "includes": "Incluye:",
+          "gallery": "Galería",
+          "slideNext": "Siguiente",
+          "slidePrev": "Anterior",
+          "slideOf": "de",
+          "scrollMore": "Ver más abajo",
+          "duration": "Duración",
+          "schedule": "Horario",
+          "bookNow": "Reservar Ahora",
+          "contactUs": "Contáctanos",
+          "categories": {
+            "waterSports": "Deportes Acuáticos",
+            "marineAdventure": "Aventura Marina"
+          }
         },
         "items": [
           {
             "id": "surf",
+            "category": "Deportes Acuáticos",
             "name": "Surf",
             "description": "",
             "location": "Punta Veleros - Los Órganos",
@@ -648,6 +670,7 @@
           },
           {
             "id": "kitesurf",
+            "category": "Deportes Acuáticos",
             "name": "Kite Surf",
             "description": "",
             "includes": [
@@ -667,6 +690,7 @@
           },
           {
             "id": "wakesurf",
+            "category": "Deportes Acuáticos",
             "name": "Wake Surf",
             "description": "",
             "includes": [
@@ -678,6 +702,7 @@
           },
           {
             "id": "stand-up-paddle",
+            "category": "Deportes Acuáticos",
             "name": "Stand Up Paddle",
             "description": "",
             "includes": [
@@ -694,6 +719,7 @@
           },
           {
             "id": "jetsky",
+            "category": "Deportes Acuáticos",
             "name": "Jetsky",
             "description": "",
             "includes": [
@@ -708,6 +734,7 @@
           },
           {
             "id": "kayak",
+            "category": "Deportes Acuáticos",
             "name": "Kayak",
             "description": "",
             "includes": [
@@ -720,6 +747,7 @@
           },
           {
             "id": "skimboard",
+            "category": "Deportes Acuáticos",
             "name": "Skim Board",
             "description": "",
             "includes": [
@@ -731,6 +759,7 @@
           },
           {
             "id": "swimming-open-sea",
+            "category": "Deportes Acuáticos",
             "name": "Natación en Mar Abierto",
             "description": "",
             "includes": [
@@ -742,6 +771,7 @@
           },
           {
             "id": "banano",
+            "category": "Deportes Acuáticos",
             "name": "Banano",
             "description": "Paseo costero.",
             "includes": [
@@ -753,6 +783,7 @@
           },
           {
             "id": "whale-turtle-tour",
+            "category": "Aventura Marina",
             "name": "Avistamiento de Ballenas y Nado con Tortugas",
             "description": "",
             "includes": ["Transporte"],
@@ -767,6 +798,7 @@
           },
           {
             "id": "turtle-swimming",
+            "category": "Aventura Marina",
             "name": "Nado con Tortugas",
             "description": "",
             "includes": ["Transporte"],
@@ -781,6 +813,7 @@
           },
           {
             "id": "fishing-ceviche",
+            "category": "Aventura Marina",
             "name": "Pesca y Prepara tu Ceviche",
             "description": "",
             "includes": [
@@ -803,6 +836,7 @@
           },
           {
             "id": "sunset-sailboat",
+            "category": "Aventura Marina",
             "name": "Sunset en Velero",
             "description": "Recorrido de 45–60 minutos; luego anclaje para actividades (bailar, cantar, remar, etc.).",
             "includes": [
@@ -820,6 +854,7 @@
           },
           {
             "id": "deep-sea-fishing",
+            "category": "Aventura Marina",
             "name": "Pesca de Altura",
             "description": "Embarque: 11 pm del día anterior.",
             "includes": [
@@ -835,6 +870,7 @@
           },
           {
             "id": "lobitos-fishing-tour",
+            "category": "Aventura Marina",
             "name": "Tour Pesca Vivencial - Lobitos",
             "description": "",
             "includes": [
@@ -853,6 +889,7 @@
           },
           {
             "id": "lobitos-fishing-tour-2",
+            "category": "Aventura Marina",
             "name": "Tour Pesca - Lobitos",
             "description": "",
             "includes": [
@@ -871,6 +908,7 @@
           },
           {
             "id": "diving",
+            "category": "Aventura Marina",
             "name": "Diving / Buceo con Tanque",
             "description": "",
             "includes": [

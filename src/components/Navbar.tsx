@@ -5,6 +5,8 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/i18n/navigation';
 import LanguageSwitcher from './ui/LanguageSwitcher';
+import sportsData from '@/data/sports.json';
+import { haakDesign } from '@/lib/design-system';
 
 export default function Navbar() {
   const t = useTranslations('translation.translations');
@@ -50,16 +52,34 @@ export default function Navbar() {
   };
 
   const links = [
+    { href: '/', label: t('Navbar.home') },
     { href: '/about', label: t('Navbar.about') },
-    { href: '/sports', label: t('Navbar.sports') },
-    // { href: '/trips', label: t('Navbar.trips') },
-    // { href: '/rentals', label: t('Navbar.rentals') },
     { href: '/spots', label: t('Navbar.spots') },
     { href: '/faq', label: t('Navbar.faq') },
-    // { href: '/packs', label: t('Navbar.packs') },
-    // { href: '/gallery', label: t('Navbar.gallery') },
     { href: '/contact', label: t('Navbar.contact') },
   ];
+
+  // Obtener lista de deportes desde traducciones
+  const sportsTranslations = t.raw('sportsInfo.items') as Array<{
+    id: string;
+    name: string;
+    category?: string;
+  }>;
+
+  // Filtrar solo los deportes que existen en sportsData
+  const sportsList = sportsTranslations.filter((sport) =>
+    sportsData.some((data) => data.id === sport.id),
+  );
+
+  // Agrupar deportes por categoría
+  const waterSports = sportsList.filter(
+    (s) =>
+      s.category === t('sportsInfo.section.categories.waterSports') ||
+      !s.category, // Fallback por si no tiene categoría
+  );
+  const marineAdventures = sportsList.filter(
+    (s) => s.category === t('sportsInfo.section.categories.marineAdventure'),
+  );
 
   const closeDrawer = () => {
     const el = document.getElementById(
@@ -68,22 +88,18 @@ export default function Navbar() {
     if (el) el.checked = false;
   };
 
-  // Agrupar: sports, trips, rentals
-  const groupedHrefs = ['/sports', '/trips', '/rentals'];
-  const groupedLinks = links.filter((l) => groupedHrefs.includes(l.href));
-  const mainLinks = links.filter((l) => !groupedHrefs.includes(l.href));
-  const servicesActive = groupedLinks.some((l) => isActive(l.href));
+  const sportsActive = isActive('/sports');
 
   return (
     <div className="drawer">
       <input id="navbar-drawer" type="checkbox" className="drawer-toggle" />
 
-      {/* Topbar */}
+      {/* Desktop Navbar*/}
       <div className="drawer-content">
         <nav className="fixed inset-x-0 top-0 z-20 bg-primary backdrop-blur supports-[backdrop-filter]:bg-primary/60 border-b border-primary/30">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
             {/* Logo */}
-            <div className="flex flex-col items-center pt-2 mb-1">
+            <div className="flex pt-2 mb-1">
               <Link
                 href="/"
                 aria-label="HAAK Home"
@@ -95,27 +111,22 @@ export default function Navbar() {
                   height={86}
                 />
               </Link>
-              <div className="font-stretch-semi-condensed  text-base-100">
-                <h5 className="font-helvetica uppercase">
-                  {t('common.academy')}
-                </h5>
-              </div>
             </div>
 
             {/* Desktop nav */}
             <ul className="hidden mdd:flex items-center gap-6">
-              {/* Dropdown Servicios */}
+              {/* Dropdown Deportes */}
               <li>
                 <div className="dropdown dropdown-hover">
                   <button
                     className={[
                       'text-sm transition-colors border-b-2 pb-1 mt-2 inline-flex items-center gap-1',
-                      servicesActive
+                      sportsActive
                         ? 'text-white border-white'
                         : 'text-neutral-100 border-transparent hover:text-white hover:border-neutral-500',
                     ].join(' ')}
                     aria-haspopup="menu"
-                    aria-expanded={servicesActive ? 'true' : 'false'}>
+                    aria-expanded={sportsActive ? 'true' : 'false'}>
                     {t('Navbar.services')}
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -127,26 +138,62 @@ export default function Navbar() {
                   </button>
                   <ul
                     tabIndex={0}
-                    className="dropdown-content menu p-2 mt-1 shadow bg-primary rounded-b-md min-w-35">
-                    {groupedLinks.map((l) => (
-                      <li key={l.href}>
-                        <Link
-                          href={l.href}
-                          className={[
-                            'text-sm transition-colors border-b-2 pb-[2px]',
-                            isActive(l.href)
-                              ? 'text-white border-white'
-                              : 'text-neutral-100 border-transparent hover:text-white hover:border-base-100',
-                          ].join(' ')}
-                          aria-current={isActive(l.href) ? 'page' : undefined}>
-                          {l.label}
-                        </Link>
+                    className="dropdown-content menu p-4 mt-1 shadow-xl bg-info/90 rounded-b-md min-w-[500px] w-auto grid grid-cols-2 gap-6 border-t-[3px] border-white/20">
+                    {/* Columna 1: Deportes Acuáticos */}
+                    <div className="flex flex-col gap-2">
+                      <li className="menu-title text-white/60 font-semibold uppercase tracking-wider text-xs border-b border-white/10 pb-1 mb-1">
+                        {t('sportsInfo.section.categories.waterSports')}
                       </li>
-                    ))}
+                      {waterSports.map((sport) => (
+                        <li key={sport.id}>
+                          <Link
+                            href={`/sports?sport=${sport.id}`}
+                            className={[
+                              'text-sm transition-colors border-b-2 pb-[2px] hover:bg-white/10 rounded-lg px-2 py-1.5',
+                              isActive(`/sports?sport=${sport.id}`)
+                                ? 'text-white border-white bg-white/10'
+                                : 'text-neutral-100 border-transparent hover:text-white hover:border-transparent',
+                            ].join(' ')}
+                            aria-current={
+                              isActive(`/sports?sport=${sport.id}`)
+                                ? 'page'
+                                : undefined
+                            }>
+                            {sport.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </div>
+
+                    {/* Columna 2: Aventura Marina */}
+                    <div className="flex flex-col gap-2">
+                      <li className="menu-title text-white/60 font-semibold uppercase tracking-wider text-xs border-b border-white/10 pb-1 mb-1">
+                        {t('sportsInfo.section.categories.marineAdventure')}
+                      </li>
+                      {marineAdventures.map((sport) => (
+                        <li key={sport.id}>
+                          <Link
+                            href={`/sports?sport=${sport.id}`}
+                            className={[
+                              'text-sm transition-colors border-b-2 pb-[2px] hover:bg-white/10 rounded-lg px-2 py-1.5',
+                              isActive(`/sports?sport=${sport.id}`)
+                                ? 'text-white border-white bg-white/10'
+                                : 'text-neutral-100 border-transparent hover:text-white hover:border-transparent',
+                            ].join(' ')}
+                            aria-current={
+                              isActive(`/sports?sport=${sport.id}`)
+                                ? 'page'
+                                : undefined
+                            }>
+                            {sport.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </div>
                   </ul>
                 </div>
               </li>
-              {mainLinks.map((l) => (
+              {links.map((l) => (
                 <li key={l.href}>
                   <Link
                     href={l.href}
@@ -192,10 +239,8 @@ export default function Navbar() {
       {/* Drawer Side (mobile) */}
       <div className="drawer-side z-30">
         <label htmlFor="navbar-drawer" className="drawer-overlay"></label>
-        <ul
-          className="menu p-4 w-72 min-h-full bg-primary
-         text-white gap-1">
-          <li className="mb-2 px-2 py-1">
+        <ul className="menu relative p-5 w-72 min-h-full text-white font-stretch-pro gap-2 bg-accent shadow-2xl border-r border-white/10 backdrop-blur">
+          <li className="mb-3 px-2 py-1 pb-3 border-b border-white/15">
             <Link
               href="/"
               onClick={closeDrawer}
@@ -208,22 +253,115 @@ export default function Navbar() {
               />
             </Link>
           </li>
+
+          {/* Otros links */}
           {links.map((l) => (
             <li key={l.href}>
               <Link
                 href={l.href}
                 onClick={closeDrawer}
                 className={[
-                  'rounded-md border-b-2',
+                  'rounded-lg border px-3 py-2 uppercase tracking-wide text-[0.95rem] font-stretch transition-all duration-200',
                   isActive(l.href)
-                    ? 'bg-neutral-800 text-white border-white'
-                    : 'text-neutral-100 border-transparent hover:text-white hover:border-neutral-100',
+                    ? 'bg-white/15 text-white border-white/30 shadow-sm'
+                    : 'text-white/85 border-white/5 bg-white/5 hover:text-white hover:border-white/20 hover:bg-white/10 hover:translate-x-0.5',
                 ].join(' ')}
                 aria-current={isActive(l.href) ? 'page' : undefined}>
-                {l.label}
+                <h6>{l.label}</h6>
               </Link>
             </li>
           ))}
+          {/* Deportes Dropdown Mobile */}
+          <li>
+            <details className="group">
+              <summary
+                className={[
+                  ` border px-3 py-2 uppercase tracking-wide text-[0.95rem] font-stretch transition-all duration-200 flex items-center justify-between cursor-pointer w-full list-none`,
+                  sportsActive
+                    ? 'bg-white/15 text-white border-white/30 shadow-sm'
+                    : 'text-white/85 border-white/5 bg-white/5 hover:text-white hover:border-white/20 hover:bg-white/10',
+                ].join(' ')}>
+                <h6>{t('Navbar.services')}</h6>
+              </summary>
+              <div className="mt-1 pl-2 ml-2 space-y-1 pb-2 border-l border-white/10">
+                {/* Categoría: Deportes Acuáticos */}
+                <details className="group/sub">
+                  <summary className="rounded-lg px-3 py-2 text-[0.9rem] font-medium text-white/60 uppercase tracking-wide cursor-pointer hover:text-white transition-colors flex items-center justify-between list-none">
+                    <h6>{t('sportsInfo.section.categories.waterSports')}</h6>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-3.5 w-3.5 transition-transform duration-200 group-open/sub:rotate-180 opacity-60"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor">
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </summary>
+                  <ul className="mt-1 pl-3 space-y-1 border-l border-white/5 ml-2">
+                    {waterSports.map((sport) => (
+                      <li key={sport.id}>
+                        <Link
+                          href={`/sports?sport=${sport.id}`}
+                          onClick={closeDrawer}
+                          className={[
+                            'rounded-lg border-transparent px-3 py-1.5 text-[0.85rem] transition-all duration-200 block border hover:border-white/10',
+                            isActive(`/sports?sport=${sport.id}`)
+                              ? 'text-white font-medium bg-white/10'
+                              : 'text-white/70 hover:text-white hover:bg-white/5',
+                          ].join(' ')}>
+                          <h6>{sport.name}</h6>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </details>
+
+                {/* Categoría: Aventura Marina */}
+                <details className="group/sub mt-1">
+                  <summary className="rounded-lg px-3 py-2 text-[0.9rem] font-medium text-white/60 uppercase tracking-wide cursor-pointer hover:text-white transition-colors flex items-center justify-between list-none">
+                    <h6>
+                      {t('sportsInfo.section.categories.marineAdventure')}
+                    </h6>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-3.5 w-3.5 transition-transform duration-200 group-open/sub:rotate-180 opacity-60"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor">
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </summary>
+                  <ul className="mt-1 pl-3 space-y-1 border-l border-white/5 ml-2">
+                    {marineAdventures.map((sport) => (
+                      <li key={sport.id}>
+                        <Link
+                          href={`/sports?sport=${sport.id}`}
+                          onClick={closeDrawer}
+                          className={[
+                            'rounded-lg border-transparent px-3 py-1.5 text-[0.85rem] transition-all duration-200 block border hover:border-white/10',
+                            isActive(`/sports?sport=${sport.id}`)
+                              ? 'text-white font-medium bg-white/10'
+                              : 'text-white/70 hover:text-white hover:bg-white/5',
+                          ].join(' ')}>
+                          <h6>{sport.name}</h6>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </details>
+              </div>
+            </details>
+          </li>
         </ul>
       </div>
     </div>

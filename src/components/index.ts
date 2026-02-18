@@ -24,6 +24,7 @@ export * from './WhyChooseUsSection';
 export { default as EmailNewsletters } from './EmailNewsletters';
 export * from './QuickForm';
 export { default as SportsSection } from './SportsSection';
+export { default as SportMediaSlider } from './SportMediaSlider';
 export * from './StatsBar';
 // Re-exports from main components (Legacy support)
 export { default as Navbar } from './Navbar';

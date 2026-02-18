@@ -9,6 +9,10 @@ import { haakDesign } from '@/lib/design-system';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslations } from 'next-intl';
+import Link from 'next/link';
+import SportMediaSlider from './SportMediaSlider';
+import { Container } from './ui';
+import { ChevronDown, ArrowRight, MessageCircle } from 'lucide-react';
 
 //Libreria de next para manejo de parametros en la URL
 import { useSearchParams } from 'next/navigation';
@@ -58,8 +62,15 @@ interface Sport {
     name: string;
   }>;
   transport?: { id: string; price: number; name: string };
+  media?: Array<{
+    type: 'video' | 'image';
+    src: string;
+    thumbnail?: string;
+    alt: string;
+  }>;
 }
 
+/* PRICING COMPONENT - COMMENTED OUT (Client doesn't want prices shown)
 const PricingComponent = ({ sport }: { sport: Sport }) => {
   const t = useTranslations('translation.translations.sportsInfo');
   switch (sport.pricingType) {
@@ -231,6 +242,7 @@ const PricingComponent = ({ sport }: { sport: Sport }) => {
       return <p className="text-xs">{t('section.noPrice')}</p>;
   }
 };
+*/
 
 export default function SportsSection() {
   // *traducciones de items generales de la UI
@@ -265,6 +277,8 @@ export default function SportsSection() {
           schedule: sportTranslation.schedule,
           duration: sportTranslation.duration,
           capacity: sportTranslation.capacity,
+          // Preserve media array with proper type
+          media: sportData.media as Sport['media'],
           // For nested arrays, merge price data with translations
           modalities: sportData.modalities?.map((mod) => ({
             ...mod,
@@ -318,6 +332,9 @@ export default function SportsSection() {
 
   const [selectedSport, setSelectedSport] = useState<Sport>(initialSport);
 
+  // Scroll indicator state for mobile
+  const [showScrollIndicator, setShowScrollIndicator] = useState(true);
+
   // Update selected sport when URL parameter changes
   useEffect(() => {
     if (sportParam) {
@@ -328,25 +345,70 @@ export default function SportsSection() {
     }
   }, [sportParam, mergedSports]);
 
+  // Hide scroll indicator on scroll (mobile only)
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setShowScrollIndicator(false);
+      } else {
+        setShowScrollIndicator(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const sliderRef = useRef<HTMLDivElement>(null);
 
   const handleSelectSport = (sport: Sport) => {
     setSelectedSport(sport);
   };
 
+  // Scroll to next section
+  const scrollToNextSection = () => {
+    window.scrollBy({
+      top: window.innerHeight,
+      behavior: 'smooth',
+    });
+  };
+
   // Simple rotating palette (3 colors). Replace these with brand colors later.
   const palette = [
     { bg: 'oklch(0.7567 0.0564 220.04)', fg: 'oklch(1 0.0044 220.38)' }, // warm sand / dark text
-    { bg: 'oklch(0.6931 0.1582 30.41)', fg: 'oklch(1 0.0044 220.38)' }, // light cyan / dark blue
-    { bg: 'oklch(0.9175 0.090055 85.5145)', fg: 'oklch(55% 0.3 240)' }, // soft rose / dark maroon
+    { bg: 'oklch(0.6931 0.1582 30.41)', fg: 'oklch(0.9175 0.090055 85.5145)' }, // light cyan / dark blue
+    { bg: 'oklch(0.9175 0.090055 85.5145)', fg: 'oklch(0.6931 0.1582 30.41)' }, // soft rose / dark maroon
   ];
   const selectedIndex = mergedSports.findIndex(
     (s) => s.id === selectedSport.id,
   );
   const pal = palette[selectedIndex >= 0 ? selectedIndex % palette.length : 0];
 
+  const jsonLd = useMemo(() => {
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'Product',
+      name: selectedSport.name,
+      image: `https://haakholbox.com${selectedSport.image}`,
+      description: selectedSport.description,
+      offers: {
+        '@type': 'Offer',
+        priceCurrency: 'USD',
+        price:
+          selectedSport.price ||
+          (selectedSport.prices && selectedSport.prices[0]?.price) ||
+          'Contact for Price',
+        availability: 'https://schema.org/InStock',
+      },
+    };
+  }, [selectedSport]);
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Desktop Layout */}
       <section className="hidden lg:flex h-screen bg-base-300 text-base-content mt-14">
         {/* Barra deslizable horizontal, permite seleccionar el deporte y darle una mirada a su página.  */}
@@ -435,9 +497,44 @@ export default function SportsSection() {
                       </p>
                     </div>
                   )}
-                  <div className="absolute bottom-16 pt-3 border-t border-white/20 text-xs space-y-1">
-                    <PricingComponent sport={selectedSport} />
+
+                  {/* Additional Info */}
+                  {(selectedSport.duration || selectedSport.schedule) && (
+                    <div className="mt-4 space-y-2">
+                      {selectedSport.duration && (
+                        <p className="text-md text-white/90">
+                          ⏱️{' '}
+                          <span className="font-semibold">
+                            {t('sportsInfo.section.duration')}:
+                          </span>{' '}
+                          {selectedSport.duration}
+                        </p>
+                      )}
+                      {selectedSport.schedule && (
+                        <p className="text-md text-white/90">
+                          📅{' '}
+                          <span className="font-semibold">
+                            {t('sportsInfo.section.schedule')}:
+                          </span>{' '}
+                          {selectedSport.schedule}
+                        </p>
+                      )}
+                    </div>
+                  )}
+
+                  {/* CTA Button */}
+                  <div className="absolute bottom-20 left-0 right-0 px-8">
+                    <Link href="/contact">
+                      <button className="w-1/2 bg-accent hover:bg-accent/90 text-accent-content font-bold py-4 px-6 rounded-xl shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-accent/50 flex items-center justify-center gap-3 group">
+                        <MessageCircle className="w-6 h-6" />
+                        <span className="text-lg">
+                          {t('sportsInfo.section.bookNow')}
+                        </span>
+                        <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+                      </button>
+                    </Link>
                   </div>
+
                   {/* valida si la locacion existe */}
                   {selectedSport.location && (
                     <p className="absolute top-5 text-sm text-base-100 font-semibold justify-self-end">
@@ -451,10 +548,34 @@ export default function SportsSection() {
         </div>
       </section>
 
+      {/* Desktop Media Gallery Section - Scrollable */}
+      {selectedSport.media && selectedSport.media.length > 0 && (
+        <section className="hidden lg:block py-16 bg-base-200">
+          <Container>
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={selectedSport.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.5 }}>
+                <h2
+                  className={`${haakDesign.typography.h2} mb-8 text-center text-base-content`}>
+                  {selectedSport.name} - {t('sportsInfo.section.gallery')}
+                </h2>
+                <div className="max-w-5xl mx-auto">
+                  <SportMediaSlider media={selectedSport.media} />
+                </div>
+              </motion.div>
+            </AnimatePresence>
+          </Container>
+        </section>
+      )}
+
       {/* Mobile Layout */}
-      <section className="lg:hidden flex flex-col h-screen bg-base-300 text-base-content">
-        {/* Image Section - Top */}
-        <div className="relative h-2/5 w-full">
+      <section className="lg:hidden flex flex-col h-screen bg-base-300 text-base-content overflow-hidden">
+        {/* Image/Video Slider Section - Top */}
+        <div className="relative h-2/5 w-full overflow-hidden">
           <AnimatePresence mode="wait">
             <motion.div
               key={selectedSport.id}
@@ -462,46 +583,48 @@ export default function SportsSection() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.5 }}
-              className="h-full">
-              <Image
-                src={selectedSport.image}
-                alt={selectedSport.name!}
-                fill
-                className="object-cover"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/60" />
+              className="h-full w-full">
+              {selectedSport.media && selectedSport.media.length > 0 ? (
+                <SportMediaSlider
+                  media={selectedSport.media}
+                  className="h-full w-full [&_.embla__viewport]:h-full [&_.embla__container]:h-full [&_.embla__slide]:h-full [&_video]:object-cover"
+                />
+              ) : (
+                <>
+                  <Image
+                    src={selectedSport.image}
+                    alt={selectedSport.name!}
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/60" />
+                </>
+              )}
             </motion.div>
           </AnimatePresence>
         </div>
 
-        {/* Horizontal Slider - Middle */}
-        {/* // todo Considerar si este scroll control es necesario
-        // o se mejora el diseño a un estilo más minimalista sen o se quita.*/}
-        <div className="bg-base-200 p-3 border-y border-base-300">
-          <div className="flex items-center">
-            <div
-              ref={sliderRef}
-              className="w-full overflow-x-auto scrollbar-hide flex gap-3">
-              {mergedSports.map((sport) => (
+        {/* Horizontal Navigation - Middle */}
+        <div className="bg-base-200 border-y border-base-300">
+          <div
+            ref={sliderRef}
+            className="flex w-full overflow-x-auto scrollbar-hide px-6 items-center snap-x gap-6 py-4">
+            {mergedSports.map((sport) => {
+              const isActive = selectedSport.id === sport.id;
+              return (
                 <button
                   key={sport.id}
                   onClick={() => handleSelectSport(sport)}
-                  className={`flex-shrink-0 transition-all duration-300 rounded-lg overflow-hidden ring-2 ${
-                    selectedSport.id === sport.id
-                      ? 'ring-primary'
-                      : 'ring-transparent hover:ring-primary/50'
+                  className={`flex-shrink-0 snap-center uppercase tracking-widest text-xs transition-all duration-300 relative py-2 px-1 ${
+                    isActive
+                      ? 'text-primary font-black border-b-2 border-primary'
+                      : 'text-base-content/60 font-medium hover:text-base-content hover:border-b-2 hover:border-base-content/30 border-b-2 border-transparent'
                   }`}>
-                  <Image
-                    src={sport.thumbnail}
-                    alt={sport.name!}
-                    width={80}
-                    height={80}
-                    className="object-cover"
-                  />
+                  {sport.name}
                 </button>
-              ))}
-            </div>
+              );
+            })}
           </div>
         </div>
 
@@ -515,61 +638,113 @@ export default function SportsSection() {
               transition={{ duration: 0.5 }}
               className="h-full relative">
               <div
-                className="absolute inset-0 p-4 flex flex-col justify-start overflow-y-auto"
+                className="absolute inset-0 p-6 flex flex-col justify-start overflow-y-auto"
                 style={{ backgroundColor: pal.bg, color: pal.fg }}>
-                <div className="space-y-2">
+                <div className="space-y-4 tracking-wide">
                   {selectedSport.location && (
-                    <p className="text-xs font-semibold">
+                    <p className="text-sm font-bold uppercase tracking-widest opacity-80">
                       📍 {selectedSport.location}
                     </p>
                   )}
-                  <h2 className="text-lg font-bold leading-tight">
+                  <h2 className="text-3xl font-black leading-tight tracking-tight uppercase">
                     {selectedSport.name}
                   </h2>
                   {selectedSport.description && (
-                    <p className="text-xs leading-snug opacity-90">
+                    <p className="text-base leading-relaxed opacity-90 font-medium">
                       {selectedSport.description}
                     </p>
                   )}
                   {selectedSport.includes &&
                     selectedSport.includes.length > 0 && (
-                      <div className="mt-3">
-                        <h3 className="font-semibold text-xs">
+                      <div className="mt-4">
+                        <h3 className="font-bold text-sm uppercase tracking-widest mb-2 opacity-80">
                           {t('sportsInfo.section.includes')}
                         </h3>
-                        <ul className="list-disc list-inside text-xs mt-1 space-y-1 opacity-80">
+                        <ul className="list-disc list-outside ml-4 text-base space-y-2 opacity-90 font-medium leading-relaxed">
                           {selectedSport.includes.map((item, index) => (
-                            <li key={index}>{item}</li>
+                            <li key={index} className="pl-1">
+                              {item}
+                            </li>
                           ))}
                         </ul>
                       </div>
                     )}
                   {selectedSport.capacity && (
-                    <div className="mt-2">
-                      <p className="text-xs opacity-90">
-                        👥 {selectedSport.capacity}
+                    <div className="mt-4">
+                      <p className="text-base font-medium opacity-90 flex items-center gap-2">
+                        <span className="text-xl">👥</span>{' '}
+                        {selectedSport.capacity}
                       </p>
                     </div>
                   )}
-                  <div
-                    className="pt-2 border-t text-xs mt-3 "
-                    style={{ borderColor: `${pal.fg}33` }}>
-                    <PricingComponent sport={selectedSport} />
-                  </div>
 
-                  {/* <div className="mt-4">
-                    <Link
-                      href={`/sports?sport=${selectedSport.id}`}
-                      className="inline-block px-3 py-2 rounded-md text-sm font-medium"
-                      style={{ backgroundColor: pal.fg, color: pal.bg }}>
-                      {t('sportsInfo.section.moreDetails') || 'Más detalles'}
+                  {/* Additional Info */}
+                  {(selectedSport.duration || selectedSport.schedule) && (
+                    <div className="mt-4 space-y-3">
+                      {selectedSport.duration && (
+                        <p className="text-base font-medium opacity-90 flex items-center gap-2">
+                          <span className="text-xl">⏱️</span>
+                          <span className="font-bold uppercase tracking-wider text-xs opacity-70">
+                            {t('sportsInfo.section.duration')}:
+                          </span>{' '}
+                          {selectedSport.duration}
+                        </p>
+                      )}
+                      {selectedSport.schedule && (
+                        <p className="text-base font-medium opacity-90 flex items-center gap-2">
+                          <span className="text-xl">📅</span>
+                          <span className="font-bold uppercase tracking-wider text-xs opacity-70">
+                            {t('sportsInfo.section.schedule')}:
+                          </span>{' '}
+                          {selectedSport.schedule}
+                        </p>
+                      )}
+                    </div>
+                  )}
+
+                  {/* CTA Button */}
+                  <div className="mt-8 pb-8">
+                    <Link href="/contact" className="block">
+                      <button
+                        className="w-full py-4 px-6 rounded-xl font-black text-lg uppercase tracking-widest flex items-center justify-center gap-3 shadow-xl transition-all duration-300 active:scale-95 group"
+                        style={{
+                          backgroundColor: pal.fg,
+                          color: pal.bg,
+                          boxShadow: `0 10px 30px -10px ${pal.fg}40`,
+                        }}>
+                        <MessageCircle className="w-6 h-6" />
+                        <span>{t('sportsInfo.section.bookNow')}</span>
+                        <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+                      </button>
                     </Link>
-                  </div> */}
+                  </div>
                 </div>
               </div>
             </motion.div>
           </AnimatePresence>
         </div>
+
+        {/* Scroll Indicator Banner - Only visible when at top */}
+        <AnimatePresence>
+          {showScrollIndicator && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 20 }}
+              transition={{ duration: 0.3 }}
+              className="absolute bottom-0 left-0 right-0 z-20">
+              <button
+                onClick={scrollToNextSection}
+                className="w-full bg-accent/90 backdrop-blur-sm hover:bg-accent text-accent-content py-3 flex items-center justify-center gap-2 transition-all duration-300 hover:py-4 shadow-lg"
+                aria-label={t('sportsInfo.section.scrollMore')}>
+                <span className="text-sm font-medium">
+                  {t('sportsInfo.section.scrollMore')}
+                </span>
+                <ChevronDown className="w-5 h-5 animate-bounce" />
+              </button>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </section>
     </>
   );

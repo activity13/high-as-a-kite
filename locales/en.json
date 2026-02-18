@@ -303,6 +303,11 @@
         "fields": {
           "name": { "label": "Name", "placeholder": "Your name" },
           "email": { "label": "Email", "placeholder": "Your email" },
+          "persons": {
+            "label": "Number of Persons",
+            "placeholder": "Number of persons"
+          },
+          "phone": { "label": "Phone", "placeholder": "Your phone number" },
           "level": {
             "label": "Level",
             "options": {
@@ -632,13 +637,27 @@
           "noPrice": "Contact us for pricing",
           "loading": "Loading sports...",
           "sports": "Sports",
-          "includes": "Includes:"
+          "includes": "Includes:",
+          "scrollMore": "See more below",
+          "gallery": "Gallery",
+          "slideNext": "Next slide",
+          "slidePrev": "Previous slide",
+          "slideOf": "of",
+          "duration": "Duration",
+          "schedule": "Schedule",
+          "bookNow": "Book Now",
+          "contactUs": "Contact Us",
+          "categories": {
+            "waterSports": "Aquatics",
+            "marineAdventure": "Marine Adventure"
+          }
         },
         "items": [
           {
             "id": "surf",
             "name": "Surf",
             "description": "",
+            "category": "Aquatics",
             "location": "Punta Veleros - Los Órganos",
             "includes": [
               "Sports and safety equipment",
@@ -651,6 +670,7 @@
             "id": "kitesurf",
             "name": "Kite Surf",
             "description": "",
+            "category": "Aquatics",
             "includes": [
               "Sports and safety equipment",
               "Certified instructor",
@@ -669,6 +689,7 @@
           {
             "id": "wakesurf",
             "name": "Wake Surf",
+            "category": "Aquatics",
             "description": "",
             "includes": [
               "Sports and safety equipment",
@@ -680,6 +701,7 @@
           {
             "id": "stand-up-paddle",
             "name": "Stand Up Paddle",
+            "category": "Aquatics",
             "description": "",
             "includes": [
               "Sports and safety equipment",
@@ -696,6 +718,7 @@
           {
             "id": "jetsky",
             "name": "Jetsky",
+            "category": "Aquatics",
             "description": "",
             "includes": ["Jet ski", "Safety equipment", "Certified instructor"],
             "modalities": [
@@ -706,6 +729,7 @@
           {
             "id": "kayak",
             "name": "Kayak",
+            "category": "Aquatics",
             "description": "",
             "includes": [
               "Sports equipment",
@@ -718,6 +742,8 @@
           {
             "id": "skimboard",
             "name": "Skim Board",
+            "category": "Aquatics",
+
             "description": "",
             "includes": [
               "Sports equipment",
@@ -729,6 +755,7 @@
           {
             "id": "swimming-open-sea",
             "name": "Open Sea Swimming",
+            "category": "Aquatics",
             "description": "",
             "includes": [
               "Sports equipment",
@@ -740,6 +767,7 @@
           {
             "id": "banano",
             "name": "Banana Boat",
+            "category": "Aquatics",
             "description": "Coastal ride.",
             "includes": [
               "Sports equipment",
@@ -751,6 +779,7 @@
           {
             "id": "whale-turtle-tour",
             "name": "Whale Watching and Turtle Swimming",
+            "category": "Marine Adventure",
             "description": "",
             "includes": ["Transportation"],
             "location": "Los Órganos Pier – Piura",
@@ -765,6 +794,7 @@
           {
             "id": "turtle-swimming",
             "name": "Turtle Swimming",
+            "category": "Marine Adventure",
             "description": "",
             "includes": ["Transportation"],
             "location": "Los Órganos Pier",
@@ -779,6 +809,7 @@
           {
             "id": "fishing-ceviche",
             "name": "Fishing and Make Your Own Ceviche",
+            "category": "Marine Adventure",
             "description": "",
             "includes": [
               "Pier ticket",
@@ -801,6 +832,7 @@
           {
             "id": "sunset-sailboat",
             "name": "Sunset Sailboat",
+            "category": "Marine Adventure",
             "description": "45–60 minute tour; then anchoring for activities (dancing, singing, paddling, etc.).",
             "includes": [
               "1 beer per person",
@@ -818,6 +850,7 @@
           {
             "id": "deep-sea-fishing",
             "name": "Deep Sea Fishing",
+            "category": "Marine Adventure",
             "description": "Boarding: 11 pm the night before.",
             "includes": [
               "Light breakfast",
@@ -833,6 +866,7 @@
           {
             "id": "lobitos-fishing-tour",
             "name": "Experiential Fishing Tour - Lobitos",
+            "category": "Marine Adventure",
             "description": "",
             "includes": [
               "Safety equipment",
@@ -851,6 +885,7 @@
           {
             "id": "lobitos-fishing-tour-2",
             "name": "Fishing Tour - Lobitos",
+            "category": "Marine Adventure",
             "description": "",
             "includes": [
               "Safety equipment",
@@ -869,6 +904,7 @@
           {
             "id": "diving",
             "name": "Diving / Scuba Diving",
+            "category": "Marine Adventure",
             "description": "",
             "includes": [
               "Introduction talk",
