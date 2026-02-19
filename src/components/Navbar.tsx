@@ -6,7 +6,6 @@ import { useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/i18n/navigation';
 import LanguageSwitcher from './ui/LanguageSwitcher';
 import sportsData from '@/data/sports.json';
-import { haakDesign } from '@/lib/design-system';
 
 export default function Navbar() {
   const t = useTranslations('translation.translations');
