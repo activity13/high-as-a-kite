@@ -199,7 +199,7 @@ export default function Footer() {
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <div className="flex items-center gap-2 text-sm text-base-content/70">
                 <Image
-                  src="/images/HaakAir.png"
+                  src="/images/haakair.png"
                   alt="High as a kite logotype"
                   width={20}
                   height={20}

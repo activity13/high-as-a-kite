@@ -15,6 +15,7 @@ import { Analytics } from '@vercel/analytics/next';
 // Componentes
 import { WhatsAppFloatingButton } from '@/components/ui';
 import { Navbar, Footer } from '@/components';
+import { WhatsAppProvider } from '@/context/WhatsAppContext';
 
 export const stretchPro = localFont({
   src: [
@@ -128,10 +129,12 @@ export default async function LocaleLayout({
       <body
         className={`${stretchPro.variable} ${helvetica.variable} font-helvetica bg-amber-600 antialiased h-screen`}>
         <NextIntlClientProvider>
-          <Navbar />
-          {children}
-          <WhatsAppFloatingButton />
-          <Footer />
+          <WhatsAppProvider>
+            <Navbar />
+            {children}
+            <WhatsAppFloatingButton />
+            <Footer />
+          </WhatsAppProvider>
         </NextIntlClientProvider>
         <Analytics />
       </body>

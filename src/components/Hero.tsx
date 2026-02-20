@@ -43,7 +43,7 @@ export default function Hero() {
         poster="/images/jetsky.webp"
         aria-hidden="true"
         className="absolute inset-0 w-full h-full object-cover">
-        <source src="/videos/hero.mp4" type="video/mp4" />
+        <source src="/videos/hero.webm" type="video/mp4" />
         {/* Fallback accesible si el navegador no soporta video */}
         Your browser does not support the video tag.
       </video>
@@ -56,9 +56,8 @@ export default function Hero() {
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 md:py-32">
         <div className="grid grid-cols-1 lg:grid-cols-12 items-center">
           <div className="col-span-12 lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left gap-4 lg:gap-6">
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight">
-              {/* Contenedor con altura mínima para evitar saltos al animar */}
-              <div className="min-h-[3.25rem] sm:min-h-[4.25rem] lg:min-h-[5.5rem]">
+            <div className="h-[9rem] sm:h-[11rem] lg:h-[16rem] flex items-center">
+              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight w-full">
                 <AnimatePresence mode="wait">
                   <motion.span
                     key={titles[index]}
@@ -76,12 +75,12 @@ export default function Hero() {
                         : { opacity: 0, y: -20 }
                     }
                     transition={{ duration: prefersReducedMotion ? 0 : 0.6 }}
-                    className="block">
+                    className="block line-clamp-3">
                     {titles[index]}
                   </motion.span>
                 </AnimatePresence>
-              </div>
-            </h1>
+              </h1>
+            </div>
 
             <p className="text-white/90 text-lg md:text-xl max-w-xl">
               {t('caption')}

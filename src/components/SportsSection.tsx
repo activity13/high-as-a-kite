@@ -18,6 +18,8 @@ import { ChevronDown, ArrowRight, MessageCircle } from 'lucide-react';
 import { useSearchParams } from 'next/navigation';
 // Datos de deportes con información de precios e imágenes
 import sportsData from '@/data/sports.json';
+// Contexto para manejo del mensaje personalizado de WhatsApp
+import { useWhatsApp } from '@/context/WhatsAppContext';
 
 // Tipo para las traducciones de deportes
 interface SportTranslation {
@@ -247,6 +249,7 @@ const PricingComponent = ({ sport }: { sport: Sport }) => {
 export default function SportsSection() {
   // *traducciones de items generales de la UI
   const t = useTranslations('translation.translations');
+  const { setWhatsAppMessage } = useWhatsApp();
 
   // * SISTEMA DE CANALIZACIÓN Y TRADUCCIONES DE DEPORTES
 
@@ -344,6 +347,16 @@ export default function SportsSection() {
       }
     }
   }, [sportParam, mergedSports]);
+
+  // Update WhatsApp message when sport changes
+  useEffect(() => {
+    if (selectedSport) {
+      setWhatsAppMessage(
+        `¡Hola! Estoy viendo la web y me interesa conocer más sobre ${selectedSport.name}.`,
+      );
+    }
+    return () => setWhatsAppMessage(null);
+  }, [selectedSport, setWhatsAppMessage]);
 
   // Hide scroll indicator on scroll (mobile only)
   useEffect(() => {

@@ -137,7 +137,7 @@ export default function Navbar() {
                   </button>
                   <ul
                     tabIndex={0}
-                    className="dropdown-content menu p-4 mt-1 shadow-xl bg-info/90 rounded-b-md min-w-[500px] w-auto grid grid-cols-2 gap-6 border-t-[3px] border-white/20">
+                    className="dropdown-content menu p-4 mt-1 shadow-xl bg-primary/90 rounded-b-md min-w-[500px] w-auto grid grid-cols-2 gap-6 border-t-[3px] border-white/20">
                     {/* Columna 1: Deportes Acuáticos */}
                     <div className="flex flex-col gap-2">
                       <li className="menu-title text-white/60 font-semibold uppercase tracking-wider text-xs border-b border-white/10 pb-1 mb-1">

@@ -1,0 +1,43 @@
+# High As A Kite (HAAK) - Water Sports Academy
+
+## Overview
+High As A Kite (HAAK) is a premier water sports school located in Peru, specializing in Kitesurfing, Surfing, Paddleboarding, and other aquatic adventures. We provide certified instruction, equipment rentals, and guided tours to help enthusiasts of all levels explore the best spots in Peru.
+
+## Core Navigation
+- **Home**: https://highasakite.pe/
+- **Sports & Activities**: https://highasakite.pe/sports
+- **Locations (Spots)**: https://highasakite.pe/spots
+- **About Us**: https://highasakite.pe/about
+- **Contact**: https://highasakite.pe/contact
+- **FAQ**: https://highasakite.pe/faq
+
+## Activities & Sports
+We offer a variety of water sports experiences:
+- **Kitesurf**: Lessons (private/group), courses, and rentals.
+- **Surf**: Lessons and guided sessions.
+- **Paddleboard (SUP)**: Relaxing tours and rentals.
+- **And more**: Check our sports page for the full list of adventures.
+
+## Key Features
+- **Certified Instructors**: Professional guidance for safe learning.
+- **Premium Equipment**: High-quality gear for all activities.
+- **Multilingual Support**: Services available in English and Spanish.
+- **Custom Packages**: Tailored experiences for individuals and groups.
+
+## Contact Information
+- **Email**: highasakiteperu@gmail.com
+- **Phone/WhatsApp**: +51 986 677 979
+- **Instagram**: [haak.academy](https://www.instagram.com/haak.academy/)
+- **Location**: Peru
+
+## Technical Details (For Developers/AI)
+This website is built using:
+- **Framework**: Next.js 15 (App Router)
+- **UI Library**: React 19
+- **Styling**: Tailwind CSS 4, DaisyUI 5
+- **Animations**: Framer Motion 12
+- **Internationalization**: next-intl (EN/ES)
+- **Deployment**: Vercel
+
+## Content for LLMs
+This file serves as a sitemap and context guide for Large Language Models to better understand and index the structure and offerings of High As A Kite.

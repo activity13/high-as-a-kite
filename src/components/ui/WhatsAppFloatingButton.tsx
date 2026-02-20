@@ -2,14 +2,18 @@
 import React from 'react';
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
+import { useWhatsApp } from '@/context/WhatsAppContext';
 
 export default function WhatsAppFloatingButton() {
   const t = useTranslations('translation.translations.common');
+  const { message: customMessage } = useWhatsApp();
 
   const phoneNumber = t('contactNumber').replace(/\s/g, '');
-  const message = encodeURIComponent(
-    '¡Hola! Me interesa conocer más sobre sus servicios de deportes acuáticos.',
-  );
+  const defaultMessage =
+    '¡Hola! Me interesa conocer más sobre sus servicios de deportes acuáticos.';
+  const messageToSend = customMessage || defaultMessage;
+
+  const message = encodeURIComponent(messageToSend);
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 
   const handleClick = () => {

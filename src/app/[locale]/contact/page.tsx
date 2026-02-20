@@ -38,8 +38,18 @@ export default async function ContactSection({
       {/* Columna 1 - Info y Logo */}
       <div className="flex flex-col items-center lg:items-start gap-8 max-w-md">
         <div className="flex mt-20 justify-center lg:justify-start">
-          <picture>
-            <source srcSet="/images/HAAKFire.png" media="(max-width: 768px)" />
+          {/* Imagen para móviles */}
+          <div className="md:hidden">
+            <Image
+              src="/images/haakfire.png"
+              alt="HAAK Logo"
+              width={220}
+              height={120}
+              className="w-32 h-auto object-contain"
+            />
+          </div>
+          {/* Imagen para desktop */}
+          <div className="hidden md:block">
             <Image
               src="/images/logo.png"
               alt="HAAK Logo"
@@ -47,7 +57,7 @@ export default async function ContactSection({
               height={120}
               className="w-32 sm:w-40 md:w-lg h-auto object-contain"
             />
-          </picture>
+          </div>
         </div>
 
         <div className="flex flex-col items-center lg:items-start text-center lg:text-left gap-6">
