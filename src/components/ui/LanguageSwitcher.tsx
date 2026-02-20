@@ -1,8 +1,7 @@
 'use client';
-
+import React, { useState, useRef, useEffect } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import { usePathname, useRouter } from '@/i18n/navigation';
-import { useState, useRef, useEffect } from 'react';
 import { Globe, Check } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
