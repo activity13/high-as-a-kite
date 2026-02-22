@@ -744,8 +744,7 @@
             "id": "skimboard",
             "name": "Skim Board",
             "category": "Aquatics",
-
-            "description": "",
+            "description": "Glide across the shore and master small waves with technique and fun.",
             "includes": [
               "Sports equipment",
               "Safety equipment",
@@ -757,7 +756,7 @@
             "id": "swimming-open-sea",
             "name": "Open Sea Swimming",
             "category": "Aquatics",
-            "description": "",
+            "description": "Guided open water training to improve your endurance and confidence in the sea.",
             "includes": [
               "Sports equipment",
               "Safety equipment",
@@ -769,7 +768,7 @@
             "id": "banano",
             "name": "Banana Boat",
             "category": "Aquatics",
-            "description": "Coastal ride.",
+            "description": "Pure fun and adrenaline guaranteed for groups, challenging balance at sea.",
             "includes": [
               "Sports equipment",
               "Safety equipment",
@@ -781,7 +780,7 @@
             "id": "whale-turtle-tour",
             "name": "Whale Watching and Turtle Swimming",
             "category": "Marine Adventure",
-            "description": "",
+            "description": "The ultimate marine experience: ocean giants and swimming with turtles in their habitat.",
             "includes": ["Transportation"],
             "location": "Los Órganos Pier – Piura",
             "schedule": "Departure time: 6:30 am",
@@ -796,7 +795,7 @@
             "id": "turtle-swimming",
             "name": "Turtle Swimming",
             "category": "Marine Adventure",
-            "description": "",
+            "description": "Dive in and share an unforgettable moment swimming alongside sea turtles.",
             "includes": ["Transportation"],
             "location": "Los Órganos Pier",
             "duration": "Duration: 2 hours",
@@ -811,7 +810,7 @@
             "id": "fishing-ceviche",
             "name": "Fishing and Make Your Own Ceviche",
             "category": "Marine Adventure",
-            "description": "",
+            "description": "Catch your lunch and enjoy the freshest ceviche prepared instantly on board.",
             "includes": [
               "Pier ticket",
               "Life jackets",
@@ -834,7 +833,7 @@
             "id": "sunset-sailboat",
             "name": "Sunset Sailboat",
             "category": "Marine Adventure",
-            "description": "45–60 minute tour; then anchoring for activities (dancing, singing, paddling, etc.).",
+            "description": "Magical sunset at sea with music, relaxation, and fun.",
             "includes": [
               "1 beer per person",
               "Music",
@@ -852,7 +851,7 @@
             "id": "deep-sea-fishing",
             "name": "Deep Sea Fishing",
             "category": "Marine Adventure",
-            "description": "Boarding: 11 pm the night before.",
+            "description": "Professional deep-sea fishing expedition for sport fishing enthusiasts.",
             "includes": [
               "Light breakfast",
               "Snacks",
@@ -868,7 +867,7 @@
             "id": "lobitos-fishing-tour",
             "name": "Experiential Fishing Tour - Lobitos",
             "category": "Marine Adventure",
-            "description": "",
+            "description": "Experience traditional fishing in Lobitos and enjoy the freshness of the sea.",
             "includes": [
               "Safety equipment",
               "GoPro videos/photos",
@@ -887,7 +886,7 @@
             "id": "lobitos-fishing-tour-2",
             "name": "Fishing Tour - Lobitos",
             "category": "Marine Adventure",
-            "description": "",
+            "description": "Full day fishing journey in the rich waters of Lobitos.",
             "includes": [
               "Safety equipment",
               "Videos",
@@ -906,7 +905,7 @@
             "id": "diving",
             "name": "Diving / Scuba Diving",
             "category": "Marine Adventure",
-            "description": "",
+            "description": "Explore the underwater world and discover life hidden beneath the waves with full gear.",
             "includes": [
               "Introduction talk",
               "Equipment rental",

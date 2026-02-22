@@ -750,7 +750,7 @@
             "id": "skimboard",
             "category": "Deportes Acuáticos",
             "name": "Skim Board",
-            "description": "",
+            "description": "Deslízate sobre la orilla y domina las olas con técnica y diversión en la orilla.",
             "includes": [
               "Equipo deportivo",
               "Equipo de seguridad",
@@ -762,7 +762,7 @@
             "id": "swimming-open-sea",
             "category": "Deportes Acuáticos",
             "name": "Natación en Mar Abierto",
-            "description": "",
+            "description": "Mejora tu resistencia y técnica de nado en aguas abiertas con acompañamiento seguro.",
             "includes": [
               "Equipo deportivo",
               "Equipo de seguridad",
@@ -774,7 +774,7 @@
             "id": "banano",
             "category": "Deportes Acuáticos",
             "name": "Banano",
-            "description": "Paseo costero.",
+            "description": "Diversión y adrenalina garantizada para grupos, desafiando el equilibrio en el mar.",
             "includes": [
               "Equipo deportivo",
               "Equipo de seguridad",
@@ -786,7 +786,7 @@
             "id": "whale-turtle-tour",
             "category": "Aventura Marina",
             "name": "Avistamiento de Ballenas y Nado con Tortugas",
-            "description": "",
+            "description": "La experiencia marina definitiva: gigantes del océano y nado junto a tortugas en su hábitat.",
             "includes": ["Transporte"],
             "location": "Muelle de Los Órganos – Piura",
             "schedule": "Hora de partida: 6:30 am",
@@ -801,7 +801,7 @@
             "id": "turtle-swimming",
             "category": "Aventura Marina",
             "name": "Nado con Tortugas",
-            "description": "",
+            "description": "Sumérgete y comparte un momento inolvidable nadando junto a tortugas marinas.",
             "includes": ["Transporte"],
             "location": "Muelle de Los Órganos",
             "duration": "Duración: 2 horas",
@@ -816,7 +816,7 @@
             "id": "fishing-ceviche",
             "category": "Aventura Marina",
             "name": "Pesca y Prepara tu Ceviche",
-            "description": "",
+            "description": "Pesca tu almuerzo y disfruta de un ceviche fresquísimo preparado al instante a bordo.",
             "includes": [
               "Ticket de muelle",
               "Chalecos salvavidas",
@@ -839,7 +839,7 @@
             "id": "sunset-sailboat",
             "category": "Aventura Marina",
             "name": "Sunset en Velero",
-            "description": "Recorrido de 45–60 minutos; luego anclaje para actividades (bailar, cantar, remar, etc.).",
+            "description": "Atardecer mágico en el mar con música, relax y diversión.",
             "includes": [
               "1 cerveza por persona",
               "Música",
@@ -857,7 +857,7 @@
             "id": "deep-sea-fishing",
             "category": "Aventura Marina",
             "name": "Pesca de Altura",
-            "description": "Embarque: 11 pm del día anterior.",
+            "description": "Expedición profesional de pesca en aguas profundas para los amantes de la pesca deportiva.",
             "includes": [
               "Desayuno ligero",
               "Snacks",
@@ -873,7 +873,7 @@
             "id": "lobitos-fishing-tour",
             "category": "Aventura Marina",
             "name": "Tour Pesca Vivencial - Lobitos",
-            "description": "",
+            "description": "Vive la pesca tradicional en Lobitos y disfruta de la frescura del mar.",
             "includes": [
               "Equipo de seguridad",
               "Videos/fotos GoPro",
@@ -892,7 +892,7 @@
             "id": "lobitos-fishing-tour-2",
             "category": "Aventura Marina",
             "name": "Tour Pesca - Lobitos",
-            "description": "",
+            "description": "Jornada de pesca completa en las ricas aguas de Lobitos.",
             "includes": [
               "Equipo de seguridad",
               "Videos",
@@ -911,7 +911,7 @@
             "id": "diving",
             "category": "Aventura Marina",
             "name": "Diving / Buceo con Tanque",
-            "description": "",
+            "description": "Explora el mundo submarino y descubre la vida oculta bajo las olas con equipo completo.",
             "includes": [
               "Charla de introducción",
               "Renta de equipo",

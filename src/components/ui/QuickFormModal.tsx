@@ -15,6 +15,7 @@ interface QuickFormModalProps {
 export const QuickFormModal = ({
   triggerLabel,
   onOpen,
+  buttonClassName, // Desestructuramos la propiedad aquí
 }: QuickFormModalProps) => {
   const [open, setOpen] = useState(false);
   const t = useTranslations('translation.translations');
@@ -30,6 +31,7 @@ export const QuickFormModal = ({
         type="button"
         variant="secondary"
         size="lg"
+        className={buttonClassName} // Pasamos la clase al botón
         onClick={handleOpen}>
         {triggerLabel ?? t('finalCta.buttons.form')}
       </CTAButton>
