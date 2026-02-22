@@ -1,9 +1,12 @@
 # *
 User-agent: *
 Allow: /
+Disallow: /api/*
+Disallow: /*?*
+Disallow: /_next/*
 
 # Host
-Host: http://localhost:3000
+Host: https://highasakite.pe
 
 # Sitemaps
-Sitemap: http://localhost:3000/sitemap.xml
+Sitemap: https://highasakite.pe/sitemap.xml

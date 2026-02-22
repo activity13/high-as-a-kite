@@ -28,7 +28,7 @@ export default function NotFound() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         className="relative z-10 text-center px-6">
-        <h1 className="text-8xl md:text-9xl font-stretch font-bold mb-4">
+        <h1 className="text-8xl md:text-9xlfont-archivo-black font-bold mb-4">
           404
         </h1>
         <p className="text-xl md:text-2xl mb-8 font-helvetica">

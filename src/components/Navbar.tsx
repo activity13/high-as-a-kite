@@ -238,7 +238,7 @@ export default function Navbar() {
       {/* Drawer Side (mobile) */}
       <div className="drawer-side z-30">
         <label htmlFor="navbar-drawer" className="drawer-overlay"></label>
-        <ul className="menu relative p-5 w-72 min-h-full text-white font-stretch-pro gap-2 bg-accent shadow-2xl border-r border-white/10 backdrop-blur">
+        <ul className="menu relative p-5 w-72 min-h-full text-whitefont-archivo-black-pro gap-2 bg-accent shadow-2xl border-r border-white/10 backdrop-blur">
           <li className="mb-3 px-2 py-1 pb-3 border-b border-white/15">
             <Link
               href="/"
@@ -260,7 +260,7 @@ export default function Navbar() {
                 href={l.href}
                 onClick={closeDrawer}
                 className={[
-                  'rounded-lg border px-3 py-2 uppercase tracking-wide text-[0.95rem] font-stretch transition-all duration-200',
+                  'rounded-lg border px-3 py-2 uppercase tracking-wide text-[0.95rem]font-archivo-black transition-all duration-200',
                   isActive(l.href)
                     ? 'bg-white/15 text-white border-white/30 shadow-sm'
                     : 'text-white/85 border-white/5 bg-white/5 hover:text-white hover:border-white/20 hover:bg-white/10 hover:translate-x-0.5',
@@ -275,7 +275,7 @@ export default function Navbar() {
             <details className="group">
               <summary
                 className={[
-                  ` border px-3 py-2 uppercase tracking-wide text-[0.95rem] font-stretch transition-all duration-200 flex items-center justify-between cursor-pointer w-full list-none`,
+                  ` border px-3 py-2 uppercase tracking-wide text-[0.95rem]font-archivo-black transition-all duration-200 flex items-center justify-between cursor-pointer w-full list-none`,
                   sportsActive
                     ? 'bg-white/15 text-white border-white/30 shadow-sm'
                     : 'text-white/85 border-white/5 bg-white/5 hover:text-white hover:border-white/20 hover:bg-white/10',

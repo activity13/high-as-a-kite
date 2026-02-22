@@ -17,16 +17,16 @@ import { WhatsAppFloatingButton } from '@/components/ui';
 import { Navbar, Footer } from '@/components';
 import { WhatsAppProvider } from '@/context/WhatsAppContext';
 
-export const stretchPro = localFont({
+export const ArchivoBlack = localFont({
   src: [
     {
-      path: '../../../public/fonts/StretchPro.otf',
+      path: '../../../public/fonts/ArchivoBlack.ttf',
       weight: '400',
       style: 'normal',
     },
   ],
   display: 'swap',
-  variable: '--font-stretch-pro',
+  variable: '--font-archivo-black',
 });
 
 export const helvetica = localFont({
@@ -127,7 +127,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} data-theme="mytheme">
       <body
-        className={`${stretchPro.variable} ${helvetica.variable} font-helvetica bg-amber-600 antialiased h-screen`}>
+        className={`${ArchivoBlack.variable} ${helvetica.variable} font-helvetica bg-amber-600 antialiased h-screen`}>
         <NextIntlClientProvider>
           <WhatsAppProvider>
             <Navbar />

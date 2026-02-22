@@ -7,7 +7,7 @@ export const haakDesign = {
     gap: 'gap-4',
   },
 
-  // Tipografía (usando tu Stretch Pro)
+  // Tipografía (usando tu font-archivo-black Pro)
   typography: {
     h1: 'text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-base-content',
     h2: 'text-3xl md:text-4xl font-bold tracking-tight text-base-content',

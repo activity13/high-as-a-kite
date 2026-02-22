@@ -61,7 +61,7 @@ export default async function ContactSection({
         </div>
 
         <div className="flex flex-col items-center lg:items-start text-center lg:text-left gap-6">
-          <h2 className="text-3xl md:text-4xl font-bold font-stretch">
+          <h2 className="text-3xl md:text-4xl font-boldfont-archivo-black">
             {t('miselaneous.contactUs')}
           </h2>
 

@@ -98,7 +98,7 @@
           },
           "step2": {
             "title": "2. Book easily",
-            "description": "Kitesurfing, surfing, paddleboarding or marine adventures."
+            "description": "Fill the form or contact us on WhatsApp to secure your spot."
           },
           "step3": {
             "title": "3. Enjoy the adventure",
@@ -300,6 +300,7 @@
       },
       "form": {
         "title": "Quick Booking",
+        "description": "Fill out the form and we'll get back to you to confirm your booking and details.",
         "fields": {
           "name": { "label": "Name", "placeholder": "Your name" },
           "email": { "label": "Email", "placeholder": "Your email" },

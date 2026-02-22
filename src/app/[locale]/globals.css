@@ -44,7 +44,7 @@
   --depth: 1;
   --noise: 0;
 
-  --font-stretch: var(--font-stretch-pro);
+  --font-archivo-black: var(--font-archivo-black);
   --font-helvetica: var(--font-helvetica);
 }
 
@@ -70,6 +70,6 @@ body {
   h4,
   h5,
   h6 {
-    font-family: var(--font-stretch-pro), sans-serif;
+    font-family: var(--font-archivo-black), sans-serif;
   }
 }

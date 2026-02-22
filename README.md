@@ -45,7 +45,7 @@ Coral #EE715E
 
 Amarillo claro #FFE9A7
 
-Tipografías: Stretch Pro (primaria), Helvetica (secundaria).
+Tipografías: font-archivo-black Pro (primaria), Helvetica (secundaria).
 
 Eslogan: “Tan alto como una cometa”.
 

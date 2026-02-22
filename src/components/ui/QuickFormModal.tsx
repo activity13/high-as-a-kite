@@ -33,7 +33,10 @@ export const QuickFormModal = ({
         onClick={handleOpen}>
         {triggerLabel ?? t('finalCta.buttons.form')}
       </CTAButton>
-      <Modal open={open} onClose={() => setOpen(false)} title={t('form.title')}>
+      <Modal
+        open={open}
+        onClose={() => setOpen(false)}
+        title={t('form.description')}>
         {/* QuickForm renders a section; it's fine inside modal context */}
         <QuickForm />
       </Modal>

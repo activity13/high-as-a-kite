@@ -42,7 +42,7 @@
           "discover": "Descubre nuevos horizontes",
           "haak": "Tan alto como una cometa"
         },
-        "caption": "En Haak Kite School brindamos servicios y enseñanza certificada de kitesurf, paddel, surf y mucho más. Además de experiencias y tours personalizados para que conozcoas lo mejor de Perú practicando los deportes que amas.",
+        "caption": "En Haak Kite School brindamos servicios y enseñanza certificada de kitesurf, paddel, surf y mucho más. Además de experiencias y tours personalizados para que conozcas lo mejor de Perú practicando los deportes que amas.",
         "cta": "Reserva ahora",
         "discover": "Descubre más"
       },
@@ -98,7 +98,7 @@
           },
           "step2": {
             "title": "2. Reserva fácilmente",
-            "description": "Kitesurf, surf, paddle o aventuras marinas."
+            "description": "LLena el formulario o contáctanos por WhatsApp para asegurar tu cupo."
           },
           "step3": {
             "title": "3. Disfruta la aventura",
@@ -298,7 +298,8 @@
         }
       },
       "form": {
-        "title": "Reserva Rápida",
+        "title": "Formulario de reserva",
+        "description": "Nos pondremos en contacto contigo para confirmar tu reserva y detalles.",
         "fields": {
           "name": { "label": "Nombre", "placeholder": "Tu nombre" },
           "email": { "label": "Email", "placeholder": "Tu correo" },
