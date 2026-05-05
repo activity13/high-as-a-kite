@@ -48,7 +48,37 @@
       },
       "Home": {
         "sportsShowCase": {
-          "disoverButton": "Descubre más"
+          "discoverButton": "Descubre más",
+          "items": {
+            "surf": {
+              "name": "Surf",
+              "description": "Clases y alquiler con equipo incluido."
+            },
+            "kitesurf": {
+              "name": "Kite Surf",
+              "description": "Cursos certificados IKO."
+            },
+            "wakesurf": {
+              "name": "Wake Surf",
+              "description": "Adrenalina en el mar con instructor."
+            },
+            "stand-up-paddle": {
+              "name": "Stand Up Paddle",
+              "description": "Paddle en el mar y tours guiados."
+            },
+            "jetsky": {
+              "name": "Jetsky",
+              "description": "Alquiler y clases de motos acuáticas."
+            },
+            "kayak": {
+              "name": "Kayak",
+              "description": "Equipo deportivo, Equipo de seguridad, Instructor certificado 1hora en el agua"
+            },
+            "skimboard": {
+              "name": "Skim Board",
+              "description": "Equipo deportivo, Equipo de seguridad, Instructor certificado, 30min de clase y 30min de práctica"
+            }
+          }
         },
         "whyHaak": {
           "title": "¿Por qué elegirnos?",
@@ -790,7 +820,7 @@
             "includes": ["Transporte"],
             "location": "Muelle de Los Órganos – Piura",
             "schedule": "Hora de partida: 6:30 am",
-            "duration": "Duración: 4 horas",
+            "duration": "4 horas",
             "boats": [
               { "id": "whale-boat-sailboat", "name": "Velero" },
               { "id": "whale-boat-artisanal", "name": "Lancha artesanal" },

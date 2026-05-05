@@ -93,11 +93,14 @@ export default function SportMediaSlider({
                   <video
                     controls
                     playsInline
+                    muted
+                    autoPlay
+                    loop
                     preload="metadata"
                     poster={item.thumbnail}
                     controlsList="nodownload"
                     onContextMenu={(e) => e.preventDefault()}
-                    className="w-full h-full object-cover sport-slider-video pointer-events-auto z-20 relative"
+                    className="w-full h-full object-contain bg-black sport-slider-video pointer-events-auto z-20 relative"
                     aria-label={item.alt}>
                     <source src={item.src} type="video/mp4" />
                     Tu navegador no soporta videos HTML5.
@@ -111,7 +114,7 @@ export default function SportMediaSlider({
                     src={item.src}
                     alt={item.alt}
                     fill
-                    className="object-cover pointer-events-none"
+                    className="object-contain bg-black pointer-events-none"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 60vw"
                     loading="lazy"
                   />

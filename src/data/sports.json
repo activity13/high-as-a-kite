@@ -13,13 +13,28 @@
     "media": [
       {
         "type": "video",
-        "src": "/videos/surf-lesson.mp4",
-        "thumbnail": "/images/surf-aerea.jpg",
+        "src": "/videos/surf.webm",
+        "thumbnail": "/images/surf_2.webp",
         "alt": "Surf session highlights"
       },
       {
         "type": "image",
-        "src": "/images/surf.webp",
+        "src": "/images/surf_3.webp",
+        "alt": "Surf action shot"
+      },
+      {
+        "type": "image",
+        "src": "/images/surf_4.webp",
+        "alt": "Surf action shot"
+      },
+      {
+        "type": "image",
+        "src": "/images/surf_5.webp",
+        "alt": "Surf action shot"
+      },
+      {
+        "type": "image",
+        "src": "/images/surf_6.webp",
         "alt": "Surf action shot"
       }
     ]
@@ -27,7 +42,7 @@
   {
     "id": "kitesurf",
     "thumbnail": "/images/kite.jpg",
-    "image": "/images/kite.jpg",
+    "image": "/images/jump.webp",
     "pricingType": "modalities",
     "modalities": [
       { "id": "kitesurf-private", "price": 60 },
@@ -38,19 +53,44 @@
     "media": [
       {
         "type": "video",
-        "src": "/videos/kite-try.mp4",
-        "thumbnail": "/images/kitesurf-parcas-header.jpg",
+        "src": "/videos/kite_video.webm",
+        "thumbnail": "/images/kite_sunset.webp",
         "alt": "Kitesurf session"
       },
       {
         "type": "image",
-        "src": "/images/jump.webp",
+        "src": "/images/kite.webp",
         "alt": "Kitesurf lessons"
       },
       {
         "type": "image",
-        "src": "/images/kitesurf-parcas-header.jpg",
-        "alt": "Kitesurf beach"
+        "src": "/images/kite_2.webp",
+        "alt": "Kitesurf lessons"
+      },
+      {
+        "type": "image",
+        "src": "/images/kite_sunset.webp",
+        "alt": "Kitesurf lessons"
+      },
+      {
+        "type": "image",
+        "src": "/images/kite_jump_1.webp",
+        "alt": "Kitesurf lessons"
+      },
+      {
+        "type": "image",
+        "src": "/images/kite_jump_2.webp",
+        "alt": "Kitesurf lessons"
+      },
+      {
+        "type": "image",
+        "src": "/images/kite_jump_3.webp",
+        "alt": "Kitesurf lessons"
+      },
+      {
+        "type": "image",
+        "src": "/images/kite_jump_4.webp",
+        "alt": "Kitesurf lessons"
       }
     ]
   },
@@ -92,13 +132,18 @@
     "media": [
       {
         "type": "video",
-        "src": "/videos/sup-tour.mp4",
-        "thumbnail": "/images/paddle.webp",
+        "src": "/videos/haak.webm",
+        "thumbnail": "/images/paddle_1.webp",
         "alt": "SUP tour highlights"
       },
       {
         "type": "image",
-        "src": "/images/paddle.webp",
+        "src": "/images/paddle_1.webp",
+        "alt": "Stand up paddle"
+      },
+      {
+        "type": "image",
+        "src": "/images/paddle_2.webp",
         "alt": "Stand up paddle"
       }
     ]
@@ -177,6 +222,33 @@
       { "id": "whale-boat-sailboat", "price": 900, "shared": 90 },
       { "id": "whale-boat-artisanal", "price": 600, "shared": 60 },
       { "id": "whale-boat-jetski", "price": 200 }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "src": "/images/yatch.webp",
+        "alt": "Whale watching"
+      },
+      {
+        "type": "image",
+        "src": "/images/whale_1.webp",
+        "alt": "Whale watching"
+      },
+      {
+        "type": "image",
+        "src": "/images/whale_2.webp",
+        "alt": "Whale watching"
+      },
+      {
+        "type": "image",
+        "src": "/images/whale_3.webp",
+        "alt": "Whale watching"
+      },
+      {
+        "type": "image",
+        "src": "/images/whale_4.webp",
+        "alt": "Whale watching"
+      }
     ]
   },
   {
@@ -189,6 +261,28 @@
       { "id": "turtle-boat-artisanal", "price": 300 },
       { "id": "turtle-boat-jetski", "price": 200 },
       { "id": "turtle-boat-sup", "price": 45, "perPerson": true }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "src": "/images/yatch.webp",
+        "alt": "Nado con tortugas / Swimming with turtles"
+      },
+      {
+        "type": "image",
+        "src": "/images/swimming_turtles_1.webp",
+        "alt": "Nado con tortugas / Swimming with turtles"
+      },
+      {
+        "type": "image",
+        "src": "/images/diving_found_1.webp",
+        "alt": "Nado con tortugas / Swimming with turtles"
+      },
+      {
+        "type": "image",
+        "src": "/images/diving_found_2.webp",
+        "alt": "Nado con tortugas / Swimming with turtles"
+      }
     ]
   },
   {
@@ -207,7 +301,14 @@
     "thumbnail": "/images/sunset.webp",
     "image": "/images/sunset.webp",
     "pricingType": "full_fixed",
-    "price": 550
+    "price": 550,
+    "media": [
+      {
+        "type": "image",
+        "src": "/images/yatch.webp",
+        "alt": "Zarpado al Sunset / Sunset Sailboat"
+      }
+    ]
   },
   {
     "id": "deep-sea-fishing",
@@ -258,6 +359,63 @@
       { "people": 2, "price": 140 },
       { "people": 3, "price": 130 },
       { "people": 4, "price": 120 }
+    ],
+    "media": [
+      {
+        "type": "video",
+        "src": "/videos/buceo.webm",
+        "alt": "Buceo / Scuba"
+      },
+      {
+        "type": "image",
+        "src": "/images/diving_1.webp",
+        "alt": "Buceo / Scuba"
+      },
+      {
+        "type": "image",
+        "src": "/images/diving_2.webp",
+        "alt": "Buceo / Scuba"
+      },
+      {
+        "type": "image",
+        "src": "/images/diving_3.webp",
+        "alt": "Buceo / Scuba"
+      },
+      {
+        "type": "image",
+        "src": "/images/diving_4.webp",
+        "alt": "Buceo / Scuba"
+      },
+      {
+        "type": "image",
+        "src": "/images/diving_found_1.webp",
+        "alt": "Buceo / Scuba"
+      },
+      {
+        "type": "image",
+        "src": "/images/diving_found_2.webp",
+        "alt": "Buceo / Scuba"
+      },
+      {
+        "type": "image",
+        "src": "/images/diving_found_3.webp",
+        "alt": "Buceo / Scuba"
+      },
+      {
+        "type": "image",
+        "src": "/images/diving_found_4.webp",
+        "alt": "Buceo / Scuba"
+      },
+      {
+        "type": "image",
+        "src": "/images/diving_found_5.webp",
+        "alt": "Buceo / Scuba"
+      },
+      {
+        "type": "image",
+        "src": "/images/diving_found_6.webp",
+        "alt": "Buceo / Scuba"
+      }
     ]
   }
 ]

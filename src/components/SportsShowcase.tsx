@@ -6,55 +6,39 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
-const sports = [
+const sportsData = [
   {
     id: 'surf',
-    name: 'Surf',
-    description: 'Clases y alquiler con equipo incluido.',
     img: '/images/surf.webp',
     img_fit: 'object-[30%_0%]',
   },
   {
     id: 'kitesurf',
-    name: 'Kite Surf',
-    description: 'Cursos certificados IKO.',
     img: '/images/kite.jpg',
     img_fit: 'object-[-190px_0]',
   },
   {
     id: 'wakesurf',
-    name: 'Wake Surf',
-    description: 'Adrenalina en el mar con instructor.',
     img: '/images/wake.webp',
     img_fit: 'object-[80%_0%]',
   },
   {
     id: 'stand-up-paddle',
-    name: 'Stand Up Paddle',
-    description: 'Paddle en el mar y tours guiados.',
     img: '/images/paddle.webp',
     img_fit: '',
   },
   {
     id: 'jetsky',
-    name: 'Jetsky',
-    description: 'Alquiler y clases de motos acuáticas.',
     img: '/images/jetsky.webp',
     img_fit: 'object-[35%_0%]',
   },
   {
     id: 'kayak',
-    name: 'Kayak',
-    description:
-      'Equipo deportivo, Equipo de seguridad, Instructor certificado 1hora en el agua',
     img: '/images/kayak.webp',
     img_fit: '-300px_0',
   },
   {
     id: 'skimboard',
-    name: 'Skim Board',
-    description:
-      'Equipo deportivo, Equipo de seguridad, Instructor certificado, 30min de clase y 30min de práctica',
     img: '/images/skim.webp',
     img_fit: '',
   },
@@ -64,6 +48,13 @@ export default function SportsShowcase() {
   const t = useTranslations('translation.translations.Home.sportsShowCase');
   const [active, setActive] = useState<number | null>(null);
   const [isDesktop, setIsDesktop] = useState<boolean>(false);
+
+  const sports = sportsData.map((sport) => ({
+    ...sport,
+    name: t(`items.${sport.id}.name`),
+    description: t(`items.${sport.id}.description`),
+  }));
+
   const total = sports.length;
   const activeWidth = 60; // percent when active (desktop)
   const defaultBasis = `${100 / total}%`;
@@ -149,7 +140,7 @@ export default function SportsShowcase() {
                     href={`/sports?sport=${sport.id}`}
                     className="inline-block px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors text-sm font-medium"
                     onClick={(e) => e.stopPropagation()}>
-                    {t('disoverButton')}
+                    {t('discoverButton')}
                   </Link>
                 </motion.div>
               )}

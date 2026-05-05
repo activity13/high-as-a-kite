@@ -468,7 +468,7 @@ export default function SportsSection() {
                 src={selectedSport.image}
                 alt={selectedSport.name!}
                 fill
-                className="object-cover"
+                className="object-cover object-bottom"
                 priority
               />
 
@@ -576,7 +576,7 @@ export default function SportsSection() {
                   className={`${haakDesign.typography.h2} mb-8 text-center text-base-content`}>
                   {selectedSport.name} - {t('sportsInfo.section.gallery')}
                 </h2>
-                <div className="max-w-5xl mx-auto">
+                <div className="max-w-5xl mx-auto h-[75vh]">
                   <SportMediaSlider media={selectedSport.media} />
                 </div>
               </motion.div>
@@ -608,7 +608,7 @@ export default function SportsSection() {
                     src={selectedSport.image}
                     alt={selectedSport.name!}
                     fill
-                    className="object-cover"
+                    className="object-cover object-bottom"
                     priority
                   />
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/60" />

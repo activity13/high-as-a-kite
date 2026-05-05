@@ -48,7 +48,37 @@
       },
       "Home": {
         "sportsShowCase": {
-          "disoverButton": "Discover more"
+          "discoverButton": "Discover more",
+          "items": {
+            "surf": {
+              "name": "Surf",
+              "description": "Lessons and rentals with equipment included."
+            },
+            "kitesurf": {
+              "name": "Kite Surf",
+              "description": "IKO certified courses."
+            },
+            "wakesurf": {
+              "name": "Wake Surf",
+              "description": "Adrenaline at sea with an instructor."
+            },
+            "stand-up-paddle": {
+              "name": "Stand Up Paddle",
+              "description": "Paddle at sea and guided tours."
+            },
+            "jetsky": {
+              "name": "Jetsky",
+              "description": "Jet ski rentals and lessons."
+            },
+            "kayak": {
+              "name": "Kayak",
+              "description": "Sports equipment, safety equipment, certified instructor, 1 hour in the water"
+            },
+            "skimboard": {
+              "name": "Skim Board",
+              "description": "Sports equipment, safety equipment, certified instructor, 30 min class and 30 min practice"
+            }
+          }
         },
         "whyHaak": {
           "title": "Why choose us?",
@@ -784,7 +814,7 @@
             "includes": ["Transportation"],
             "location": "Los Órganos Pier – Piura",
             "schedule": "Departure time: 6:30 am",
-            "duration": "Duration: 4 hours",
+            "duration": "4 hours",
             "boats": [
               { "id": "whale-boat-sailboat", "name": "Sailboat" },
               { "id": "whale-boat-artisanal", "name": "Artisanal boat" },
