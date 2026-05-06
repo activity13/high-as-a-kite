@@ -15,8 +15,14 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <WhyChooseUsSection />
-      <StatsBar />
+      <div className="h-screen flex flex-col">
+        <div className="flex-1 flex flex-col [&>section]:flex-1 [&>section]:flex [&>section]:flex-col [&>section]:justify-center">
+          <WhyChooseUsSection />
+        </div>
+        <div className="shrink-0">
+          <StatsBar />
+        </div>
+      </div>
       <SportsShowcase />
       <MainSpotShowcase />
       <GallerySection />

@@ -423,7 +423,7 @@ export default function SportsSection() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       {/* Desktop Layout */}
-      <section className="hidden lg:flex h-screen bg-base-300 text-base-content mt-14">
+      <section className="hidden lg:flex h-screen bg-base-300 text-base-content pt-14">
         {/* Barra deslizable horizontal, permite seleccionar el deporte y darle una mirada a su página.  */}
         <div className="w-1/4 bg-base-200 p-4 scrollbar-none overflow-y-auto border-r border-base-300">
           <h2 className={`${haakDesign.typography.h2} mb-6`}>
@@ -482,58 +482,61 @@ export default function SportsSection() {
                     className={`${haakDesign.typography.h1} text-white leading-tight`}>
                     {selectedSport.name}
                   </h1>
-                  {selectedSport.description && (
-                    <p className="text-sm text-white/90 leading-snug max-w-3xl">
-                      {selectedSport.description}
-                    </p>
-                  )}
-                  {selectedSport.includes &&
-                    selectedSport.includes.length > 0 && (
-                      <div className="mt-4">
-                        <h3 className="font-semibold text-base-100 text-md">
-                          {t('sportsInfo.section.includes')}
-                        </h3>
-                        <ul
-                          className={`text-white/80 h-[400px] text-md mt-1 space-y-1 list-disc list-inside ${selectedSport.includes.length > 6 ? 'columns-2 gap-4' : ''}`}>
-                          {selectedSport.includes.map((item, index) => (
-                            <li key={index} className="break-inside-avoid">
-                              {item}
-                            </li>
-                          ))}
-                        </ul>
+                  {/* Scrollable Container for all info */}
+                  <div className="overflow-y-auto scrollbar-none pr-4 max-h-[calc(100vh-400px)] space-y-4 pb-10">
+                    {selectedSport.description && (
+                      <p className="text-sm text-white/90 leading-snug max-w-3xl">
+                        {selectedSport.description}
+                      </p>
+                    )}
+                    {selectedSport.includes &&
+                      selectedSport.includes.length > 0 && (
+                        <div>
+                          <h3 className="font-semibold text-base-100 text-md mb-2">
+                            {t('sportsInfo.section.includes')}
+                          </h3>
+                          <ul
+                            className={`text-white/80 text-md space-y-1 list-disc list-inside ${selectedSport.includes.length > 6 ? 'columns-2 gap-4' : ''}`}>
+                            {selectedSport.includes.map((item, index) => (
+                              <li key={index} className="break-inside-avoid">
+                                {item}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                    {selectedSport.capacity && (
+                      <div>
+                        <p className="text-xl text-white/90">
+                          👥 {selectedSport.capacity}
+                        </p>
                       </div>
                     )}
-                  {selectedSport.capacity && (
-                    <div className="mt-3">
-                      <p className="text-xl text-white/90">
-                        👥 {selectedSport.capacity}
-                      </p>
-                    </div>
-                  )}
 
-                  {/* Additional Info */}
-                  {(selectedSport.duration || selectedSport.schedule) && (
-                    <div className="mt-4 space-y-2">
-                      {selectedSport.duration && (
-                        <p className="text-md text-white/90">
-                          ⏱️{' '}
-                          <span className="font-semibold">
-                            {t('sportsInfo.section.duration')}:
-                          </span>{' '}
-                          {selectedSport.duration}
-                        </p>
-                      )}
-                      {selectedSport.schedule && (
-                        <p className="text-md text-white/90">
-                          📅{' '}
-                          <span className="font-semibold">
-                            {t('sportsInfo.section.schedule')}:
-                          </span>{' '}
-                          {selectedSport.schedule}
-                        </p>
-                      )}
-                    </div>
-                  )}
+                    {/* Additional Info */}
+                    {(selectedSport.duration || selectedSport.schedule) && (
+                      <div className="space-y-2">
+                        {selectedSport.duration && (
+                          <p className="text-md text-white/90">
+                            ⏱️{' '}
+                            <span className="font-semibold">
+                              {t('sportsInfo.section.duration')}:
+                            </span>{' '}
+                            {selectedSport.duration}
+                          </p>
+                        )}
+                        {selectedSport.schedule && (
+                          <p className="text-md text-white/90">
+                            📅{' '}
+                            <span className="font-semibold">
+                              {t('sportsInfo.section.schedule')}:
+                            </span>{' '}
+                            {selectedSport.schedule}
+                          </p>
+                        )}
+                      </div>
+                    )}
+                  </div>
 
                   {/* CTA Button */}
                   <div className="absolute bottom-20 left-0 right-0 px-8">
